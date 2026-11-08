@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>El Silencio como Ventaja — Un Ensayo de Lectura Profunda</title>
+  <meta name="description" content="Una landing de lectura inmersiva sobre la concentración, la lentitud deliberada y el diseño perdurable.">
+  
+  <!-- Fuentes Google: Newsreader (Editorial Serif) & Plus Jakarta Sans (Interfaz) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="font-serif">
+
+  <!-- BARRA DE PROGRESO DE LECTURA (Fija en el tope de la pantalla) -->
+  <div id="reading-progress-track" aria-hidden="true">
+    <div id="reading-progress-bar"></div>
+  </div>
+
+  <!-- 
+    HEADER EXCLUSIVO DE LECTURA:
+    - NO contiene menú de secciones ni anclas navegables
+    - Solo identidad editorial y controles ergonómicos de lectura (Modo de luz, tamaño de texto, tiempo estimado)
+  -->
+  <header class="reading-header" role="banner">
+    <div class="header-inner">
+      <div class="header-brand">
+        <span class="brand-eyebrow">Edición Nº 07 · Manifiesto</span>
+        <span class="brand-title">Atelier &amp; Letras</span>
+      </div>
+
+      <div class="header-tools" aria-label="Herramientas de lectura">
+        <!-- Indicador de tiempo estimado -->
+        <div class="read-estimate" title="Tiempo estimado de lectura">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <polyline points="12 6 12 12 16 14"></polyline>
+          </svg>
+          <span id="reading-time-display">9 min de lectura</span>
+        </div>
+
+        <div class="tools-divider" aria-hidden="true"></div>
+
+        <!-- Ajuste de tipografía: Serif / Sans -->
+        <div class="font-family-toggle" role="group" aria-label="Familia tipográfica">
+          <button id="btn-font-serif" class="tool-btn active" title="Tipografía con serifa (estilo libro)" aria-pressed="true">Serif</button>
+          <button id="btn-font-sans" class="tool-btn" title="Tipografía moderna sin serifa" aria-pressed="false">Sans</button>
+        </div>
+
+        <!-- Ajuste de tamaño de fuente -->
+        <div class="font-size-controls" role="group" aria-label="Tamaño de texto">
+          <button id="btn-font-decrease" class="tool-btn icon-btn" title="Reducir tamaño del texto" aria-label="Reducir fuente">A−</button>
+          <button id="btn-font-increase" class="tool-btn icon-btn" title="Aumentar tamaño del texto" aria-label="Aumentar fuente">A+</button>
+        </div>
+
+        <div class="tools-divider" aria-hidden="true"></div>
+
+        <!-- Selector de paleta de lectura: Claro / Sepia / Noche -->
+        <div class="theme-selector" role="group" aria-label="Ambiente de lectura">
+          <button class="theme-btn theme-light active" data-set-theme="light" title="Modo Claro (Papel blanco)" aria-label="Modo Claro"></button>
+          <button class="theme-btn theme-sepia" data-set-theme="sepia" title="Modo Sepia (Tinta cálida)" aria-label="Modo Sepia"></button>
+          <button class="theme-btn theme-dark" data-set-theme="dark" title="Modo Nocturno (Tinta oscura)" aria-label="Modo Nocturno"></button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- CONTENIDO PRINCIPAL: LECTURA LINEAL PURA -->
+  <main id="main-content">
+    <article class="article-container" id="reading-article">
+
+      <!-- PORTADA DEL ARTÍCULO / INTRODUCCIÓN -->
+      <header class="article-hero">
+        <div class="hero-meta">
+          <time datetime="2026-11-01">Noviembre 2026</time>
+          <span class="meta-dot">·</span>
+          <span>Por Santiago V. Pellegrini</span>
+          <span class="meta-dot">·</span>
+          <span>Teoría &amp; Diseño</span>
+        </div>
+
+        <h1 class="article-headline">El Silencio como Ventaja</h1>
+        <p class="article-lead">
+          Un ensayo sobre la recuperación de la mente lineal, el valor de la lentitud deliberada y cómo construir cosas que duren más que el ciclo de atención de una pantalla.
+        </p>
+
+        <div class="reading-hint">
+          <span class="hint-pulse"></span>
+          <span>Esta pieza está diseñada exclusivamente para ser leída de principio a fin, sin atajos ni distracciones.</span>
+        </div>
+      </header>
+
+      <!-- SECCIÓN 1: No localizable desde el header, existe naturalmente en el flujo -->
+      <section class="chapter" id="capitulo-i">
+        <div class="chapter-header">
+          <span class="chapter-number">Capítulo I</span>
+          <h2 class="chapter-title">La tiranía del fragmento</h2>
+        </div>
+
+        <p class="paragraph drop-cap">
+          El colapso de la atención moderna no fue un accidente biológico ni un fallo de voluntad individual; fue una consecuencia de diseño deliberada. A lo largo de la última década, las interfaces digitales sustituyeron la profundidad por la aceleración. Cada botón, cada notificación y cada hipervínculo se transformaron en pequeñas promesas de gratificación que terminaron por fragmentar nuestra capacidad de seguir un argumento hasta sus últimas consecuencias.
+        </p>
+
+        <p class="paragraph">
+          Nos convencieron de que saltar de un punto a otro era una forma superior de conocimiento. Los menús interminables, los índices interactivos que prometían ahorrarnos el camino y los resúmenes automáticos crearon la ilusión de que podíamos poseer la conclusión sin transitar la experiencia de pensar.
+        </p>
+
+        <aside class="pull-quote">
+          <blockquote>
+            “Quien busca el atajo en una idea se queda con su esqueleto, pero jamás con su pulso.”
+          </blockquote>
+          <cite>— Apuntes sobre el pensamiento demorado</cite>
+        </aside>
+
+        <p class="paragraph">
+          Cuando todo está a un clic de distancia, nada tiene suficiente gravedad. La verdadera comprensión requiere un tipo particular de resistencia: el compromiso de permanecer frente a una página, permitiendo que la cadencia de la frase modele el ritmo del pensamiento en lugar de que el ojo impaciente busque el próximo estímulo disponible.
+        </p>
+      </section>
+
+      <!-- SECCIÓN 2 -->
+      <section class="chapter" id="capitulo-ii">
+        <div class="chapter-header">
+          <span class="chapter-number">Capítulo II</span>
+          <h2 class="chapter-title">La física del pensamiento largo</h2>
+        </div>
+
+        <p class="paragraph">
+          Hay pensamientos que únicamente emergen a partir del minuto cuarenta de silencio ininterrumpido. No son ideas mejores por ser complejas, sino porque nacen de una síntesis que ninguna mente fragmentada puede gestar. En el oficio del pensamiento y del diseño de productos, la velocidad suele confundirse con fecundidad. Producimos más, pero recordamos menos.
+        </p>
+
+        <div class="editorial-box">
+          <div class="editorial-box-tag">Observación de campo</div>
+          <h3 class="editorial-box-title">La regla de los dos compases</h3>
+          <p>
+            En la música clásica, la tensión no se genera en el golpe de la tecla, sino en el espacio de resonancia que le sigue. Las obras que trascienden comparten este principio: dedican más espacio a lo que no se dice que a lo evidente. En las pantallas contemporáneas, sin embargo, el espacio en blanco es tratado como una falla de inventario que debe ser rellenada inmediatamente con sugerencias.
+          </p>
+        </div>
+
+        <p class="paragraph">
+          Al prescindir de los atajos visuales y de las barras repletas de enlaces que compiten por nuestra retina, la página se convierte en una habitación con las puertas cerradas y las ventanas abiertas. Ya no hay prisa por llegar al final, porque el valor no reside en acumular lecturas completadas, sino en el estado mental que la lectura induce.
+        </p>
+
+        <p class="paragraph">
+          Las mejores decisiones que tomamos —ya sea en la arquitectura de un software, en la redacción de un código o en la elección de una forma de vivir— provienen siempre de periodos de calma no medibles. Son el subproducto del tiempo que aparentemente se pierde.
+        </p>
+      </section>
+
+      <!-- SECCIÓN 3 -->
+      <section class="chapter" id="capitulo-iii">
+        <div class="chapter-header">
+          <span class="chapter-number">Capítulo III</span>
+          <h2 class="chapter-title">Tres axiomas de la serenidad deliberada</h2>
+        </div>
+
+        <p class="paragraph">
+          Si aceptamos que la saturación visual debilita la agudeza mental, se vuelve indispensable formular principios que sirvan de refugio. No se trata de un rechazo nostálgico a la tecnología, sino de una exigencia estética y funcional frente a ella:
+        </p>
+
+        <div class="axioms-grid">
+          <div class="axiom-card">
+            <span class="axiom-roman">01</span>
+            <h3 class="axiom-heading">La fricción voluntaria</h3>
+            <p class="axiom-body">
+              Hacer que una lectura requiera desplazamiento continuo sin saltos automáticos no es un obstáculo: es un filtro de presencia. Lo que cuesta un poco de tiempo merece el doble de memoria.
+            </p>
+          </div>
+
+          <div class="axiom-card">
+            <span class="axiom-roman">02</span>
+            <h3 class="axiom-heading">El peso de la palabra sola</h3>
+            <p class="axiom-body">
+              Cuando eliminamos los banners, las animaciones estridentes y los widgets periféricos, la palabra queda desnuda. Debe sostenerse por su propia precisión, sin fuegos artificiales.
+            </p>
+          </div>
+
+          <div class="axiom-card">
+            <span class="axiom-roman">03</span>
+            <h3 class="axiom-heading">La permanencia del objeto</h3>
+            <p class="axiom-body">
+              Un texto digital puede adoptar la nobleza de una hoja de papel encuadernada: proporciones armónicas, márgenes generosos y respeto reverencial por la mirada del lector.
+            </p>
+          </div>
+        </div>
+
+        <p class="paragraph">
+          Bajo estas tres premisas, este espacio fue concebido. Cada margen fue medido para respetar la distancia óptima entre el ojo y el monitor, limitando la línea a sesenta y cinco caracteres para que el músculo ocular no experimente fatiga.
+        </p>
+      </section>
+
+      <!-- SECCIÓN 4 -->
+      <section class="chapter" id="capitulo-iv">
+        <div class="chapter-header">
+          <span class="chapter-number">Capítulo IV</span>
+          <h2 class="chapter-title">El diseño de lo imperceptible</h2>
+        </div>
+
+        <p class="paragraph">
+          El verdadero refinamiento no se nota; se respira. Cuando un sitio web está diseñado con un propósito de pura lectura, la tipografía no grita: susurra. Las proporciones de la caja tipográfica, el contraste atenuado que huye del blanco cegador y del negro absoluto, y la ausencia intencionada de un índice flotante forman un acuerdo tácito de confianza entre quien escribe y quien lee.
+        </p>
+
+        <!-- Elemento interactivo sutil de reflexión / nota al margen -->
+        <div class="margin-note-wrapper">
+          <blockquote class="marginalia">
+            <strong>Nota de imprenta:</strong> La serifa clásica utilizada en esta edición se basa en los tipos de prensa franceses del siglo XVIII, adaptada meticulosamente para pantallas de alta densidad de píxeles.
+          </blockquote>
+        </div>
+
+        <p class="paragraph">
+          Al remover los enlaces del encabezado, quitamos la tentación permanente de juzgar el final antes de haber comprendido el principio. El lector ya no es un usuario apresurado que audita títulos en busca de palabras clave para escanear en diagonal. Vuelve a ser, sencillamente, alguien que lee.
+        </p>
+
+        <p class="paragraph">
+          Ese retorno a la lectura pausada es quizás el acto más revolucionario que nos queda en una red construida para la dispersión.
+        </p>
+      </section>
+
+      <!-- SECCIÓN 5: EPÍLOGO / CONCLUSIÓN & SUSCRIPCIÓN EDITORIAL -->
+      <section class="chapter epilogue" id="epilogo">
+        <div class="chapter-header">
+          <span class="chapter-number">Epílogo</span>
+          <h2 class="chapter-title">Una correspondencia sin estridencias</h2>
+        </div>
+
+        <p class="paragraph">
+          Si has llegado hasta este punto sin prisas, compartes con nosotros la convicción de que los mejores frutos del intelecto humano maduran en la calma. No publicamos a diario. No perseguimos la última tendencia efímera ni acumulamos visitas vacías.
+        </p>
+
+        <p class="paragraph">
+          Una vez al mes, redactamos una carta extensa dedicada a reflexionar sobre estética, tecnología y filosofía del trabajo concentrado. La enviamos directamente a tu correo electrónico, en texto limpio, sin imágenes de carga pesada ni rastreadores publicitarios.
+        </p>
+
+        <!-- Formulario sobrio de correspondencia -->
+        <div class="subscription-card">
+          <div class="subscription-content">
+            <span class="sub-label">Boletín Mensual</span>
+            <h3 class="sub-title">Recibir los próximos ensayos</h3>
+            <p class="sub-text">
+              Una entrega mensual. Máximo silencio. Te puedes desuscribir con un solo clic en cualquier momento.
+            </p>
+            
+            <form class="sub-form" id="newsletter-form" onsubmit="event.preventDefault(); window.handleSubscribe(this);">
+              <div class="input-group">
+                <input 
+                  type="email" 
+                  name="email" 
+                  id="email-input" 
+                  placeholder="tu.correo@ejemplo.com" 
+                  required 
+                  autocomplete="email"
+                  aria-label="Correo electrónico"
+                >
+                <button type="submit" class="sub-submit-btn">
+                  <span>Suscribirme</span>
+                  <svg class="icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </button>
+              </div>
+              <p class="form-feedback" id="form-feedback" aria-live="polite"></p>
+            </form>
+          </div>
+        </div>
+
+        <div class="author-signature">
+          <div class="signature-line"></div>
+          <p class="signature-text">
+            Escrito en una tarde templada de noviembre. <br>
+            Gracias por dedicar tu atención a este texto.
+          </p>
+        </div>
+      </section>
+
+    </article>
+  </main>
+
+  <!-- PIE DE PÁGINA EDITORIAL (Sin enlaces de sección) -->
+  <footer class="reading-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="colophon">
+        <h4>Colofón tipográfico</h4>
+        <p>
+          Compuesto en <em>Newsreader</em> e <em>Plus Jakarta Sans</em>. Diseñado para favorecer la lectura sostenida. Libre de algoritmos de retención y analítica invasiva.
+        </p>
+      </div>
+
+      <div class="footer-credits">
+        <p>© 2026 Atelier &amp; Letras. Todos los derechos reservados.</p>
+        <p class="footer-quiet">Una landing pensada para ser leída, no consumida.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
