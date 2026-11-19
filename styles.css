@@ -161,6 +161,11 @@ body {
   font-size: 1.0625rem;
 }
 
+.btn-sm {
+  padding: 0.5rem 1.15rem;
+  font-size: 0.8125rem;
+}
+
 .btn-full {
   width: 100%;
 }
@@ -199,7 +204,91 @@ body {
 }
 
 /* ==========================================================================
-   SECCIÓN 1: HERO (DIRECTO EN EL TOPE, SIN HEADER)
+   BARRA SUPERIOR DE MARCA (LOGO OFICIAL EN PNG TRANSPARENTE)
+   ========================================================================== */
+.top-bar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: rgba(11, 14, 20, 0.94);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  transition: var(--transition);
+}
+
+.top-bar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 0.85rem;
+  padding-bottom: 0.85rem;
+  gap: 1.5rem;
+}
+
+.brand-logo-link {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.brand-logo-link:hover {
+  opacity: 0.92;
+  transform: scale(1.02);
+}
+
+.brand-logo-img {
+  height: 38px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.3));
+}
+
+.top-bar-contact {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.top-contact-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--color-text-light);
+}
+
+.live-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #22C55E;
+  box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.25);
+  animation: pulse 2s infinite;
+}
+
+.contact-label {
+  color: var(--color-text-muted);
+  font-size: 0.8125rem;
+}
+
+.contact-value {
+  color: #FFFFFF;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 0.9375rem;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.contact-value:hover {
+  color: var(--color-primary);
+}
+
+/* ==========================================================================
+   SECCIÓN 1: HERO
    ========================================================================== */
 .section-hero {
   position: relative;
@@ -977,12 +1066,14 @@ body {
 }
 
 .footer-logo {
-  font-family: var(--font-display);
-  font-size: 1.65rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  color: #FFFFFF;
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.65rem;
+}
+
+.footer-logo-img {
+  height: 32px;
+  width: auto;
+  object-fit: contain;
+  display: block;
 }
 
 .footer-brand p {
@@ -1082,6 +1173,19 @@ body {
 }
 
 @media (max-width: 600px) {
+  .top-bar-inner {
+    padding-top: 0.65rem;
+    padding-bottom: 0.65rem;
+  }
+
+  .brand-logo-img {
+    height: 30px;
+  }
+
+  .top-contact-item {
+    display: none;
+  }
+
   .section {
     padding: 3.5rem 0;
   }
