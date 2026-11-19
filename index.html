@@ -1,298 +1,633 @@
 <!DOCTYPE html>
-<html lang="es" data-theme="light">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>El Silencio como Ventaja — Un Ensayo de Lectura Profunda</title>
-  <meta name="description" content="Una landing de lectura inmersiva sobre la concentración, la lentitud deliberada y el diseño perdurable.">
+  <title>VÉRTICE Materiales de Construcción — Corralón Mayorista y Minorista</title>
+  <meta name="description" content="Comercio de materiales para la construcción. Áridos, cementos, hierros, ladrillos, cubiertas y herramientas. Entregas en obra en 24h con hidrogrúa y acopio sin cargo.">
   
-  <!-- Fuentes Google: Newsreader (Editorial Serif) & Plus Jakarta Sans (Interfaz) -->
+  <!-- Tipografía Google: Oswald (industrial impactante) y Plus Jakarta Sans (legibilidad técnica) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
   
   <link rel="stylesheet" href="styles.css">
 </head>
-<body class="font-serif">
-
-  <!-- BARRA DE PROGRESO DE LECTURA (Fija en el tope de la pantalla) -->
-  <div id="reading-progress-track" aria-hidden="true">
-    <div id="reading-progress-bar"></div>
-  </div>
+<body>
 
   <!-- 
-    HEADER EXCLUSIVO DE LECTURA:
-    - NO contiene menú de secciones ni anclas navegables
-    - Solo identidad editorial y controles ergonómicos de lectura (Modo de luz, tamaño de texto, tiempo estimado)
+    NOTA: ESTA LANDING NO POSEE NINGÚN HEADER. 
+    Inicia directamente con la sección Hero de la empresa de construcción.
   -->
-  <header class="reading-header" role="banner">
-    <div class="header-inner">
-      <div class="header-brand">
-        <span class="brand-eyebrow">Edición Nº 07 · Manifiesto</span>
-        <span class="brand-title">Atelier &amp; Letras</span>
-      </div>
 
-      <div class="header-tools" aria-label="Herramientas de lectura">
-        <!-- Indicador de tiempo estimado -->
-        <div class="read-estimate" title="Tiempo estimado de lectura">
-          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="10"></circle>
-            <polyline points="12 6 12 12 16 14"></polyline>
-          </svg>
-          <span id="reading-time-display">9 min de lectura</span>
-        </div>
-
-        <div class="tools-divider" aria-hidden="true"></div>
-
-        <!-- Ajuste de tipografía: Serif / Sans -->
-        <div class="font-family-toggle" role="group" aria-label="Familia tipográfica">
-          <button id="btn-font-serif" class="tool-btn active" title="Tipografía con serifa (estilo libro)" aria-pressed="true">Serif</button>
-          <button id="btn-font-sans" class="tool-btn" title="Tipografía moderna sin serifa" aria-pressed="false">Sans</button>
-        </div>
-
-        <!-- Ajuste de tamaño de fuente -->
-        <div class="font-size-controls" role="group" aria-label="Tamaño de texto">
-          <button id="btn-font-decrease" class="tool-btn icon-btn" title="Reducir tamaño del texto" aria-label="Reducir fuente">A−</button>
-          <button id="btn-font-increase" class="tool-btn icon-btn" title="Aumentar tamaño del texto" aria-label="Aumentar fuente">A+</button>
-        </div>
-
-        <div class="tools-divider" aria-hidden="true"></div>
-
-        <!-- Selector de paleta de lectura: Claro / Sepia / Noche -->
-        <div class="theme-selector" role="group" aria-label="Ambiente de lectura">
-          <button class="theme-btn theme-light active" data-set-theme="light" title="Modo Claro (Papel blanco)" aria-label="Modo Claro"></button>
-          <button class="theme-btn theme-sepia" data-set-theme="sepia" title="Modo Sepia (Tinta cálida)" aria-label="Modo Sepia"></button>
-          <button class="theme-btn theme-dark" data-set-theme="dark" title="Modo Nocturno (Tinta oscura)" aria-label="Modo Nocturno"></button>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <!-- CONTENIDO PRINCIPAL: LECTURA LINEAL PURA -->
   <main id="main-content">
-    <article class="article-container" id="reading-article">
 
-      <!-- PORTADA DEL ARTÍCULO / INTRODUCCIÓN -->
-      <header class="article-hero">
-        <div class="hero-meta">
-          <time datetime="2026-11-01">Noviembre 2026</time>
-          <span class="meta-dot">·</span>
-          <span>Por Santiago V. Pellegrini</span>
-          <span class="meta-dot">·</span>
-          <span>Teoría &amp; Diseño</span>
+    <!-- SECCIÓN 1: HERO / PORTADA PRINCIPAL DE LA EMPRESA (Sin header previo) -->
+    <section class="section-hero" id="inicio">
+      <div class="hero-overlay"></div>
+      <div class="container hero-content">
+        <div class="hero-badge">
+          <span class="badge-icon">🏗️</span>
+          <span>Corralón &amp; Distribuidora de Materiales de Construcción</span>
         </div>
 
-        <h1 class="article-headline">El Silencio como Ventaja</h1>
-        <p class="article-lead">
-          Un ensayo sobre la recuperación de la mente lineal, el valor de la lentitud deliberada y cómo construir cosas que duren más que el ciclo de atención de una pantalla.
+        <h1 class="hero-title">
+          Todo para tu obra: <br>
+          <span class="hero-highlight">desde los cimientos</span> hasta la última terminación
+        </h1>
+
+        <p class="hero-subtitle">
+          Abastecemos a constructoras, arquitectos, desarrolladores y particulares. Más de 4.000 productos con entrega directa en obra con camión hidrogrúa en 24 hs, acopio bonificado y precios especiales por pallet cerrado.
         </p>
 
-        <div class="reading-hint">
-          <span class="hint-pulse"></span>
-          <span>Esta pieza está diseñada exclusivamente para ser leída de principio a fin, sin atajos ni distracciones.</span>
-        </div>
-      </header>
-
-      <!-- SECCIÓN 1: No localizable desde el header, existe naturalmente en el flujo -->
-      <section class="chapter" id="capitulo-i">
-        <div class="chapter-header">
-          <span class="chapter-number">Capítulo I</span>
-          <h2 class="chapter-title">La tiranía del fragmento</h2>
-        </div>
-
-        <p class="paragraph drop-cap">
-          El colapso de la atención moderna no fue un accidente biológico ni un fallo de voluntad individual; fue una consecuencia de diseño deliberada. A lo largo de la última década, las interfaces digitales sustituyeron la profundidad por la aceleración. Cada botón, cada notificación y cada hipervínculo se transformaron en pequeñas promesas de gratificación que terminaron por fragmentar nuestra capacidad de seguir un argumento hasta sus últimas consecuencias.
-        </p>
-
-        <p class="paragraph">
-          Nos convencieron de que saltar de un punto a otro era una forma superior de conocimiento. Los menús interminables, los índices interactivos que prometían ahorrarnos el camino y los resúmenes automáticos crearon la ilusión de que podíamos poseer la conclusión sin transitar la experiencia de pensar.
-        </p>
-
-        <aside class="pull-quote">
-          <blockquote>
-            “Quien busca el atajo en una idea se queda con su esqueleto, pero jamás con su pulso.”
-          </blockquote>
-          <cite>— Apuntes sobre el pensamiento demorado</cite>
-        </aside>
-
-        <p class="paragraph">
-          Cuando todo está a un clic de distancia, nada tiene suficiente gravedad. La verdadera comprensión requiere un tipo particular de resistencia: el compromiso de permanecer frente a una página, permitiendo que la cadencia de la frase modele el ritmo del pensamiento en lugar de que el ojo impaciente busque el próximo estímulo disponible.
-        </p>
-      </section>
-
-      <!-- SECCIÓN 2 -->
-      <section class="chapter" id="capitulo-ii">
-        <div class="chapter-header">
-          <span class="chapter-number">Capítulo II</span>
-          <h2 class="chapter-title">La física del pensamiento largo</h2>
+        <div class="hero-actions">
+          <a href="#presupuesto" class="btn btn-primary btn-large">
+            <span>Solicitar Cotización Rápida</span>
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="https://wa.me/5491100000000?text=Hola,%20necesito%20cotizar%20materiales%20para%20una%20obra" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-large">
+            <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 18.17c-1.49 0-2.95-.4-4.22-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.17 8.17 0 0 1-1.26-4.4c0-4.51 3.67-8.18 8.18-8.18 2.19 0 4.24.85 5.79 2.4 1.55 1.55 2.4 3.61 2.4 5.79-.01 4.51-3.68 8.18-8.18 8.18z"/></svg>
+            <span>WhatsApp Directo Obra</span>
+          </a>
+          <a href="#calculadora" class="btn btn-outline btn-large">
+            <span>Calculadora de Materiales</span>
+          </a>
         </div>
 
-        <p class="paragraph">
-          Hay pensamientos que únicamente emergen a partir del minuto cuarenta de silencio ininterrumpido. No son ideas mejores por ser complejas, sino porque nacen de una síntesis que ninguna mente fragmentada puede gestar. En el oficio del pensamiento y del diseño de productos, la velocidad suele confundirse con fecundidad. Producimos más, pero recordamos menos.
-        </p>
-
-        <div class="editorial-box">
-          <div class="editorial-box-tag">Observación de campo</div>
-          <h3 class="editorial-box-title">La regla de los dos compases</h3>
-          <p>
-            En la música clásica, la tensión no se genera en el golpe de la tecla, sino en el espacio de resonancia que le sigue. Las obras que trascienden comparten este principio: dedican más espacio a lo que no se dice que a lo evidente. En las pantallas contemporáneas, sin embargo, el espacio en blanco es tratado como una falla de inventario que debe ser rellenada inmediatamente con sugerencias.
-          </p>
-        </div>
-
-        <p class="paragraph">
-          Al prescindir de los atajos visuales y de las barras repletas de enlaces que compiten por nuestra retina, la página se convierte en una habitación con las puertas cerradas y las ventanas abiertas. Ya no hay prisa por llegar al final, porque el valor no reside en acumular lecturas completadas, sino en el estado mental que la lectura induce.
-        </p>
-
-        <p class="paragraph">
-          Las mejores decisiones que tomamos —ya sea en la arquitectura de un software, en la redacción de un código o en la elección de una forma de vivir— provienen siempre de periodos de calma no medibles. Son el subproducto del tiempo que aparentemente se pierde.
-        </p>
-      </section>
-
-      <!-- SECCIÓN 3 -->
-      <section class="chapter" id="capitulo-iii">
-        <div class="chapter-header">
-          <span class="chapter-number">Capítulo III</span>
-          <h2 class="chapter-title">Tres axiomas de la serenidad deliberada</h2>
-        </div>
-
-        <p class="paragraph">
-          Si aceptamos que la saturación visual debilita la agudeza mental, se vuelve indispensable formular principios que sirvan de refugio. No se trata de un rechazo nostálgico a la tecnología, sino de una exigencia estética y funcional frente a ella:
-        </p>
-
-        <div class="axioms-grid">
-          <div class="axiom-card">
-            <span class="axiom-roman">01</span>
-            <h3 class="axiom-heading">La fricción voluntaria</h3>
-            <p class="axiom-body">
-              Hacer que una lectura requiera desplazamiento continuo sin saltos automáticos no es un obstáculo: es un filtro de presencia. Lo que cuesta un poco de tiempo merece el doble de memoria.
-            </p>
+        <!-- Ventajas clave inmediatas -->
+        <div class="hero-trust-bar">
+          <div class="trust-item">
+            <span class="trust-icon">🚚</span>
+            <div>
+              <strong>Envíos en 24 Horas</strong>
+              <p>Descarga mecanizada con hidrogrúa</p>
+            </div>
           </div>
-
-          <div class="axiom-card">
-            <span class="axiom-roman">02</span>
-            <h3 class="axiom-heading">El peso de la palabra sola</h3>
-            <p class="axiom-body">
-              Cuando eliminamos los banners, las animaciones estridentes y los widgets periféricos, la palabra queda desnuda. Debe sostenerse por su propia precisión, sin fuegos artificiales.
-            </p>
+          <div class="trust-item">
+            <span class="trust-icon">📦</span>
+            <div>
+              <strong>Acopio sin Costo</strong>
+              <p>Congelá precio y retirá hasta 90 días</p>
+            </div>
           </div>
-
-          <div class="axiom-card">
-            <span class="axiom-roman">03</span>
-            <h3 class="axiom-heading">La permanencia del objeto</h3>
-            <p class="axiom-body">
-              Un texto digital puede adoptar la nobleza de una hoja de papel encuadernada: proporciones armónicas, márgenes generosos y respeto reverencial por la mirada del lector.
-            </p>
+          <div class="trust-item">
+            <span class="trust-icon">📐</span>
+            <div>
+              <strong>Cómputo sobre Plano</strong>
+              <p>Asesoramiento técnico de arquitectos</p>
+            </div>
+          </div>
+          <div class="trust-item">
+            <span class="trust-icon">💳</span>
+            <div>
+              <strong>Facturación A y B</strong>
+              <p>Precios mayoristas por bulto/pallet</p>
+            </div>
           </div>
         </div>
+      </div>
+    </section>
 
-        <p class="paragraph">
-          Bajo estas tres premisas, este espacio fue concebido. Cada margen fue medido para respetar la distancia óptima entre el ojo y el monitor, limitando la línea a sesenta y cinco caracteres para que el músculo ocular no experimente fatiga.
+    <!-- SECCIÓN 2: CATÁLOGO Y RUBROS PRINCIPALES DE MATERIALES -->
+    <section class="section" id="catalogo">
+      <div class="container">
+        <div class="section-badge">Catálogo de Materiales</div>
+        <h2 class="section-title">Rubros y Materiales para Todas las Etapas</h2>
+        <p class="section-description">
+          Disponemos de stock permanente en nuestro centro de distribución de más de 6.000 m² para que tu proyecto nunca se detenga.
         </p>
-      </section>
 
-      <!-- SECCIÓN 4 -->
-      <section class="chapter" id="capitulo-iv">
-        <div class="chapter-header">
-          <span class="chapter-number">Capítulo IV</span>
-          <h2 class="chapter-title">El diseño de lo imperceptible</h2>
+        <div class="catalog-grid">
+          <!-- Categoría 1 -->
+          <div class="catalog-card">
+            <div class="card-icon-wrapper">
+              <span class="card-emoji">🧱</span>
+            </div>
+            <h3 class="card-title">Mampostería &amp; Ladrillos</h3>
+            <p class="card-text">Ladrillo hueco de todas las medidas (8, 12 y 18), ladrillo común seleccionado, bloques de hormigón celular curado en autoclave (HCCA) y bloques de cemento vibrocomprimido.</p>
+            <ul class="card-list">
+              <li>Ladrillo cerámico 12x18x33 y 18x18x33</li>
+              <li>Ladrillo común para vista y cimientos</li>
+              <li>Bloques portantes y de tabique</li>
+            </ul>
+            <div class="card-footer">
+              <span class="card-tag">Pallet cerrado disponible</span>
+            </div>
+          </div>
+
+          <!-- Categoría 2 -->
+          <div class="catalog-card">
+            <div class="card-icon-wrapper">
+              <span class="card-emoji">🏗️</span>
+            </div>
+            <h3 class="card-title">Áridos &amp; Granel</h3>
+            <p class="card-text">Arenas limpias de río, piedras partidas graníticas de gradación controlada, tosca compactable y leca para alivianar losas y contrapisos.</p>
+            <ul class="card-list">
+              <li>Arena fina de río en bolsón y a granel</li>
+              <li>Piedra partida 6/20 y binder</li>
+              <li>Cascote limpio picado y tosca</li>
+            </ul>
+            <div class="card-footer">
+              <span class="card-tag">Bolsón Big Bag 1m³ o camión</span>
+            </div>
+          </div>
+
+          <!-- Categoría 3 -->
+          <div class="catalog-card">
+            <div class="card-icon-wrapper">
+              <span class="card-emoji">🔩</span>
+            </div>
+            <h3 class="card-title">Hierros, Acero &amp; Mallas</h3>
+            <p class="card-text">Barras de acero conformadas ADN 420 soldables para estructuras de hormigón armado, mallas electrosoldadas estándar y especiales, perfiles estructurales UPN/IPN.</p>
+            <ul class="card-list">
+              <li>Hierro del ø6, ø8, ø10, ø12, ø16, ø20 y ø25</li>
+              <li>Mallas cima 15x15 (ø4.2, ø6 y ø8)</li>
+              <li>Alambre recocido, estribos y clavos de obra</li>
+            </ul>
+            <div class="card-footer">
+              <span class="card-tag">Certificación IRAM</span>
+            </div>
+          </div>
+
+          <!-- Categoría 4 -->
+          <div class="catalog-card">
+            <div class="card-icon-wrapper">
+              <span class="card-emoji">🧪</span>
+            </div>
+            <h3 class="card-title">Cementos, Cales &amp; Aditivos</h3>
+            <p class="card-text">Distribuidor oficial de las principales marcas. Cemento Portland normal, cemento de albañilería (plasticor), cal aérea viva e hidratada, y aditivos de tecnología química.</p>
+            <ul class="card-list">
+              <li>Cemento en bolsas de 50 kg (Loma Negra / Holcim)</li>
+              <li>Cal común y milagro hidratada</li>
+              <li>Hidrófugos, acelerantes de fragüe y selladores</li>
+            </ul>
+            <div class="card-footer">
+              <span class="card-tag">Descuento por equipo completo</span>
+            </div>
+          </div>
+
+          <!-- Categoría 5 -->
+          <div class="catalog-card">
+            <div class="card-icon-wrapper">
+              <span class="card-emoji">🏠</span>
+            </div>
+            <h3 class="card-title">Techos, Chapas &amp; Aislantes</h3>
+            <p class="card-text">Soluciones completas para techos y cubiertas industriales y residenciales: chapas galvanizadas, cincalum y prepintadas color, tirantes de pino y eucalipto seleccionado.</p>
+            <ul class="card-list">
+              <li>Chapas acanaladas y trapezoidales a medida</li>
+              <li>Membranas asfálticas con aluminio de 4mm</li>
+              <li>Aislantes termoacústicos (lana de vidrio, espuma)</li>
+            </ul>
+            <div class="card-footer">
+              <span class="card-tag">Cortes a medida en chapa</span>
+            </div>
+          </div>
+
+          <!-- Categoría 6 -->
+          <div class="catalog-card">
+            <div class="card-icon-wrapper">
+              <span class="card-emoji">🛠️</span>
+            </div>
+            <h3 class="card-title">Construcción en Seco &amp; Terminación</h3>
+            <p class="card-text">Placas de yeso estándar, resistentes a la humedad y resistentes al fuego. Perfilería de chapa galvanizada liviana y estructural para Steel Framing, masillas y cintas.</p>
+            <ul class="card-list">
+              <li>Placas de yeso 12.5mm y 9.5mm (Knauf / Durlock)</li>
+              <li>Montantes, soleras, omegas y tornillos autoperforantes</li>
+              <li>Pegamentos impermeables para porcelanato y cerámicas</li>
+            </ul>
+            <div class="card-footer">
+              <span class="card-tag">Stock permanente</span>
+            </div>
+          </div>
         </div>
 
-        <p class="paragraph">
-          El verdadero refinamiento no se nota; se respira. Cuando un sitio web está diseñado con un propósito de pura lectura, la tipografía no grita: susurra. Las proporciones de la caja tipográfica, el contraste atenuado que huye del blanco cegador y del negro absoluto, y la ausencia intencionada de un índice flotante forman un acuerdo tácito de confianza entre quien escribe y quien lee.
-        </p>
-
-        <!-- Elemento interactivo sutil de reflexión / nota al margen -->
-        <div class="margin-note-wrapper">
-          <blockquote class="marginalia">
-            <strong>Nota de imprenta:</strong> La serifa clásica utilizada en esta edición se basa en los tipos de prensa franceses del siglo XVIII, adaptada meticulosamente para pantallas de alta densidad de píxeles.
-          </blockquote>
+        <div class="catalog-cta-box">
+          <div class="cta-box-text">
+            <h4>¿Buscás un material específico que no ves en la lista?</h4>
+            <p>Contamos con más de 4.000 artículos disponibles en stock directo y bajo pedido a fábrica.</p>
+          </div>
+          <a href="#presupuesto" class="btn btn-primary">Consultar a un Asesor</a>
         </div>
+      </div>
+    </section>
 
-        <p class="paragraph">
-          Al remover los enlaces del encabezado, quitamos la tentación permanente de juzgar el final antes de haber comprendido el principio. El lector ya no es un usuario apresurado que audita títulos en busca de palabras clave para escanear en diagonal. Vuelve a ser, sencillamente, alguien que lee.
+    <!-- SECCIÓN 3: CALCULADORA RÁPIDA DE MATERIALES DE OBRA (Interactiva) -->
+    <section class="section section-dark" id="calculadora">
+      <div class="container">
+        <div class="section-badge badge-orange">Herramienta Gratuita</div>
+        <h2 class="section-title text-white">Calculadora Rápida de Materiales para tu Obra</h2>
+        <p class="section-description text-gray">
+          Estimá al instante los insumos principales que necesitás según los metros cuadrados de tu proyecto y enviá el cómputo directo a cotización por WhatsApp.
         </p>
 
-        <p class="paragraph">
-          Ese retorno a la lectura pausada es quizás el acto más revolucionario que nos queda en una red construida para la dispersión.
-        </p>
-      </section>
+        <div class="calc-wrapper">
+          <!-- Selector de tipo de cálculo -->
+          <div class="calc-tabs">
+            <button class="calc-tab active" data-tab="ladrillos">Paredes / Ladrillos</button>
+            <button class="calc-tab" data-tab="contrapiso">Contrapiso / Mezcla</button>
+            <button class="calc-tab" data-tab="hormigon">Losa de Hormigón</button>
+          </div>
 
-      <!-- SECCIÓN 5: EPÍLOGO / CONCLUSIÓN & SUSCRIPCIÓN EDITORIAL -->
-      <section class="chapter epilogue" id="epilogo">
-        <div class="chapter-header">
-          <span class="chapter-number">Epílogo</span>
-          <h2 class="chapter-title">Una correspondencia sin estridencias</h2>
-        </div>
-
-        <p class="paragraph">
-          Si has llegado hasta este punto sin prisas, compartes con nosotros la convicción de que los mejores frutos del intelecto humano maduran en la calma. No publicamos a diario. No perseguimos la última tendencia efímera ni acumulamos visitas vacías.
-        </p>
-
-        <p class="paragraph">
-          Una vez al mes, redactamos una carta extensa dedicada a reflexionar sobre estética, tecnología y filosofía del trabajo concentrado. La enviamos directamente a tu correo electrónico, en texto limpio, sin imágenes de carga pesada ni rastreadores publicitarios.
-        </p>
-
-        <!-- Formulario sobrio de correspondencia -->
-        <div class="subscription-card">
-          <div class="subscription-content">
-            <span class="sub-label">Boletín Mensual</span>
-            <h3 class="sub-title">Recibir los próximos ensayos</h3>
-            <p class="sub-text">
-              Una entrega mensual. Máximo silencio. Te puedes desuscribir con un solo clic en cualquier momento.
-            </p>
-            
-            <form class="sub-form" id="newsletter-form" onsubmit="event.preventDefault(); window.handleSubscribe(this);">
-              <div class="input-group">
-                <input 
-                  type="email" 
-                  name="email" 
-                  id="email-input" 
-                  placeholder="tu.correo@ejemplo.com" 
-                  required 
-                  autocomplete="email"
-                  aria-label="Correo electrónico"
-                >
-                <button type="submit" class="sub-submit-btn">
-                  <span>Suscribirme</span>
-                  <svg class="icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                    <polyline points="12 5 19 12 12 19"></polyline>
-                  </svg>
-                </button>
+          <!-- Contenido Tab 1: Ladrillos -->
+          <div class="calc-content active" id="tab-ladrillos">
+            <div class="calc-grid">
+              <div class="calc-inputs">
+                <div class="form-group">
+                  <label for="ladrillo-tipo">Tipo de ladrillo:</label>
+                  <select id="ladrillo-tipo" class="form-control">
+                    <option value="hueco12" data-per-m2="16">Ladrillo Hueco 12x18x33 (Tabique estándar)</option>
+                    <option value="hueco18" data-per-m2="16">Ladrillo Hueco 18x18x33 (Pared exterior)</option>
+                    <option value="hueco8" data-per-m2="16">Ladrillo Hueco 8x18x33 (Pared divisoria fina)</option>
+                    <option value="comun" data-per-m2="60">Ladrillo Común Macizo (Muro tradicional)</option>
+                    <option value="bloque" data-per-m2="12.5">Bloque de Hormigón 20x20x40</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="ladrillo-m2">Superficie de pared a levantar (m²):</label>
+                  <input type="number" id="ladrillo-m2" class="form-control" value="30" min="1" max="10000">
+                  <small class="form-hint">Largo de pared × Altura (descontando puertas y ventanas)</small>
+                </div>
+                <button type="button" class="btn btn-primary" id="btn-calc-ladrillo">Calcular Materiales</button>
               </div>
-              <p class="form-feedback" id="form-feedback" aria-live="polite"></p>
-            </form>
+
+              <div class="calc-results" id="results-ladrillo">
+                <h4 class="results-title">Cómputo estimado de insumos:</h4>
+                <div class="result-item">
+                  <span class="result-label">Ladrillos necesarios:</span>
+                  <span class="result-value" id="res-ladrillos-unidades">480 u.</span>
+                </div>
+                <div class="result-item">
+                  <span class="result-label">Cemento Portland estimado:</span>
+                  <span class="result-value" id="res-ladrillos-cemento">3 bolsas (50kg)</span>
+                </div>
+                <div class="result-item">
+                  <span class="result-label">Cal hidratada estimada:</span>
+                  <span class="result-value" id="res-ladrillos-cal">6 bolsas (25kg)</span>
+                </div>
+                <div class="result-item">
+                  <span class="result-label">Arena de río estimada:</span>
+                  <span class="result-value" id="res-ladrillos-arena">1.2 m³</span>
+                </div>
+                <div class="result-note">* Incluye 10% de desperdicio técnico habitual.</div>
+
+                <a href="#" class="btn btn-whatsapp btn-full" id="btn-send-whatsapp-calc">
+                  <span>Pedir Cotización de este Cómputo por WhatsApp</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contenido Tab 2: Contrapiso -->
+          <div class="calc-content" id="tab-contrapiso">
+            <div class="calc-grid">
+              <div class="calc-inputs">
+                <div class="form-group">
+                  <label for="contrapiso-m2">Superficie del contrapiso (m²):</label>
+                  <input type="number" id="contrapiso-m2" class="form-control" value="25" min="1" max="10000">
+                </div>
+                <div class="form-group">
+                  <label for="contrapiso-espesor">Espesor promedio (cm):</label>
+                  <input type="number" id="contrapiso-espesor" class="form-control" value="10" min="5" max="30">
+                </div>
+                <button type="button" class="btn btn-primary" id="btn-calc-contrapiso">Calcular Insumos</button>
+              </div>
+
+              <div class="calc-results" id="results-contrapiso">
+                <h4 class="results-title">Cómputo de contrapiso:</h4>
+                <div class="result-item">
+                  <span class="result-label">Volumen total de mezcla:</span>
+                  <span class="result-value" id="res-contra-vol">2.5 m³</span>
+                </div>
+                <div class="result-item">
+                  <span class="result-label">Cemento de albañilería / cal:</span>
+                  <span class="result-value" id="res-contra-cal">8 bolsas</span>
+                </div>
+                <div class="result-item">
+                  <span class="result-label">Arena gruesa limpia:</span>
+                  <span class="result-value" id="res-contra-arena">1.5 m³</span>
+                </div>
+                <div class="result-item">
+                  <span class="result-label">Cascote picado / piedra:</span>
+                  <span class="result-value" id="res-contra-cascote">2.2 m³</span>
+                </div>
+                <div class="result-note">* Proporción 1:3:5 estándar para contrapisos interiores y exteriores.</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contenido Tab 3: Hormigón -->
+          <div class="calc-content" id="tab-hormigon">
+            <div class="calc-grid">
+              <div class="calc-inputs">
+                <div class="form-group">
+                  <label for="hormigon-m3">Metros cúbicos de hormigón a elaborar (m³):</label>
+                  <input type="number" id="hormigon-m3" class="form-control" value="4" min="0.5" step="0.5">
+                  <small class="form-hint">Largo × Ancho × Espesor de losa, zapatas o columnas</small>
+                </div>
+                <button type="button" class="btn btn-primary" id="btn-calc-hormigon">Calcular Cemento, Arena y Piedra</button>
+              </div>
+
+              <div class="calc-results" id="results-hormigon">
+                <h4 class="results-title">Cómputo para hormigón H21 (1:2:3):</h4>
+                <div class="result-item">
+                  <span class="result-label">Cemento Portland Normal (50kg):</span>
+                  <span class="result-value" id="res-horm-cemento">28 bolsas</span>
+                </div>
+                <div class="result-item">
+                  <span class="result-label">Arena fina/mediana de río:</span>
+                  <span class="result-value" id="res-horm-arena">2.7 m³</span>
+                </div>
+                <div class="result-item">
+                  <span class="result-label">Piedra partida granítica 6/20:</span>
+                  <span class="result-value" id="res-horm-piedra">3.5 m³</span>
+                </div>
+                <div class="result-note">* Estimación basada en dosificación para 350 kg/m³ de cemento.</div>
+              </div>
+            </div>
           </div>
         </div>
+      </div>
+    </section>
 
-        <div class="author-signature">
-          <div class="signature-line"></div>
-          <p class="signature-text">
-            Escrito en una tarde templada de noviembre. <br>
-            Gracias por dedicar tu atención a este texto.
-          </p>
+    <!-- SECCIÓN 4: SERVICIOS Y LOGÍSTICA PARA OBRAS Y CONSTRUCTORAS -->
+    <section class="section" id="servicios">
+      <div class="container">
+        <div class="section-badge">Nuestra Logística</div>
+        <h2 class="section-title">El Respaldo que tu Obra Necesita</h2>
+        <p class="section-description">
+          Sabemos que en la construcción un día de retraso cuesta caro. Diseñamos nuestros servicios para que no pierdas horas de trabajo en el obrador.
+        </p>
+
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-icon">🚛</div>
+            <h3 class="service-title">Flota de Camiones Hidrogrúa</h3>
+            <p class="service-text">
+              Descargamos tus pallets directamente en la losa, segundo piso o dentro del predio, evitando sobrecostos de mano de obra y roturas de material.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">⏱️</div>
+            <h3 class="service-title">Entregas Programadas en 24h</h3>
+            <p class="service-text">
+              Coordinamos franjas horarias exactas con tu jefe de obra o capataz para que el material ingrese justo cuando tu cuadrilla está lista para aplicarlo.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">🔒</div>
+            <h3 class="service-title">Acopio Bonificado sin Recargo</h3>
+            <p class="service-text">
+              Comprás hoy la totalidad de tus materiales, congelás el valor en pesos frente a la inflación y los vas retirando a medida que avanza tu cronograma de obra (hasta 90 días).
+            </p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">📐</div>
+            <h3 class="service-title">Cómputo Métrico de Planos</h3>
+            <p class="service-text">
+              Envianos el plano en PDF o DWG. Nuestro departamento técnico realiza el despiece y cómputo de hierros, ladrillos y mezclas sin costo adicional.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">💼</div>
+            <h3 class="service-title">Cuenta Corriente a Constructoras</h3>
+            <p class="service-text">
+              Facilidades de pago, facturación electrónica unificada A y B, y condiciones de crédito especiales para desarrolladores y contratistas registrados.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">🤝</div>
+            <h3 class="service-title">Atención Personalizada en Obra</h3>
+            <p class="service-text">
+              Asignamos un asesor comercial exclusivo para tu proyecto con canal directo por WhatsApp y visitas técnicas al obrador cuando sea necesario.
+            </p>
+          </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-    </article>
+    <!-- SECCIÓN 5: PROMOS POR VOLUMEN Y EQUIPOS COMPLETOS -->
+    <section class="section section-highlight" id="promociones">
+      <div class="container">
+        <div class="highlight-inner">
+          <div class="highlight-info">
+            <span class="highlight-badge">Precios Mayoristas</span>
+            <h2 class="highlight-title">Comprá por Pallet Cerrado o Equipo Completo y Ahorrá hasta un 18%</h2>
+            <p class="highlight-text">
+              Si estás comenzando la etapa de cimientos, mampostería o techos, consultá nuestras listas especiales con flete bonificado según el volumen de compra.
+            </p>
+            <div class="highlight-features">
+              <div class="feat-pill">✔ Pallet Cemento x 40 bolsas</div>
+              <div class="feat-pill">✔ Pallet Ladrillos Huecos x 144 / 192 u.</div>
+              <div class="feat-pill">✔ Paquete cerrado de Hierro ADN 420 (2 Tn)</div>
+              <div class="feat-pill">✔ Bolsón de Arena por 5 o más unidades</div>
+            </div>
+          </div>
+          <div class="highlight-cta">
+            <div class="quote-instant-card">
+              <h3>¿Tenés una lista de materiales?</h3>
+              <p>Enviala ahora mismo por WhatsApp o adjuntala en el formulario y te respondemos en menos de 2 horas hábiles.</p>
+              <a href="https://wa.me/5491100000000?text=Hola,%20tengo%20una%20lista%20de%20materiales%20para%20cotizar" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-large btn-full">
+                <span>Enviar Lista por WhatsApp</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 6: NÚMEROS Y CONFIANZA -->
+    <section class="section section-stats" id="nosotros">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-item">
+            <span class="stat-number">+18</span>
+            <span class="stat-label">Años abasteciendo obras</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">+15.000</span>
+            <span class="stat-label">Entregas realizadas con éxito</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">8</span>
+            <span class="stat-label">Camiones propios con hidrogrúa</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">6.500 m²</span>
+            <span class="stat-label">De depósito con stock permanente</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 7: FORMULARIO DE COTIZACIÓN ONLINE -->
+    <section class="section" id="presupuesto">
+      <div class="container">
+        <div class="presupuesto-wrapper">
+          <div class="presupuesto-header">
+            <div class="section-badge">Presupuesto sin Cargo</div>
+            <h2 class="section-title">Solicitá tu Cotización de Materiales</h2>
+            <p class="section-description">
+              Completá los datos de tu obra y detallá los insumos. Te enviaremos el presupuesto formal con valores de materiales, costo de flete y plazos de entrega.
+            </p>
+          </div>
+
+          <form class="presupuesto-form" id="form-cotizacion" onsubmit="event.preventDefault(); window.handleQuoteSubmit(this);">
+            <div class="form-row">
+              <div class="form-group col-half">
+                <label for="quote-name">Nombre y Apellido / Razón Social *</label>
+                <input type="text" id="quote-name" name="name" class="form-control" placeholder="Ej: Juan Pérez / Constructora Norte" required>
+              </div>
+              <div class="form-group col-half">
+                <label for="quote-phone">Teléfono / WhatsApp de Contacto *</label>
+                <input type="tel" id="quote-phone" name="phone" class="form-control" placeholder="Ej: 11 3456-7890" required>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group col-half">
+                <label for="quote-email">Correo Electrónico</label>
+                <input type="email" id="quote-email" name="email" class="form-control" placeholder="tu.correo@ejemplo.com">
+              </div>
+              <div class="form-group col-half">
+                <label for="quote-location">Localidad / Zona de la Obra *</label>
+                <input type="text" id="quote-location" name="location" class="form-control" placeholder="Ej: Pilar, San Isidro, Canning, CABA" required>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group col-half">
+                <label for="quote-type">Tipo de Cliente / Obra</label>
+                <select id="quote-type" name="type" class="form-control">
+                  <option value="particular">Particular / Autoconstrucción / Reforma</option>
+                  <option value="constructora">Empresa Constructora / Desarrollador</option>
+                  <option value="profesional">Arquitecto / Ingeniero / Maestro Mayor de Obra</option>
+                  <option value="gremio">Contratista / Albañil / Gremio</option>
+                </select>
+              </div>
+              <div class="form-group col-half">
+                <label for="quote-delivery">Modalidad de Entrega</label>
+                <select id="quote-delivery" name="delivery" class="form-control">
+                  <option value="obra-hidrogrua">Envío a obra con descarga hidrogrúa</option>
+                  <option value="obra-estandar">Envío a obra con camión común</option>
+                  <option value="retiro-deposito">Retiro directo por nuestro depósito</option>
+                  <option value="acopio">Compra para acopio (entrega futura)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="quote-materials">Detalle de Materiales Necesarios *</label>
+              <textarea id="quote-materials" name="materials" rows="5" class="form-control" placeholder="Ejemplo:
+- 120 bolsas de Cemento Loma Negra
+- 8 bolsones de arena fina
+- 500 ladrillos huecos 12x18x33
+- 40 barras hierro ø10 y 30 barras ø8" required></textarea>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary btn-large" id="btn-submit-quote">
+                <span>Enviar Solicitud de Presupuesto</span>
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+              </button>
+            </div>
+
+            <div id="quote-feedback" class="form-feedback" aria-live="polite"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 8: DEPÓSITO, UBICACIÓN Y HORARIOS -->
+    <section class="section section-dark" id="contacto">
+      <div class="container">
+        <div class="contact-grid">
+          <div class="contact-info">
+            <div class="section-badge badge-orange">Depósito Central</div>
+            <h2 class="section-title text-white">Ventas y Centro de Distribución</h2>
+            <p class="text-gray">
+              Podés acercarte personalmente a nuestras oficinas comerciales y patio de materiales, o comunicarte con nuestro equipo de logística.
+            </p>
+
+            <div class="info-items">
+              <div class="info-item">
+                <span class="info-icon">📍</span>
+                <div>
+                  <strong class="text-white">Dirección de Ventas &amp; Depósito:</strong>
+                  <p class="text-gray">Av. Industrial 4580 (Acceso Rápido y Salida a Autopista)</p>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <span class="info-icon">🕒</span>
+                <div>
+                  <strong class="text-white">Horarios de Atención y Despacho:</strong>
+                  <p class="text-gray">Lunes a Viernes: 07:30 a 18:00 hs (corrido)<br>Sábados: 08:00 a 13:00 hs</p>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <span class="info-icon">📞</span>
+                <div>
+                  <strong class="text-white">Teléfonos y Ventas Corporativas:</strong>
+                  <p class="text-gray">Línea directa: (011) 4890-5500 · WhatsApp: +54 9 11 0000-0000</p>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <span class="info-icon">✉️</span>
+                <div>
+                  <strong class="text-white">Correo Electrónico de Presupuestos:</strong>
+                  <p class="text-gray">ventas@verticemateriales.com.ar</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-card-box">
+            <h3 class="box-title">Atención Express para Obras en Curso</h3>
+            <p class="box-text">¿Te quedaste sin cemento, arena o hierros en el medio del colado de hormigón?</p>
+            <div class="urgent-banner">
+              <span class="urgent-dot"></span>
+              <strong>Despacho de Urgencia en el Día</strong>
+            </div>
+            <p class="box-text-sm">Tenemos unidades livianas para entregas express en el mismo día a obras que estén dentro del radio de cobertura.</p>
+            <a href="https://wa.me/5491100000000?text=Urgente:%20necesito%20despacho%20de%20materiales%20en%20el%20d%C3%ADa" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-large btn-full">
+              <span>Llamar por Urgencia de Obra</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
 
-  <!-- PIE DE PÁGINA EDITORIAL (Sin enlaces de sección) -->
-  <footer class="reading-footer" role="contentinfo">
-    <div class="footer-inner">
-      <div class="colophon">
-        <h4>Colofón tipográfico</h4>
-        <p>
-          Compuesto en <em>Newsreader</em> e <em>Plus Jakarta Sans</em>. Diseñado para favorecer la lectura sostenida. Libre de algoritmos de retención y analítica invasiva.
-        </p>
+  <!-- PIE DE PÁGINA (Sin menú de navegación) -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <div class="footer-logo">VÉRTICE</div>
+        <p>Distribuidora Mayorista y Minorista de Materiales para la Construcción. Despachos a obra, logística pesada y acopio garantizado.</p>
       </div>
 
-      <div class="footer-credits">
-        <p>© 2026 Atelier &amp; Letras. Todos los derechos reservados.</p>
-        <p class="footer-quiet">Una landing pensada para ser leída, no consumida.</p>
+      <div class="footer-legal">
+        <p>© 2026 VÉRTICE Materiales de Construcción. Todos los derechos reservados.</p>
+        <p class="footer-subtext">Precios y promociones sujetos a disponibilidad de stock y cambios sin previo aviso. Factura A y B.</p>
       </div>
     </div>
   </footer>
+
+  <!-- BOTÓN FLOTANTE DIRECTO DE WHATSAPP -->
+  <a href="https://wa.me/5491100000000?text=Hola,%20quisiera%20consultar%20por%20materiales%20de%20construcci%C3%B3n" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 18.17c-1.49 0-2.95-.4-4.22-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.17 8.17 0 0 1-1.26-4.4c0-4.51 3.67-8.18 8.18-8.18 2.19 0 4.24.85 5.79 2.4 1.55 1.55 2.4 3.61 2.4 5.79-.01 4.51-3.68 8.18-8.18 8.18z"/>
+    </svg>
+    <span class="whatsapp-tooltip">¡Cotizá tu obra por WhatsApp!</span>
+  </a>
 
   <script src="script.js"></script>
 </body>
