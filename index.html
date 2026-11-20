@@ -506,77 +506,92 @@
     <!-- SECCIÓN 7: FORMULARIO DE COTIZACIÓN ONLINE -->
     <section class="section" id="presupuesto">
       <div class="container">
-        <div class="presupuesto-wrapper">
-          <div class="presupuesto-header">
-            <div class="section-badge">Presupuesto sin Cargo</div>
-            <h2 class="section-title">Solicitá tu Cotización de Materiales</h2>
-            <p class="section-description">
-              Completá los datos de tu obra y detallá los insumos. Te enviaremos el presupuesto formal con valores de materiales, costo de flete y plazos de entrega.
-            </p>
+        <div class="presupuesto-grid">
+          <!-- LADO IZQUIERDO: Imagen dinámica de materiales de obra -->
+          <div class="presupuesto-media-col">
+            <div class="presupuesto-image-card">
+              <img src="assets/cotizacion-materiales.jpg" alt="Muestrario de materiales para la construcción" class="presupuesto-featured-img" loading="lazy">
+              <div class="presupuesto-image-overlay">
+                <span class="media-badge">Cómputo Inmediato</span>
+                <h3 class="media-title">Todo para tu lista de obra</h3>
+                <p class="media-desc">Cotizamos áridos, mampostería, hierros, cementos, maderas y perfiles en un solo presupuesto unificado.</p>
+              </div>
+            </div>
           </div>
 
-          <form class="presupuesto-form" id="form-cotizacion" onsubmit="event.preventDefault(); window.handleQuoteSubmit(this);">
-            <div class="form-row">
-              <div class="form-group col-half">
-                <label for="quote-name">Nombre y Apellido / Razón Social *</label>
-                <input type="text" id="quote-name" name="name" class="form-control" placeholder="Ej: Juan Pérez / Constructora Norte" required>
-              </div>
-              <div class="form-group col-half">
-                <label for="quote-phone">Teléfono / WhatsApp de Contacto *</label>
-                <input type="tel" id="quote-phone" name="phone" class="form-control" placeholder="Ej: 11 3456-7890" required>
-              </div>
+          <!-- LADO DERECHO: Título y Formulario de cotización -->
+          <div class="presupuesto-form-col">
+            <div class="presupuesto-header">
+              <div class="section-badge">Presupuesto sin Cargo</div>
+              <h2 class="section-title">Solicitá tu Cotización de Materiales</h2>
+              <p class="section-description">
+                Completá los datos de tu obra y detallá los insumos. Te enviaremos el presupuesto formal con valores de materiales, costo de flete y plazos de entrega.
+              </p>
             </div>
 
-            <div class="form-row">
-              <div class="form-group col-half">
-                <label for="quote-email">Correo Electrónico</label>
-                <input type="email" id="quote-email" name="email" class="form-control" placeholder="tu.correo@ejemplo.com">
+            <form class="presupuesto-form" id="form-cotizacion" onsubmit="event.preventDefault(); window.handleQuoteSubmit(this);">
+              <div class="form-row">
+                <div class="form-group col-half">
+                  <label for="quote-name">Nombre y Apellido / Razón Social *</label>
+                  <input type="text" id="quote-name" name="name" class="form-control" placeholder="Ej: Juan Pérez / Constructora Norte" required>
+                </div>
+                <div class="form-group col-half">
+                  <label for="quote-phone">Teléfono / WhatsApp de Contacto *</label>
+                  <input type="tel" id="quote-phone" name="phone" class="form-control" placeholder="Ej: 11 3456-7890" required>
+                </div>
               </div>
-              <div class="form-group col-half">
-                <label for="quote-location">Localidad / Zona de la Obra *</label>
-                <input type="text" id="quote-location" name="location" class="form-control" placeholder="Ej: Pilar, San Isidro, Canning, CABA" required>
-              </div>
-            </div>
 
-            <div class="form-row">
-              <div class="form-group col-half">
-                <label for="quote-type">Tipo de Cliente / Obra</label>
-                <select id="quote-type" name="type" class="form-control">
-                  <option value="particular">Particular / Autoconstrucción / Reforma</option>
-                  <option value="constructora">Empresa Constructora / Desarrollador</option>
-                  <option value="profesional">Arquitecto / Ingeniero / Maestro Mayor de Obra</option>
-                  <option value="gremio">Contratista / Albañil / Gremio</option>
-                </select>
+              <div class="form-row">
+                <div class="form-group col-half">
+                  <label for="quote-email">Correo Electrónico</label>
+                  <input type="email" id="quote-email" name="email" class="form-control" placeholder="tu.correo@ejemplo.com">
+                </div>
+                <div class="form-group col-half">
+                  <label for="quote-location">Localidad / Zona de la Obra *</label>
+                  <input type="text" id="quote-location" name="location" class="form-control" placeholder="Ej: Pilar, San Isidro, Canning, CABA" required>
+                </div>
               </div>
-              <div class="form-group col-half">
-                <label for="quote-delivery">Modalidad de Entrega</label>
-                <select id="quote-delivery" name="delivery" class="form-control">
-                  <option value="obra-hidrogrua">Envío a obra con descarga hidrogrúa</option>
-                  <option value="obra-estandar">Envío a obra con camión común</option>
-                  <option value="retiro-deposito">Retiro directo por nuestro depósito</option>
-                  <option value="acopio">Compra para acopio (entrega futura)</option>
-                </select>
-              </div>
-            </div>
 
-            <div class="form-group">
-              <label for="quote-materials">Detalle de Materiales Necesarios *</label>
-              <textarea id="quote-materials" name="materials" rows="5" class="form-control" placeholder="Ejemplo:
+              <div class="form-row">
+                <div class="form-group col-half">
+                  <label for="quote-type">Tipo de Cliente / Obra</label>
+                  <select id="quote-type" name="type" class="form-control">
+                    <option value="particular">Particular / Autoconstrucción / Reforma</option>
+                    <option value="constructora">Empresa Constructora / Desarrollador</option>
+                    <option value="profesional">Arquitecto / Ingeniero / Maestro Mayor de Obra</option>
+                    <option value="gremio">Contratista / Albañil / Gremio</option>
+                  </select>
+                </div>
+                <div class="form-group col-half">
+                  <label for="quote-delivery">Modalidad de Entrega</label>
+                  <select id="quote-delivery" name="delivery" class="form-control">
+                    <option value="obra-hidrogrua">Envío a obra con descarga hidrogrúa</option>
+                    <option value="obra-estandar">Envío a obra con camión común</option>
+                    <option value="retiro-deposito">Retiro directo por nuestro depósito</option>
+                    <option value="acopio">Compra para acopio (entrega futura)</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="quote-materials">Detalle de Materiales Necesarios *</label>
+                <textarea id="quote-materials" name="materials" rows="5" class="form-control" placeholder="Ejemplo:
 - 120 bolsas de Cemento Loma Negra
 - 8 bolsones de arena fina
 - 500 ladrillos huecos 12x18x33
 - 40 barras hierro ø10 y 30 barras ø8" required></textarea>
-            </div>
+              </div>
 
-            <div class="form-actions">
-              <button type="submit" class="btn btn-primary btn-large" id="btn-submit-quote">
-                <span>Enviar Solicitud de Presupuesto</span>
-                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
-              </button>
-            </div>
+              <div class="form-actions">
+                <button type="submit" class="btn btn-primary btn-large" id="btn-submit-quote">
+                  <span>Enviar Solicitud de Presupuesto</span>
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                </button>
+              </div>
 
-            <div id="quote-feedback" class="form-feedback" aria-live="polite"></div>
-          </form>
+              <div id="quote-feedback" class="form-feedback" aria-live="polite"></div>
+            </form>
+          </div>
         </div>
       </div>
     </section>

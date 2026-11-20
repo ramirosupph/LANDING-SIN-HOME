@@ -879,21 +879,97 @@ body {
 }
 
 /* ==========================================================================
-   SECCIÓN 7: FORMULARIO DE PRESUPUESTO
+   SECCIÓN 7: FORMULARIO DE PRESUPUESTO & IMAGEN DINÁMICA
    ========================================================================== */
-.presupuesto-wrapper {
-  max-width: 860px;
-  margin: 0 auto;
+.presupuesto-grid {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 3.5rem;
+  align-items: stretch;
+}
+
+.presupuesto-media-col {
+  display: flex;
+}
+
+.presupuesto-image-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 560px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  border: 1px solid var(--color-gray-border);
+  background-color: var(--color-gray-light);
+}
+
+.presupuesto-featured-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.presupuesto-image-card:hover .presupuesto-featured-img {
+  transform: scale(1.04);
+}
+
+.presupuesto-image-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2.25rem 2rem;
+  background: linear-gradient(180deg, transparent 0%, rgba(16, 20, 29, 0.82) 30%, rgba(16, 20, 29, 0.98) 100%);
+  color: #FFFFFF;
+}
+
+.media-badge {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #FFA066;
+  background-color: rgba(255, 94, 20, 0.2);
+  padding: 0.3rem 0.65rem;
+  border-radius: 4px;
+  margin-bottom: 0.65rem;
+  border: 1px solid rgba(255, 94, 20, 0.35);
+}
+
+.media-title {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 0.45rem;
+  line-height: 1.2;
+}
+
+.media-desc {
+  font-size: 0.875rem;
+  color: var(--color-text-light);
+  line-height: 1.5;
+}
+
+.presupuesto-form-col {
+  display: flex;
+  flex-direction: column;
 }
 
 .presupuesto-header {
-  text-align: center;
-  margin-bottom: 3rem;
+  text-align: left;
+  margin-bottom: 1.75rem;
 }
 
 .presupuesto-header .section-description {
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 0;
 }
 
 .presupuesto-form {
@@ -1141,9 +1217,15 @@ body {
 @media (max-width: 900px) {
   .calc-grid,
   .highlight-inner,
-  .contact-grid {
+  .contact-grid,
+  .presupuesto-grid {
     grid-template-columns: 1fr;
     gap: 2rem;
+  }
+
+  .presupuesto-image-card {
+    min-height: 320px;
+    max-height: 420px;
   }
 
   .col-half {
