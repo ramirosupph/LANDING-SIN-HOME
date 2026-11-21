@@ -1,32 +1,33 @@
 /**
- * PROMPI - VETERINARIA, ALIMENTOS BALANCEADOS & PET SHOP
- * Lógica interactiva: Filtros de catálogo, calculadora de nutrición, recomendador de matapulgas y formulario.
+ * PROMPI - PET SHOP, VETERINARIA & PELUQUERÍA CANINA
+ * Lógica interactiva inspirada en Centro Pet:
+ * Filtros de catálogo dinámicos, calculadora de ración, buscador de matapulgas y pedidos directos a WhatsApp.
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-  initProductFilters();
+  initProductCatalog();
   initPetCalculators();
   initOrderForm();
   initSmoothScroll();
 });
 
 /* ==========================================================================
-   1. FILTRADO DINÁMICO DE PRODUCTOS (INSPIRADO EN PUPPIS)
+   1. FILTRADO DINÁMICO DE PRODUCTOS DEL CATÁLOGO
    ========================================================================== */
-function initProductFilters() {
-  const filterBtns = document.querySelectorAll('.filter-btn');
-  const productCards = document.querySelectorAll('.product-card');
+function initProductCatalog() {
+  const filterChips = document.querySelectorAll('.filter-chip');
+  const productCards = document.querySelectorAll('.pet-item-card');
 
-  filterBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      filterBtns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
+  filterChips.forEach(chip => {
+    chip.addEventListener('click', () => {
+      filterChips.forEach(c => c.classList.remove('active'));
+      chip.classList.add('active');
 
-      const filterValue = btn.getAttribute('data-filter');
+      const filterCategory = chip.getAttribute('data-filter');
 
       productCards.forEach(card => {
         const categories = card.getAttribute('data-category') || '';
-        if (filterValue === 'all' || categories.includes(filterValue)) {
+        if (filterCategory === 'all' || categories.includes(filterCategory)) {
           card.style.display = 'flex';
         } else {
           card.style.display = 'none';
@@ -36,37 +37,37 @@ function initProductFilters() {
   });
 }
 
-// Función global para filtrar desde las tarjetas de categoría
+// Función global accesible desde las tarjetas de categorías principales
 window.filterCatalog = function(category) {
   const catalogEl = document.getElementById('catalogo');
   if (catalogEl) {
     catalogEl.scrollIntoView({ behavior: 'smooth' });
   }
 
-  const targetBtn = document.querySelector(`.filter-btn[data-filter="${category}"]`);
-  if (targetBtn) {
-    targetBtn.click();
+  const targetChip = document.querySelector(`.filter-chip[data-filter="${category}"]`);
+  if (targetChip) {
+    targetChip.click();
   }
 };
 
 /* ==========================================================================
-   2. CALCULADORA INTERACTIVA PROMPI (RACIÓN DIARIA & MATAPULGAS)
+   2. HERRAMIENTAS INTERACTIVAS: CALCULADORA NUTRICIONAL & MATAPULGAS
    ========================================================================== */
 function initPetCalculators() {
-  // Manejo de Tabs
-  const tabs = document.querySelectorAll('.calc-tab');
-  const contents = document.querySelectorAll('.calc-content');
+  // Manejo de pestañas
+  const tabs = document.querySelectorAll('.calc-pill-tab');
+  const panels = document.querySelectorAll('.pet-calc-panel');
 
   tabs.forEach(tab => {
     tab.addEventListener('click', () => {
       const targetId = `tab-${tab.getAttribute('data-tab')}`;
 
       tabs.forEach(t => t.classList.remove('active'));
-      contents.forEach(c => c.classList.remove('active'));
+      panels.forEach(p => p.classList.remove('active'));
 
       tab.classList.add('active');
-      const targetEl = document.getElementById(targetId);
-      if (targetEl) targetEl.classList.add('active');
+      const targetPanel = document.getElementById(targetId);
+      if (targetPanel) targetPanel.classList.add('active');
     });
   });
 
@@ -87,20 +88,16 @@ function initPetCalculators() {
     let dailyGrams = 0;
 
     if (species === 'perro') {
-      // Cálculo aproximado para perros: ~15 a 20g por kg según actividad
       let factor = 16;
       if (activity === 'alta') factor = 20;
       if (activity === 'baja') factor = 13;
       if (activity === 'cachorro') factor = 25;
-
       dailyGrams = Math.round(weight * factor);
     } else {
-      // Gatos: ~12 a 15g por kg
       let factor = 13;
       if (activity === 'alta') factor = 16;
       if (activity === 'baja') factor = 10;
       if (activity === 'cachorro') factor = 20;
-
       dailyGrams = Math.round(weight * factor);
     }
 
@@ -116,7 +113,7 @@ function initPetCalculators() {
     if (resDuration) resDuration.textContent = `~${bagDuration} días`;
 
     if (btnWhatsAppFood) {
-      const msg = `Hola Prompi! Hice el cálculo en su web para mi ${species} de ${weight}kg (${activity}). Necesita unos ${dailyGrams}g por día. ¿Qué alimento balanceado me recomiendan y qué precio tiene la bolsa?`;
+      const msg = `Hola Prompi! Hice el cálculo en su web para mi ${species} de ${weight}kg (${activity}). Necesita unos ${dailyGrams}g por día. ¿Qué alimento balanceado premium me recomiendan y qué precio tiene la bolsa de 15kg?`;
       btnWhatsAppFood.href = `https://wa.me/5491148907700?text=${encodeURIComponent(msg)}`;
     }
   };
@@ -148,13 +145,13 @@ function initPetCalculators() {
 
     if (species === 'gato') {
       if (format === 'oral') {
-        prod = 'Bravecto Plus Spot-on o Credelio Gatos';
-        duration = '12 semanas (Bravecto) o 30 días';
+        prod = 'Bravecto Plus Felina Spot-on o Credelio Gatos';
+        duration = '12 semanas (Bravecto) o 30 días continuos';
         covers = 'Pulgas, garrapatas, ácaros del oído y parásitos internos';
       } else {
         prod = 'Pipeta Frontline Plus Felina / Revolution Plus';
-        duration = '30 días de cobertura tópica';
-        covers = 'Pulgas, huevos, larvas y garrapatas';
+        duration = '30 días de cobertura dérmica';
+        covers = 'Pulgas adultas, huevos, larvas y garrapatas';
       }
     } else {
       // Perro
@@ -170,12 +167,12 @@ function initPetCalculators() {
         } else {
           prod = 'Bravecto 40-56 kg / Nexgard Spectra Gigante';
         }
-        duration = '30 días a 12 semanas según laboratorio';
-        covers = 'Pulgas, garrapatas, ácaros de sarna y parásitos gastrointestinales';
+        duration = '30 días a 12 semanas (según presentación)';
+        covers = 'Pulgas, garrapatas, ácaros de sarna y parásitos intestinales';
       } else {
         prod = `Pipeta Frontline Plus o Advantix Canina (${weightRange})`;
-        duration = '30 días de protección sobre la piel';
-        covers = 'Pulgas adultas, larvas, garrapatas y repelente de mosquitos';
+        duration = '30 días de protección sobre el pelaje';
+        covers = 'Pulgas, larvas, garrapatas y repelente de mosquitos';
       }
     }
 
@@ -188,7 +185,7 @@ function initPetCalculators() {
     if (resCovers) resCovers.textContent = covers;
 
     if (btnWhatsAppFlea) {
-      const msg = `Hola Prompi! En su buscador vi el antipulgas recomendado: "${prod}" para mi ${species}. ¿Tienen stock y cuánto sale con envío?`;
+      const msg = `Hola Prompi! En su buscador vi el antipulgas sugerido: "${prod}" para mi ${species}. ¿Tienen stock disponible y cuánto sale el envío a domicilio?`;
       btnWhatsAppFlea.href = `https://wa.me/5491148907700?text=${encodeURIComponent(msg)}`;
     }
   };
@@ -202,7 +199,7 @@ function initPetCalculators() {
 }
 
 /* ==========================================================================
-   3. FORMULARIO DE PEDIDOS & TURNOS CON ENVÍO DIRECTO A WHATSAPP
+   3. FORMULARIO DE PEDIDOS Y TURNOS
    ========================================================================== */
 function initOrderForm() {
   const form = document.getElementById('order-form');
@@ -227,14 +224,14 @@ function initOrderForm() {
 
     if (feedback) {
       feedback.textContent = '¡Gracias! Redirigiendo a WhatsApp para confirmar tu pedido con un asesor de Prompi...';
-      feedback.className = 'form-feedback success';
+      feedback.className = 'form-feedback-pill success';
     }
 
-    const message = `🐾 *NUEVO PEDIDO PROMPI WEB* 🐾
+    const message = `🐾 *NUEVO PEDIDO PROMPI* 🐾
 *Cliente:* ${name}
 *Teléfono:* ${phone}
 *Mascota:* ${pet || 'No especificada'}
-*Motivo:* ${service}
+*Solicitud:* ${service}
 *Dirección:* ${address || 'A convenir'}
 *Detalle:*
 ${details}`;
@@ -243,7 +240,7 @@ ${details}`;
       const waUrl = `https://wa.me/5491148907700?text=${encodeURIComponent(message)}`;
       window.open(waUrl, '_blank');
       form.reset();
-    }, 900);
+    }, 850);
   });
 }
 

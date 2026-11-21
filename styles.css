@@ -1,52 +1,54 @@
 /* ==========================================================================
-   PROMPI - VETERINARIA, ALIMENTOS BALANCEADOS & PET SHOP
-   Hoja de Estilos Moderna con Tipografía 'Plus Jakarta Sans'
+   PROMPI - PET SHOP, VETERINARIA & PELUQUERÍA CANINA
+   Inspirado en Centro Pet (centropet.com.ar):
+   Tipografía: Poppins (Títulos) + Inter (Cuerpo)
+   Colores: Azul Marino Profundo (#032B61, #035791) + Naranja Cálido Pet (#FF621A) + Fondos (#FAF5EE, #EEF7FE, #FFFFFF)
    ========================================================================== */
 
 :root {
-  --font-main: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  
-  /* Paleta de Colores de Marca */
-  --color-primary: #FF6338;
-  --color-primary-hover: #EE5125;
-  --color-primary-soft: rgba(255, 99, 56, 0.12);
-  --color-primary-border: rgba(255, 99, 56, 0.25);
+  /* Tipografías de Centro Pet */
+  --font-heading: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 
-  --color-secondary: #4F46E5;
-  --color-secondary-soft: rgba(79, 70, 229, 0.1);
-  --color-accent-teal: #0EA5E9;
-  --color-accent-green: #10B981;
+  /* Paleta de Colores Centro Pet */
+  --color-navy: #032B61;
+  --color-navy-dark: #021E45;
+  --color-navy-mid: #035791;
+  --color-blue-brand: #5AA9E6;
+  --color-blue-mist: #EEF7FE;
+  --color-blue-subtle: #A9D9F7;
+
+  --color-orange: #FF621A;
+  --color-orange-hover: #E6510B;
+  --color-orange-soft: rgba(255, 98, 26, 0.12);
+
+  --color-warm-bone: #FAF5EE;
+  --color-surface-white: #FFFFFF;
+  --color-hairline: rgba(3, 43, 97, 0.09);
+  --color-border-card: #E5E9F0;
+
+  --color-ink-900: #131E2B;
+  --color-ink-body: #444E5B;
+  --color-ink-muted: #64748B;
+  --color-ink-light: #94A3B8;
 
   --color-whatsapp: #25D366;
   --color-whatsapp-hover: #1EBE5D;
 
-  --color-dark: #0F172A;
-  --color-dark-surface: #1E293B;
-  --color-dark-card: #182234;
-  --color-dark-border: rgba(255, 255, 255, 0.08);
+  --radius-xs: 8px;
+  --radius-sm: 14px;
+  --radius-md: 18px;
+  --radius-lg: 24px;
+  --radius-pill: 9999px;
 
-  --color-light-bg: #FAFAF9;
-  --color-gray-light: #F8FAFC;
-  --color-gray-border: #E2E8F0;
+  --shadow-subtle: 0 1px 3px rgba(3, 43, 97, 0.05);
+  --shadow-card: 0 2px 4px rgba(3, 43, 97, 0.04), 0 12px 24px -14px rgba(3, 43, 97, 0.18);
+  --shadow-lift: 0 4px 8px rgba(3, 43, 97, 0.05), 0 20px 36px -16px rgba(3, 43, 97, 0.25);
 
-  --color-text-main: #0F172A;
-  --color-text-muted: #64748B;
-  --color-text-light: #94A3B8;
-
-  --radius-sm: 8px;
-  --radius-md: 14px;
-  --radius-lg: 20px;
-  --radius-full: 9999px;
-
-  --shadow-sm: 0 2px 8px rgba(15, 23, 42, 0.06);
-  --shadow-md: 0 6px 20px rgba(15, 23, 42, 0.08);
-  --shadow-lg: 0 16px 36px rgba(15, 23, 42, 0.12);
-  --shadow-card: 0 8px 24px rgba(15, 23, 42, 0.07);
-
-  --transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition: all 0.22s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-/* Reset Universal */
+/* Reset y Base */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -59,9 +61,9 @@ html {
 }
 
 body {
-  font-family: var(--font-main);
-  background-color: #FFFFFF;
-  color: var(--color-text-main);
+  font-family: var(--font-body);
+  background-color: var(--color-surface-white);
+  color: var(--color-ink-body);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -86,107 +88,133 @@ a {
 }
 
 /* ==========================================================================
-   BARRA SUPERIOR: EXCLUSIVAMENTE LOGO PROMPI (SIN NINGÚN MENÚ)
+   BARRA DE ANUNCIO SUPERIOR (ESTILO CENTRO PET)
    ========================================================================== */
-.top-bar {
-  background-color: #FFFFFF;
-  border-bottom: 1px solid var(--color-gray-border);
-  padding: 0.85rem 0;
+.ad-topbar {
+  background-color: var(--color-navy);
+  color: #FFFFFF;
+  padding: 0.55rem 0;
+  font-size: 0.8125rem;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.ad-topbar-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ad-topbar-text {
+  letter-spacing: 0.01em;
+}
+
+.ad-topbar-text strong {
+  color: var(--color-blue-brand);
+}
+
+/* ==========================================================================
+   CABECERA PRINCIPAL: EXCLUSIVAMENTE LOGOTIPO PROMPI (SIN NAVEGACIÓN)
+   ========================================================================== */
+.main-header {
+  background-color: var(--color-surface-white);
+  border-bottom: 1px solid var(--color-border-card);
+  padding: 0.9rem 0;
   position: sticky;
   top: 0;
   z-index: 100;
-  box-shadow: 0 2px 10px rgba(15, 23, 42, 0.04);
+  box-shadow: 0 2px 10px rgba(3, 43, 97, 0.04);
 }
 
-.top-bar-inner {
+.header-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.brand-logo-container {
+.logo-area {
   display: flex;
   align-items: center;
 }
 
-.prompi-logo {
-  height: 44px;
+.prompi-brand-logo {
+  height: 48px;
   width: auto;
   display: block;
 }
 
-.top-bar-badge {
+.header-status-badge {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background-color: var(--color-gray-light);
-  border: 1px solid var(--color-gray-border);
-  padding: 0.4rem 0.95rem;
-  border-radius: var(--radius-full);
+  background-color: var(--color-blue-mist);
+  color: var(--color-navy);
+  padding: 0.45rem 1.05rem;
+  border-radius: var(--radius-pill);
   font-size: 0.8125rem;
   font-weight: 600;
-  color: var(--color-text-muted);
+  border: 1px solid rgba(3, 87, 145, 0.18);
 }
 
-.live-dot {
+.status-indicator {
   width: 8px;
   height: 8px;
-  background-color: var(--color-accent-green);
+  background-color: #10B981;
   border-radius: 50%;
   box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.25);
 }
 
 /* ==========================================================================
-   BOTONES Y ELEMENTOS DE ACCIÓN
+   BOTONES ESTILO CENTRO PET (POPPINS, BORDES REDONDEADOS)
    ========================================================================== */
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  font-family: var(--font-main);
-  font-size: 0.95rem;
-  font-weight: 700;
+  font-family: var(--font-heading);
+  font-size: 0.9375rem;
+  font-weight: 600;
   padding: 0.85rem 1.75rem;
-  border-radius: var(--radius-full);
+  border-radius: var(--radius-pill);
   border: none;
   cursor: pointer;
   transition: var(--transition);
   text-align: center;
 }
 
-.btn-primary {
-  background-color: var(--color-primary);
+.btn-orange {
+  background-color: var(--color-orange);
   color: #FFFFFF;
-  box-shadow: 0 4px 14px rgba(255, 99, 56, 0.35);
+  box-shadow: 0 4px 14px rgba(255, 98, 26, 0.35);
 }
 
-.btn-primary:hover {
-  background-color: var(--color-primary-hover);
+.btn-orange:hover {
+  background-color: var(--color-orange-hover);
   transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(255, 99, 56, 0.45);
+  box-shadow: 0 6px 18px rgba(255, 98, 26, 0.45);
 }
 
-.btn-secondary {
-  background-color: var(--color-gray-light);
-  color: var(--color-text-main);
-  border: 1px solid var(--color-gray-border);
+.btn-navy {
+  background-color: var(--color-navy);
+  color: #FFFFFF;
+  box-shadow: 0 4px 14px rgba(3, 43, 97, 0.25);
 }
 
-.btn-secondary:hover {
-  background-color: #E2E8F0;
+.btn-navy:hover {
+  background-color: var(--color-navy-dark);
   transform: translateY(-2px);
 }
 
-.btn-outline {
+.btn-navy-outline {
   background: transparent;
-  color: var(--color-primary);
-  border: 2px solid var(--color-primary);
+  color: var(--color-navy);
+  border: 2px solid var(--color-navy);
   font-weight: 700;
 }
 
-.btn-outline:hover {
-  background-color: var(--color-primary);
+.btn-navy-outline:hover {
+  background-color: var(--color-navy);
   color: #FFFFFF;
 }
 
@@ -194,6 +222,7 @@ a {
   background-color: var(--color-whatsapp);
   color: #FFFFFF;
   box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35);
+  font-weight: 700;
 }
 
 .btn-whatsapp:hover {
@@ -208,7 +237,7 @@ a {
 }
 
 .btn-large {
-  padding: 1rem 2.25rem;
+  padding: 1rem 2rem;
   font-size: 1.05rem;
   width: 100%;
 }
@@ -217,440 +246,434 @@ a {
   width: 100%;
 }
 
-.icon {
+.btn-icon {
   width: 18px;
   height: 18px;
 }
 
 /* ==========================================================================
-   SECCIONES GENERALES & ENCABEZADOS
+   SECCIÓN HERO (ESTILO CÁLIDO & VET FRIENDLY)
    ========================================================================== */
-.section {
-  padding: 5rem 0;
-}
-
-.section-dark {
-  background-color: var(--color-dark);
-  color: #FFFFFF;
-}
-
-.section-header-center {
-  text-align: center;
-  max-width: 720px;
-  margin: 0 auto 3.5rem;
-}
-
-.section-tag {
-  display: inline-block;
-  font-size: 0.75rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: var(--color-primary);
-  background-color: var(--color-primary-soft);
-  padding: 0.35rem 0.95rem;
-  border-radius: var(--radius-full);
-  margin-bottom: 0.75rem;
-  border: 1px solid var(--color-primary-border);
-}
-
-.section-title {
-  font-size: clamp(2rem, 3.5vw, 2.75rem);
-  font-weight: 800;
-  line-height: 1.2;
-  letter-spacing: -0.02em;
-  margin-bottom: 0.85rem;
-}
-
-.section-subtitle {
-  font-size: 1.05rem;
-  color: var(--color-text-muted);
-  line-height: 1.6;
-}
-
-.section-badge {
-  display: inline-block;
-  font-size: 0.75rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  padding: 0.4rem 1rem;
-  border-radius: var(--radius-full);
-  margin-bottom: 1rem;
-}
-
-.badge-coral {
-  background-color: rgba(255, 99, 56, 0.18);
-  color: #FFA07A;
-  border: 1px solid rgba(255, 99, 56, 0.35);
-}
-
-.text-white {
-  color: #FFFFFF !important;
-}
-
-.text-gray {
-  color: var(--color-text-light);
-  line-height: 1.6;
-}
-
-/* ==========================================================================
-   SECCIÓN HERO
-   ========================================================================== */
-.section-hero {
-  background: linear-gradient(180deg, #FFFFFF 0%, #F8FAFC 100%);
-  padding: 4rem 0 4.5rem;
+.hero-pet-section {
+  background: linear-gradient(180deg, #FFFFFF 0%, var(--color-warm-bone) 100%);
+  padding: 4.25rem 0 4.75rem;
   position: relative;
   overflow: hidden;
 }
 
-.hero-grid {
+.hero-pet-grid {
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
   gap: 3.5rem;
   align-items: center;
 }
 
-.hero-tag {
+.hero-pill-badge {
   display: inline-flex;
   align-items: center;
-  gap: 0.4rem;
+  gap: 0.5rem;
+  font-family: var(--font-heading);
   font-size: 0.8125rem;
   font-weight: 700;
-  color: var(--color-secondary);
-  background-color: var(--color-secondary-soft);
-  padding: 0.4rem 1rem;
-  border-radius: var(--radius-full);
+  color: var(--color-navy-mid);
+  background-color: var(--color-blue-mist);
+  padding: 0.4rem 1.15rem;
+  border-radius: var(--radius-pill);
   margin-bottom: 1.25rem;
+  border: 1px solid rgba(3, 87, 145, 0.15);
 }
 
-.tag-star {
-  color: #F59E0B;
+.pill-dot {
+  width: 7px;
+  height: 7px;
+  background-color: var(--color-orange);
+  border-radius: 50%;
 }
 
-.hero-title {
+.hero-pet-title {
+  font-family: var(--font-heading);
   font-size: clamp(2.35rem, 4.2vw, 3.4rem);
-  font-weight: 900;
+  font-weight: 800;
   line-height: 1.15;
-  letter-spacing: -0.03em;
-  color: var(--color-dark);
+  letter-spacing: -0.025em;
+  color: var(--color-navy);
   margin-bottom: 1.25rem;
 }
 
-.highlight-text {
-  color: var(--color-primary);
-  position: relative;
+.text-orange {
+  color: var(--color-orange);
 }
 
-.hero-description {
+.hero-pet-lead {
   font-size: 1.125rem;
-  color: var(--color-text-muted);
+  color: var(--color-ink-body);
   line-height: 1.65;
   margin-bottom: 2rem;
   max-width: 580px;
 }
 
-.hero-actions {
+.hero-btn-group {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
-  margin-bottom: 2rem;
+  margin-bottom: 2.25rem;
 }
 
-.hero-quick-filters {
+.hero-quick-categories {
   display: flex;
   align-items: center;
-  gap: 0.6rem;
+  gap: 0.65rem;
   flex-wrap: wrap;
-  margin-bottom: 2.25rem;
-  padding: 0.75rem 1rem;
-  background-color: #FFFFFF;
-  border: 1px solid var(--color-gray-border);
+  padding: 0.85rem 1.25rem;
+  background-color: var(--color-surface-white);
+  border: 1px solid var(--color-border-card);
   border-radius: var(--radius-md);
-  box-shadow: var(--shadow-sm);
+  box-shadow: var(--shadow-subtle);
 }
 
-.quick-filter-label {
+.quick-title {
+  font-family: var(--font-heading);
   font-size: 0.8125rem;
   font-weight: 700;
-  color: var(--color-text-muted);
+  color: var(--color-navy);
 }
 
-.quick-pill {
+.quick-chip {
   font-size: 0.8125rem;
   font-weight: 600;
-  color: var(--color-text-main);
-  background-color: var(--color-gray-light);
-  padding: 0.35rem 0.75rem;
-  border-radius: var(--radius-full);
-  border: 1px solid var(--color-gray-border);
+  color: var(--color-ink-body);
+  background-color: var(--color-warm-bone);
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--color-border-card);
   transition: var(--transition);
 }
 
-.quick-pill:hover {
-  background-color: var(--color-primary-soft);
-  color: var(--color-primary);
-  border-color: var(--color-primary);
+.quick-chip:hover {
+  background-color: var(--color-blue-mist);
+  color: var(--color-navy);
+  border-color: var(--color-blue-brand);
 }
 
-.hero-trust-bar {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
-  border-top: 1px solid var(--color-gray-border);
-  padding-top: 1.75rem;
-}
-
-.trust-item {
-  display: flex;
-  flex-direction: column;
-}
-
-.trust-title {
-  font-size: 0.925rem;
-  font-weight: 700;
-  color: var(--color-dark);
-}
-
-.trust-sub {
-  font-size: 0.78rem;
-  color: var(--color-text-muted);
-  line-height: 1.4;
-}
-
-.hero-visual {
+.hero-pet-visual {
   position: relative;
 }
 
-.hero-image-wrapper {
+.hero-card-canvas {
   position: relative;
   border-radius: var(--radius-lg);
   overflow: visible;
 }
 
-.hero-main-img {
+.hero-pet-image {
   width: 100%;
   height: 480px;
   object-fit: cover;
   border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-lg);
+  box-shadow: var(--shadow-lift);
 }
 
-.floating-badge {
+.hero-floating-card {
   position: absolute;
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(255, 255, 255, 0.96);
   backdrop-filter: blur(8px);
   padding: 0.85rem 1.25rem;
   border-radius: var(--radius-md);
-  box-shadow: var(--shadow-md);
-  border: 1px solid rgba(255, 255, 255, 0.8);
+  box-shadow: var(--shadow-card);
+  border: 1px solid var(--color-hairline);
   z-index: 2;
 }
 
-.badge-top {
+.card-top {
   top: -15px;
   right: -15px;
 }
 
-.badge-bottom {
+.card-bottom {
   bottom: -20px;
   left: -15px;
 }
 
-.badge-icon {
+.card-icon {
   font-size: 1.5rem;
 }
 
-.floating-badge strong {
+.hero-floating-card strong {
   display: block;
+  font-family: var(--font-heading);
   font-size: 0.875rem;
-  color: var(--color-dark);
+  color: var(--color-navy);
 }
 
-.floating-badge small {
+.hero-floating-card small {
   font-size: 0.75rem;
-  color: var(--color-text-muted);
+  color: var(--color-ink-muted);
 }
 
 /* ==========================================================================
-   SECCIÓN NARANJA: CONFÍAN EN NOSOTROS / MARCAS LÍDERES (MARQUEE INFINITO)
+   BARRA DE BENEFICIOS (CONFIANZA ESTILO CENTRO PET)
    ========================================================================== */
-.section-trusted-brands {
-  background: linear-gradient(135deg, #FF6820 0%, #FF5E14 45%, #E64E0B 100%);
-  color: #FFFFFF;
-  padding: 3.75rem 0 3.5rem;
-  position: relative;
-  overflow: hidden;
-  box-shadow: inset 0 8px 18px rgba(0, 0, 0, 0.08), inset 0 -8px 18px rgba(0, 0, 0, 0.12);
-  border-top: 1px solid rgba(255, 255, 255, 0.25);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+.trust-bar-section {
+  background-color: var(--color-surface-white);
+  border-top: 1px solid var(--color-border-card);
+  border-bottom: 1px solid var(--color-border-card);
+  padding: 2.25rem 0;
 }
 
-.trusted-header {
-  text-align: center;
-  margin-bottom: 2.25rem;
-  position: relative;
-  z-index: 2;
+.trust-bar-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.75rem;
 }
 
-.trusted-title {
-  font-size: clamp(1.85rem, 3.6vw, 2.75rem);
-  font-weight: 900;
-  text-transform: uppercase;
-  color: #FFFFFF;
-  letter-spacing: -0.01em;
-  line-height: 1.1;
-  margin-bottom: 0;
-  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.18);
-}
-
-.logo-marquee-container {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-  padding: 1.25rem 0;
-  mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
-  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
-}
-
-.logo-marquee-track {
+.trust-box {
   display: flex;
-  width: max-content;
   align-items: center;
-  animation: marqueeContinuous 35s linear infinite;
-  will-change: transform;
+  gap: 1rem;
 }
 
-.logo-marquee-track:hover {
-  animation-play-state: paused;
-}
-
-.marquee-logo-item {
-  flex-shrink: 0;
-  padding: 0.75rem 2.75rem;
+.trust-icon-bubble {
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  background-color: var(--color-blue-mist);
+  border-radius: var(--radius-sm);
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 64px;
-  opacity: 0.94;
-  transition: transform 0.25s ease, opacity 0.25s ease;
-  user-select: none;
+  font-size: 1.4rem;
 }
 
-.marquee-logo-item:hover {
-  opacity: 1;
-  transform: scale(1.08);
-}
-
-.white-logo {
-  height: 38px;
-  width: auto;
-  max-width: 180px;
+.trust-box-body strong {
   display: block;
-  filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.18));
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  color: var(--color-navy);
+  line-height: 1.3;
 }
 
-@keyframes marqueeContinuous {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+.trust-box-body span {
+  font-size: 0.8125rem;
+  color: var(--color-ink-muted);
 }
 
 /* ==========================================================================
-   SECCIÓN CATEGORÍAS PRINCIPALES
+   CATEGORÍAS DE MASCOTAS
    ========================================================================== */
-.section-categories {
-  background-color: #FFFFFF;
+.section-categories-pet {
+  padding: 5rem 0;
+  background-color: var(--color-warm-bone);
 }
 
-.categories-grid {
+.section-heading-centered {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 3.5rem;
+}
+
+.heading-subtag {
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-orange);
+  background-color: var(--color-orange-soft);
+  padding: 0.35rem 0.95rem;
+  border-radius: var(--radius-pill);
+  margin-bottom: 0.75rem;
+  border: 1px solid rgba(255, 98, 26, 0.25);
+}
+
+.heading-maintitle {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: var(--color-navy);
+  margin-bottom: 0.85rem;
+}
+
+.heading-description {
+  font-size: 1.05rem;
+  color: var(--color-ink-body);
+  line-height: 1.6;
+}
+
+.pet-categories-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 1.75rem;
 }
 
-.category-card {
-  background-color: #FFFFFF;
-  border: 1px solid var(--color-gray-border);
-  border-radius: var(--radius-lg);
+.pet-cat-card {
+  background-color: var(--color-surface-white);
+  border: 1px solid var(--color-border-card);
+  border-radius: var(--radius-md);
   overflow: hidden;
-  box-shadow: var(--shadow-sm);
+  box-shadow: var(--shadow-card);
   transition: var(--transition);
   cursor: pointer;
   display: flex;
   flex-direction: column;
 }
 
-.category-card:hover {
-  transform: translateY(-6px);
-  box-shadow: var(--shadow-lg);
-  border-color: var(--color-primary);
+.pet-cat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lift);
+  border-color: var(--color-orange);
 }
 
-.cat-image-box {
-  position: relative;
+.pet-cat-thumb {
   height: 190px;
   overflow: hidden;
 }
 
-.cat-img {
+.pet-cat-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: transform 0.4s ease;
 }
 
-.category-card:hover .cat-img {
+.pet-cat-card:hover .pet-cat-img {
   transform: scale(1.08);
 }
 
-.cat-content {
+.pet-cat-info {
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
 }
 
-.cat-badge {
+.pet-cat-tag {
+  font-family: var(--font-heading);
   font-size: 0.75rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  color: var(--color-secondary);
+  color: var(--color-navy-mid);
   margin-bottom: 0.5rem;
 }
 
-.cat-title {
+.pet-cat-name {
+  font-family: var(--font-heading);
   font-size: 1.25rem;
   font-weight: 800;
+  color: var(--color-navy);
   margin-bottom: 0.5rem;
-  color: var(--color-dark);
 }
 
-.cat-desc {
-  font-size: 0.9rem;
-  color: var(--color-text-muted);
+.pet-cat-text {
+  font-size: 0.875rem;
+  color: var(--color-ink-muted);
   line-height: 1.5;
   margin-bottom: 1.25rem;
   flex-grow: 1;
 }
 
-.cat-link {
+.pet-cat-cta {
+  font-family: var(--font-heading);
   font-size: 0.875rem;
   font-weight: 700;
-  color: var(--color-primary);
+  color: var(--color-orange);
 }
 
 /* ==========================================================================
-   SECCIÓN CATÁLOGO DE PRODUCTOS (INSPIRADO EN PUPPIS)
+   BANDA DE MARCAS OFICIALES (MARQUEE EN AZUL MARINO DE CENTRO PET)
    ========================================================================== */
-.section-products {
-  background-color: var(--color-gray-light);
+.brands-marquee-band {
+  background-color: var(--color-navy);
+  color: #FFFFFF;
+  padding: 3.5rem 0 3.25rem;
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
 }
 
-.product-filters {
+.brands-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+.brands-title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.65rem, 3.2vw, 2.4rem);
+  font-weight: 800;
+  color: #FFFFFF;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+
+.brands-marquee-wrap {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 1rem 0;
+  mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+}
+
+.brands-marquee-rail {
+  display: flex;
+  width: max-content;
+  align-items: center;
+  animation: brandsScroll 35s linear infinite;
+  will-change: transform;
+}
+
+.brands-marquee-rail:hover {
+  animation-play-state: paused;
+}
+
+.brand-item {
+  flex-shrink: 0;
+  padding: 0.6rem 2.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  opacity: 0.92;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+  user-select: none;
+}
+
+.brand-item:hover {
+  opacity: 1;
+  transform: scale(1.08);
+}
+
+.brand-vector {
+  height: 36px;
+  width: auto;
+  max-width: 170px;
+  display: block;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.25));
+}
+
+@keyframes brandsScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ==========================================================================
+   CATÁLOGO DE PRODUCTOS (ESTILO E-COMMERCE PET SHOP REAL)
+   ========================================================================== */
+.section-pet-catalog {
+  padding: 5rem 0;
+  background-color: var(--color-surface-white);
+}
+
+.catalog-filter-bar {
   display: flex;
   justify-content: center;
   gap: 0.65rem;
@@ -658,179 +681,179 @@ a {
   margin-bottom: 2.75rem;
 }
 
-.filter-btn {
-  background: #FFFFFF;
-  border: 1px solid var(--color-gray-border);
-  font-family: var(--font-main);
-  font-size: 0.9rem;
+.filter-chip {
+  background: var(--color-warm-bone);
+  border: 1px solid var(--color-border-card);
+  font-family: var(--font-heading);
+  font-size: 0.875rem;
   font-weight: 600;
-  color: var(--color-text-muted);
-  padding: 0.6rem 1.25rem;
-  border-radius: var(--radius-full);
+  color: var(--color-ink-body);
+  padding: 0.55rem 1.25rem;
+  border-radius: var(--radius-pill);
   cursor: pointer;
   transition: var(--transition);
 }
 
-.filter-btn:hover {
-  color: var(--color-dark);
-  border-color: #CBD5E1;
+.filter-chip:hover {
+  background-color: var(--color-blue-mist);
+  color: var(--color-navy);
+  border-color: var(--color-blue-brand);
 }
 
-.filter-btn.active {
-  background-color: var(--color-dark);
+.filter-chip.active {
+  background-color: var(--color-navy);
   color: #FFFFFF;
-  border-color: var(--color-dark);
+  border-color: var(--color-navy);
 }
 
-.products-grid {
+.pet-products-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
   gap: 2rem;
   margin-bottom: 3.5rem;
 }
 
-.product-card {
-  background: #FFFFFF;
-  border: 1px solid var(--color-gray-border);
+.pet-item-card {
+  background: var(--color-surface-white);
+  border: 1px solid var(--color-border-card);
   border-radius: var(--radius-md);
   overflow: hidden;
-  box-shadow: var(--shadow-sm);
+  box-shadow: var(--shadow-card);
   display: flex;
   flex-direction: column;
   transition: var(--transition);
 }
 
-.product-card:hover {
+.pet-item-card:hover {
   transform: translateY(-4px);
-  box-shadow: var(--shadow-md);
-  border-color: rgba(255, 99, 56, 0.4);
+  box-shadow: var(--shadow-lift);
+  border-color: rgba(3, 87, 145, 0.35);
 }
 
-.product-image-box {
+.pet-item-media {
   position: relative;
   height: 210px;
   overflow: hidden;
   background-color: #FFFFFF;
 }
 
-.product-img {
+.pet-item-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: transform 0.4s ease;
 }
 
-.product-card:hover .product-img {
+.pet-item-card:hover .pet-item-img {
   transform: scale(1.06);
 }
 
-.prod-badge {
+.item-badge {
   position: absolute;
   top: 12px;
   left: 12px;
+  font-family: var(--font-heading);
   font-size: 0.7rem;
-  font-weight: 800;
+  font-weight: 700;
   text-transform: uppercase;
   padding: 0.3rem 0.65rem;
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius-pill);
   z-index: 2;
-  box-shadow: var(--shadow-sm);
+  box-shadow: var(--shadow-subtle);
 }
 
-.badge-hot {
-  background-color: #EF4444;
+.badge-orange-tag {
+  background-color: var(--color-orange);
   color: #FFFFFF;
 }
 
-.badge-premium {
-  background-color: #4F46E5;
+.badge-navy-tag {
+  background-color: var(--color-navy);
   color: #FFFFFF;
 }
 
-.badge-best {
-  background-color: #F59E0B;
-  color: #FFFFFF;
-}
-
-.badge-health {
+.badge-green-tag {
   background-color: #10B981;
   color: #FFFFFF;
 }
 
-.product-body {
+.pet-item-body {
   padding: 1.35rem;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
 }
 
-.product-meta {
+.item-category-label {
+  font-family: var(--font-heading);
   font-size: 0.75rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: var(--color-primary);
+  color: var(--color-orange);
   margin-bottom: 0.4rem;
 }
 
-.product-name {
+.item-title {
+  font-family: var(--font-heading);
   font-size: 1.05rem;
-  font-weight: 800;
-  color: var(--color-dark);
+  font-weight: 700;
+  color: var(--color-navy);
   line-height: 1.35;
   margin-bottom: 0.65rem;
 }
 
-.product-desc {
+.item-description {
   font-size: 0.85rem;
-  color: var(--color-text-muted);
+  color: var(--color-ink-muted);
   line-height: 1.5;
   margin-bottom: 1rem;
 }
 
-.product-features {
+.item-bullets {
   display: flex;
   flex-direction: column;
   gap: 0.3rem;
   font-size: 0.8rem;
-  color: #334155;
+  color: var(--color-ink-body);
   margin-bottom: 1.25rem;
   margin-top: auto;
 }
 
-.product-features span {
+.item-bullets span {
   display: flex;
   align-items: center;
   gap: 0.35rem;
 }
 
-.product-footer {
+.item-bottom-bar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-top: 1px dashed var(--color-gray-border);
+  border-top: 1px dashed var(--color-border-card);
   padding-top: 1rem;
 }
 
-.product-pricing {
+.item-price-block {
   display: flex;
   flex-direction: column;
 }
 
-.price-label {
+.price-hint {
   font-size: 0.72rem;
-  color: var(--color-text-muted);
+  color: var(--color-ink-muted);
 }
 
-.price-val {
-  font-size: 1.05rem;
+.price-amount {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
   font-weight: 800;
-  color: var(--color-dark);
+  color: var(--color-navy);
 }
 
-.catalog-help-banner {
-  background: #FFFFFF;
-  border: 1px solid var(--color-gray-border);
+.catalog-callout-box {
+  background: var(--color-blue-mist);
+  border: 1px solid rgba(3, 87, 145, 0.2);
   border-radius: var(--radius-lg);
   padding: 2.25rem 2.5rem;
   display: flex;
@@ -838,225 +861,284 @@ a {
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 1.5rem;
-  box-shadow: var(--shadow-sm);
 }
 
-.help-banner-content h3 {
-  font-size: 1.35rem;
-  font-weight: 800;
-  color: var(--color-dark);
+.callout-badge {
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-orange);
   margin-bottom: 0.35rem;
 }
 
-.help-banner-content p {
-  color: var(--color-text-muted);
+.callout-content h3 {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--color-navy);
+  margin-bottom: 0.35rem;
+}
+
+.callout-content p {
+  color: var(--color-ink-body);
   font-size: 0.95rem;
   max-width: 620px;
 }
 
 /* ==========================================================================
-   SECCIÓN SERVICIOS: BAÑO, PELUQUERÍA & CLÍNICA
+   SERVICIOS INTEGRALES: BAÑO, PELUQUERÍA & CLÍNICA (ESTILO CENTRO PET)
    ========================================================================== */
-.section-services {
-  background-color: #FFFFFF;
+.section-pet-services {
+  padding: 5rem 0;
+  background-color: var(--color-warm-bone);
 }
 
-.services-grid {
+.services-cards-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 2rem;
 }
 
-.service-box {
-  background-color: var(--color-gray-light);
-  border: 1px solid var(--color-gray-border);
+.pet-service-panel {
+  background-color: var(--color-surface-white);
+  border: 1px solid var(--color-border-card);
   border-radius: var(--radius-lg);
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  box-shadow: var(--shadow-card);
   transition: var(--transition);
 }
 
-.service-box:hover {
+.pet-service-panel:hover {
   transform: translateY(-4px);
-  box-shadow: var(--shadow-md);
-  border-color: rgba(79, 70, 229, 0.4);
+  box-shadow: var(--shadow-lift);
+  border-color: var(--color-blue-brand);
 }
 
-.service-box-img {
+.panel-image-wrap {
   position: relative;
   height: 220px;
 }
 
-.service-box-img img {
+.panel-image-wrap img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.service-pill {
+.panel-tag {
   position: absolute;
   top: 14px;
   right: 14px;
-  background-color: rgba(15, 23, 42, 0.85);
+  background-color: rgba(3, 43, 97, 0.9);
   backdrop-filter: blur(4px);
   color: #FFFFFF;
+  font-family: var(--font-heading);
   font-size: 0.75rem;
   font-weight: 700;
-  padding: 0.35rem 0.8rem;
-  border-radius: var(--radius-full);
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--radius-pill);
 }
 
-.service-box-body {
+.panel-body {
   padding: 2rem;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
 }
 
-.service-name {
+.panel-title {
+  font-family: var(--font-heading);
   font-size: 1.35rem;
   font-weight: 800;
-  color: var(--color-dark);
+  color: var(--color-navy);
   margin-bottom: 0.75rem;
 }
 
-.service-desc {
+.panel-text {
   font-size: 0.925rem;
-  color: var(--color-text-muted);
+  color: var(--color-ink-body);
   line-height: 1.6;
   margin-bottom: 1.25rem;
 }
 
-.service-list {
+.panel-list {
   list-style: none;
   margin-bottom: 1.75rem;
   margin-top: auto;
 }
 
-.service-list li {
+.panel-list li {
   font-size: 0.875rem;
-  color: var(--color-text-main);
+  color: var(--color-ink-body);
   padding: 0.4rem 0;
   display: flex;
   align-items: center;
-  border-bottom: 1px dashed rgba(0, 0, 0, 0.06);
+  border-bottom: 1px dashed rgba(3, 43, 97, 0.08);
 }
 
-.service-list li::before {
+.panel-list li::before {
   content: "🐾";
   font-size: 0.8rem;
   margin-right: 0.6rem;
 }
 
 /* ==========================================================================
-   SECCIÓN HERRAMIENTA INTERACTIVA: CALCULADORA PROMPI
+   HERRAMIENTA INTERACTIVA: CALCULADORA PROMPI
    ========================================================================== */
-.calc-intro {
-  max-width: 680px;
-  margin-bottom: 2.5rem;
-  font-size: 1.05rem;
+.section-pet-calc {
+  padding: 5rem 0;
+  background-color: var(--color-navy);
+  color: #FFFFFF;
 }
 
-.calc-wrapper {
-  background-color: var(--color-dark-card);
-  border: 1px solid var(--color-dark-border);
+.calc-header-block {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 3rem;
+}
+
+.calc-badge {
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  padding: 0.4rem 1rem;
+  border-radius: var(--radius-pill);
+  background-color: rgba(255, 98, 26, 0.2);
+  color: #FFA07A;
+  border: 1px solid rgba(255, 98, 26, 0.35);
+  margin-bottom: 0.85rem;
+}
+
+.calc-main-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: #FFFFFF;
+  margin-bottom: 0.85rem;
+}
+
+.calc-sub-text {
+  font-size: 1.05rem;
+  color: var(--color-blue-subtle);
+  line-height: 1.6;
+}
+
+.pet-calc-container {
+  background-color: var(--color-navy-dark);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: var(--radius-lg);
   padding: 2.25rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.35);
 }
 
-.calc-tabs {
+.pet-calc-tabs {
   display: flex;
   gap: 0.75rem;
-  border-bottom: 1px solid var(--color-dark-border);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
   padding-bottom: 1.25rem;
   margin-bottom: 2rem;
   overflow-x: auto;
 }
 
-.calc-tab {
+.calc-pill-tab {
   background: transparent;
   border: none;
-  font-family: var(--font-main);
+  font-family: var(--font-heading);
   font-size: 0.95rem;
-  font-weight: 700;
-  color: var(--color-text-light);
+  font-weight: 600;
+  color: var(--color-blue-subtle);
   padding: 0.65rem 1.35rem;
-  border-radius: var(--radius-full);
+  border-radius: var(--radius-pill);
   cursor: pointer;
   transition: var(--transition);
   white-space: nowrap;
 }
 
-.calc-tab:hover {
+.calc-pill-tab:hover {
   color: #FFFFFF;
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: rgba(255, 255, 255, 0.08);
 }
 
-.calc-tab.active {
-  background-color: var(--color-primary);
+.calc-pill-tab.active {
+  background-color: var(--color-orange);
   color: #FFFFFF;
 }
 
-.calc-content {
+.pet-calc-panel {
   display: none;
 }
 
-.calc-content.active {
+.pet-calc-panel.active {
   display: block;
 }
 
-.calc-grid {
+.calc-two-columns {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2.5rem;
   align-items: start;
 }
 
-.calc-inputs {
+.calc-input-column {
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
 }
 
-.form-group {
+.calc-field {
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
 }
 
-.form-group label {
+.calc-field label {
+  font-family: var(--font-heading);
   font-size: 0.875rem;
-  font-weight: 700;
-  color: #F1F5F9;
+  font-weight: 600;
+  color: #FFFFFF;
 }
 
-.form-control {
-  font-family: var(--font-main);
-  background-color: #0F172A;
-  border: 1px solid #334155;
+.calc-input,
+.calc-select {
+  font-family: var(--font-body);
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   color: #FFFFFF;
   padding: 0.85rem 1.15rem;
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius-xs);
   font-size: 0.95rem;
   transition: var(--transition);
 }
 
-.form-control:focus {
+.calc-select option {
+  background-color: var(--color-navy);
+  color: #FFFFFF;
+}
+
+.calc-input:focus,
+.calc-select:focus {
   outline: none;
-  border-color: var(--color-primary);
-  box-shadow: 0 0 0 3px rgba(255, 99, 56, 0.25);
+  border-color: var(--color-orange);
+  box-shadow: 0 0 0 3px rgba(255, 98, 26, 0.25);
 }
 
-.form-hint {
+.field-hint {
   font-size: 0.75rem;
-  color: var(--color-text-light);
+  color: var(--color-blue-subtle);
 }
 
-.calc-results {
-  background-color: #0F172A;
-  border: 1px solid var(--color-dark-border);
+.calc-result-column {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: var(--radius-md);
   padding: 2rem;
   display: flex;
@@ -1064,56 +1146,62 @@ a {
   gap: 1.15rem;
 }
 
-.results-title {
+.result-heading {
+  font-family: var(--font-heading);
   font-size: 1.15rem;
-  font-weight: 800;
+  font-weight: 700;
   color: #FFFFFF;
-  border-bottom: 1px solid var(--color-dark-border);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
   padding-bottom: 0.75rem;
-  margin-bottom: 0.25rem;
 }
 
-.result-item {
+.result-row {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0.35rem 0;
-  border-bottom: 1px dashed rgba(255, 255, 255, 0.07);
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.08);
 }
 
-.result-label {
+.row-label {
   font-size: 0.9rem;
-  color: var(--color-text-light);
+  color: var(--color-blue-subtle);
 }
 
-.result-value {
+.row-value {
+  font-family: var(--font-heading);
   font-size: 1.1rem;
-  font-weight: 800;
+  font-weight: 700;
   color: #FFA07A;
 }
 
-.result-note {
+.result-disclaimer {
   font-size: 0.75rem;
-  color: var(--color-text-light);
+  color: var(--color-blue-subtle);
   font-style: italic;
   line-height: 1.4;
 }
 
 /* ==========================================================================
-   SECCIÓN FORMULARIO DE PEDIDO
+   FORMULARIO DE PEDIDO RÁPIDO & TURNOS
    ========================================================================== */
-.presupuesto-grid {
+.section-order-pet {
+  padding: 5rem 0;
+  background-color: var(--color-surface-white);
+}
+
+.order-pet-grid {
   display: grid;
   grid-template-columns: 0.95fr 1.05fr;
   gap: 3.5rem;
   align-items: stretch;
 }
 
-.presupuesto-media-col {
+.order-media-col {
   display: flex;
 }
 
-.presupuesto-image-card {
+.order-image-card {
   position: relative;
   width: 100%;
   height: 100%;
@@ -1121,111 +1209,129 @@ a {
   border-radius: var(--radius-lg);
   overflow: hidden;
   box-shadow: var(--shadow-card);
-  border: 1px solid var(--color-gray-border);
-  background-color: var(--color-gray-light);
+  border: 1px solid var(--color-border-card);
 }
 
-.presupuesto-featured-img {
+.order-featured-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
 }
 
-.presupuesto-image-overlay {
+.order-image-badge-overlay {
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
   padding: 2.25rem 2rem;
-  background: linear-gradient(180deg, transparent 0%, rgba(15, 23, 42, 0.85) 35%, rgba(15, 23, 42, 0.98) 100%);
+  background: linear-gradient(180deg, transparent 0%, rgba(3, 43, 97, 0.88) 35%, rgba(3, 43, 97, 0.98) 100%);
   color: #FFFFFF;
 }
 
-.media-badge {
+.badge-mini-tag {
   display: inline-block;
+  font-family: var(--font-heading);
   font-size: 0.7rem;
-  font-weight: 800;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: #FFA07A;
-  background-color: rgba(255, 99, 56, 0.2);
+  background-color: rgba(255, 98, 26, 0.2);
   padding: 0.3rem 0.65rem;
   border-radius: 4px;
   margin-bottom: 0.65rem;
-  border: 1px solid rgba(255, 99, 56, 0.35);
+  border: 1px solid rgba(255, 98, 26, 0.35);
 }
 
-.media-title {
+.order-image-badge-overlay h3 {
+  font-family: var(--font-heading);
   font-size: 1.35rem;
   font-weight: 800;
   margin-bottom: 0.45rem;
   line-height: 1.25;
 }
 
-.media-desc {
+.order-image-badge-overlay p {
   font-size: 0.875rem;
-  color: var(--color-text-light);
+  color: var(--color-blue-subtle);
   line-height: 1.5;
 }
 
-.presupuesto-form-col {
+.order-form-col {
   display: flex;
   flex-direction: column;
 }
 
-.presupuesto-header {
+.order-header-text {
   text-align: left;
   margin-bottom: 1.75rem;
 }
 
-.presupuesto-form {
-  background-color: var(--color-gray-light);
-  border: 1px solid var(--color-gray-border);
+.order-card-form {
+  background-color: var(--color-warm-bone);
+  border: 1px solid var(--color-border-card);
   border-radius: var(--radius-lg);
-  padding: 2.5rem;
+  padding: 2.25rem;
   box-shadow: var(--shadow-card);
 }
 
-.presupuesto-form .form-control {
-  background-color: #FFFFFF;
-  border-color: #CBD5E1;
-  color: var(--color-text-main);
-}
-
-.presupuesto-form .form-control:focus {
-  border-color: var(--color-primary);
-  box-shadow: 0 0 0 3px var(--color-primary-soft);
-}
-
-.presupuesto-form label {
-  color: var(--color-dark);
-}
-
-.form-row {
+.form-grid-two {
   display: flex;
-  gap: 1.5rem;
+  gap: 1.25rem;
   flex-wrap: wrap;
+  margin-bottom: 1.15rem;
 }
 
-.col-half {
-  flex: 1 1 calc(50% - 0.75rem);
+.form-group-pet {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  flex: 1 1 calc(50% - 0.65rem);
 }
 
-.form-actions {
+.order-card-form .form-group-pet:not(.form-grid-two .form-group-pet) {
+  margin-bottom: 1.15rem;
+}
+
+.form-group-pet label {
+  font-family: var(--font-heading);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-navy);
+}
+
+.pet-text-input {
+  font-family: var(--font-body);
+  background-color: #FFFFFF;
+  border: 1px solid #CBD5E1;
+  color: var(--color-ink-900);
+  padding: 0.8rem 1rem;
+  border-radius: var(--radius-xs);
+  font-size: 0.95rem;
+  transition: var(--transition);
+}
+
+.pet-text-input:focus {
+  outline: none;
+  border-color: var(--color-orange);
+  box-shadow: 0 0 0 3px rgba(255, 98, 26, 0.2);
+}
+
+.form-submit-row {
   margin-top: 1.5rem;
 }
 
-.form-feedback {
+.form-feedback-pill {
   margin-top: 1.25rem;
   padding: 1rem;
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius-xs);
   display: none;
   font-weight: 600;
   text-align: center;
 }
 
-.form-feedback.success {
+.form-feedback-pill.success {
   display: block;
   background-color: #DEF7EC;
   color: #03543F;
@@ -1235,25 +1341,62 @@ a {
 /* ==========================================================================
    SECCIÓN 4 ISLAS: CONTACTO, SUCURSAL & ENVÍOS (2 ARRIBA Y 2 ABAJO, SIN ICONOS)
    ========================================================================== */
-.contact-grid {
+.section-pet-contact {
+  padding: 5rem 0;
+  background-color: var(--color-navy);
+  color: #FFFFFF;
+}
+
+.contact-box-wrapper {
   max-width: 1060px;
   margin: 0 auto;
 }
 
-.contact-info {
+.contact-heading-box {
   width: 100%;
 }
 
-.info-items {
+.heading-subtag-light {
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #FFA07A;
+  background-color: rgba(255, 98, 26, 0.2);
+  padding: 0.4rem 1rem;
+  border-radius: var(--radius-pill);
+  margin-bottom: 0.85rem;
+  border: 1px solid rgba(255, 98, 26, 0.35);
+}
+
+.contact-title-white {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: #FFFFFF;
+  margin-bottom: 0.75rem;
+}
+
+.contact-subtitle-gray {
+  font-size: 1.05rem;
+  color: var(--color-blue-subtle);
+  line-height: 1.6;
+}
+
+.info-islands-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
-  margin-top: 2.5rem;
+  margin-top: 2.75rem;
 }
 
-.info-item {
-  background-color: var(--color-dark-card);
-  border: 1px solid var(--color-dark-border);
+.info-island-card {
+  background-color: var(--color-navy-dark);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: var(--radius-md);
   padding: 1.85rem 2.25rem;
   display: flex;
@@ -1265,61 +1408,61 @@ a {
   transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-.info-item:hover {
+.info-island-card:hover {
   transform: translateY(-2px);
-  border-color: rgba(255, 99, 56, 0.45);
+  border-color: var(--color-orange);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
 }
 
-.info-item-label {
+.island-tag-label {
   display: block;
-  font-family: var(--font-main);
+  font-family: var(--font-heading);
   font-size: 0.8125rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: var(--color-primary);
+  color: var(--color-orange);
   margin-bottom: 0.65rem;
 }
 
-.info-item-value {
+.island-main-text {
   font-size: 1.05rem;
-  color: #F8FAFC;
+  color: #FFFFFF;
   line-height: 1.55;
   margin: 0;
   word-break: break-word;
 }
 
-.info-item-sub {
+.island-sub-text {
   display: block;
   font-size: 0.875rem;
-  color: var(--color-text-light);
+  color: var(--color-blue-subtle);
   margin-top: 0.25rem;
 }
 
-.info-link {
-  color: #F8FAFC;
+.island-anchor {
+  color: #FFFFFF;
   text-decoration: none;
   font-weight: 600;
   transition: color 0.2s ease;
 }
 
-.info-link:hover {
-  color: var(--color-primary);
+.island-anchor:hover {
+  color: var(--color-orange);
   text-decoration: underline;
 }
 
 /* ==========================================================================
-   FOOTER (SIN NAVEGACIÓN)
+   FOOTER (ESTILO CENTRO PET EN AZUL MARINO PROFUNDO, SIN MENÚS)
    ========================================================================== */
-.footer {
-  background-color: #090E17;
-  color: var(--color-text-light);
+.pet-footer {
+  background-color: #021735;
+  color: var(--color-blue-subtle);
   padding: 3.5rem 0;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.footer-content {
+.footer-flex-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1327,37 +1470,39 @@ a {
   gap: 2rem;
 }
 
-.footer-logo {
+.footer-logo-box {
   margin-bottom: 0.75rem;
 }
 
-.prompi-footer-logo {
-  height: 38px;
+.prompi-footer-vector {
+  height: 42px;
   width: auto;
   display: block;
 }
 
-.footer-brand p {
+.footer-mission-text {
   font-size: 0.875rem;
   max-width: 440px;
   line-height: 1.6;
+  color: #CBD5E1;
 }
 
-.footer-legal {
+.footer-rights-side {
   font-size: 0.8125rem;
   text-align: right;
+  color: #94A3B8;
 }
 
-.footer-subtext {
+.footer-vet-legend {
   font-size: 0.75rem;
   margin-top: 0.25rem;
-  color: #475569;
+  color: var(--color-blue-brand);
 }
 
 /* ==========================================================================
    BOTÓN FLOTANTE DE WHATSAPP
    ========================================================================== */
-.whatsapp-float {
+.whatsapp-float-btn {
   position: fixed;
   bottom: 24px;
   right: 24px;
@@ -1375,21 +1520,21 @@ a {
   transition: var(--transition);
 }
 
-.whatsapp-float:hover {
+.whatsapp-float-btn:hover {
   background-color: var(--color-whatsapp-hover);
   transform: scale(1.1);
   box-shadow: 0 6px 22px rgba(37, 211, 102, 0.6);
 }
 
-.whatsapp-float svg {
+.whatsapp-float-btn svg {
   width: 34px;
   height: 34px;
 }
 
-.whatsapp-tooltip {
+.whatsapp-pill-hint {
   position: absolute;
   right: 72px;
-  background-color: var(--color-dark);
+  background-color: var(--color-navy);
   color: #FFFFFF;
   padding: 0.45rem 0.85rem;
   border-radius: 4px;
@@ -1400,10 +1545,11 @@ a {
   opacity: 0;
   transform: translateX(10px);
   transition: var(--transition);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
-.whatsapp-float:hover .whatsapp-tooltip {
+.whatsapp-float-btn:hover .whatsapp-pill-hint {
   opacity: 1;
   transform: translateX(0);
 }
@@ -1412,86 +1558,85 @@ a {
    RESPONSIVIDAD MÓVIL
    ========================================================================== */
 @media (max-width: 900px) {
-  .hero-grid,
-  .calc-grid,
-  .presupuesto-grid {
+  .hero-pet-grid,
+  .calc-two-columns,
+  .order-pet-grid {
     grid-template-columns: 1fr;
     gap: 2.5rem;
   }
 
-  .hero-visual {
+  .hero-pet-visual {
     order: -1;
   }
 
-  .hero-main-img {
+  .hero-pet-image {
     height: 360px;
   }
 
-  .floating-badge {
+  .hero-floating-card {
     padding: 0.6rem 0.9rem;
   }
 
-  .presupuesto-image-card {
+  .trust-bar-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .order-image-card {
     min-height: 320px;
     max-height: 400px;
   }
 
-  .col-half {
+  .form-grid-two .form-group-pet {
     flex: 1 1 100%;
   }
 
-  .footer-content {
+  .footer-flex-container {
     flex-direction: column;
     text-align: center;
   }
 
-  .footer-legal {
+  .footer-rights-side {
     text-align: center;
   }
 }
 
 @media (max-width: 768px) {
-  .info-items {
+  .info-islands-grid {
     grid-template-columns: 1fr;
     gap: 1.15rem;
   }
 
-  .info-item {
+  .info-island-card {
     padding: 1.4rem 1.5rem;
   }
 
-  .hero-trust-bar {
+  .trust-bar-grid {
     grid-template-columns: 1fr;
-    gap: 0.75rem;
   }
 }
 
 @media (max-width: 600px) {
-  .top-bar-badge {
+  .header-status-badge {
     display: none;
   }
 
-  .prompi-logo {
-    height: 38px;
+  .prompi-brand-logo {
+    height: 40px;
   }
 
-  .section {
-    padding: 3.5rem 0;
-  }
-
-  .hero-actions {
+  .hero-btn-group {
     flex-direction: column;
   }
 
-  .hero-actions .btn {
+  .hero-btn-group .btn {
     width: 100%;
   }
 
-  .presupuesto-form {
+  .order-card-form {
     padding: 1.5rem;
   }
 
-  .catalog-help-banner {
+  .catalog-callout-box {
     flex-direction: column;
     text-align: center;
     padding: 1.5rem;

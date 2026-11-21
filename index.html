@@ -3,127 +3,123 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Prompi | Veterinaria, Alimentos Balanceados &amp; Pet Shop</title>
-  <meta name="description" content="Prompi: Alimentos balanceados para perros y gatos, matapulgas, farmacia veterinaria, baño y peluquería canina con envíos rápidos a domicilio.">
-  <meta name="theme-color" content="#FF6338">
+  <title>Prompi | Pet Shop, Veterinaria &amp; Peluquería Canina</title>
+  <meta name="description" content="Prompi: Pet shop integral, veterinaria y peluquería canina. Alimentos balanceados Royal Canin, Pro Plan, antiparasitarios Bravecto, NexGard, farmacia y envíos en el día.">
+  <meta name="theme-color" content="#032B61">
 
-  <!-- Tipografía moderna Google Fonts: Plus Jakarta Sans -->
+  <!-- Tipografía Google Fonts de Centro Pet: Poppins (Títulos) + Inter (Cuerpo) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800;900&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
   <!-- ==========================================================================
-       BARRA SUPERIOR: EXCLUSIVAMENTE LOGO PROMPI (SIN ENLACES NI MENÚ)
+       BARRA DE ANUNCIO SUPERIOR (ESTILO CENTRO PET)
        ========================================================================== -->
-  <header class="top-bar">
-    <div class="container top-bar-inner">
-      <div class="brand-logo-container">
-        <!-- Logotipo Prompi Vectorial Moderno -->
-        <a href="#" class="brand-logo-link" aria-label="Prompi - Veterinaria &amp; Pet Shop">
-          <svg class="prompi-logo" viewBox="0 0 220 54" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <!-- Icono Mascota / Patita estilizada en tonos coral y violeta -->
-            <g transform="translate(4, 7)">
-              <circle cx="20" cy="24" r="14" fill="#FF6338"/>
-              <ellipse cx="10" cy="11" rx="4.5" ry="6.5" fill="#4F46E5"/>
-              <ellipse cx="20" cy="6" rx="4.5" ry="6.5" fill="#FF6338"/>
-              <ellipse cx="30" cy="11" rx="4.5" ry="6.5" fill="#4F46E5"/>
-              <!-- Huellita interna blanca -->
-              <ellipse cx="20" cy="24" rx="7" ry="5.5" fill="#FFFFFF"/>
-              <circle cx="16" cy="18" r="2" fill="#FFFFFF"/>
-              <circle cx="24" cy="18" r="2" fill="#FFFFFF"/>
+  <aside class="ad-topbar" aria-label="Aviso de envíos">
+    <div class="container ad-topbar-inner">
+      <span class="ad-topbar-text">
+        🐾 <strong>Envíos en 24h a domicilio</strong> en CABA y GBA · Asesoramiento veterinario personalizado por WhatsApp
+      </span>
+    </div>
+  </aside>
+
+  <!-- ==========================================================================
+       BARRA PRINCIPAL: EXCLUSIVAMENTE LOGOTIPO PROMPI (SIN HEADER CON NAVEGACIÓN)
+       ========================================================================== -->
+  <header class="main-header">
+    <div class="container header-container">
+      <div class="logo-area">
+        <a href="#" class="logo-link" aria-label="Prompi - Pet Shop y Veterinaria">
+          <!-- Logotipo Prompi estilo Centro Pet (Azul Marino + Naranja Cálido) -->
+          <svg class="prompi-brand-logo" viewBox="0 0 240 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Icono mascota con corazón/orejitas -->
+            <g transform="translate(4, 8)">
+              <circle cx="20" cy="22" r="15" fill="#032B61"/>
+              <!-- Orejitas en naranja -->
+              <ellipse cx="9" cy="8" rx="5" ry="7" fill="#FF621A"/>
+              <ellipse cx="20" cy="3" rx="4.5" ry="6.5" fill="#035791"/>
+              <ellipse cx="31" cy="8" rx="5" ry="7" fill="#FF621A"/>
+              <!-- Almohadilla blanca -->
+              <ellipse cx="20" cy="22" rx="7.5" ry="6" fill="#FFFFFF"/>
+              <circle cx="15.5" cy="15.5" r="2.2" fill="#FFFFFF"/>
+              <circle cx="24.5" cy="15.5" r="2.2" fill="#FFFFFF"/>
             </g>
-            <!-- Tipografía del Logo: Prompi -->
-            <text x="50" y="34" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="32" fill="#0F172A" letter-spacing="-0.03em">prompi</text>
-            <circle cx="168" cy="18" r="4" fill="#FF6338"/>
-            <text x="52" y="47" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="8.5" fill="#64748B" letter-spacing="0.18em">VETERINARIA &amp; PET SHOP</text>
+            <!-- Tipografía de marca: Prompi -->
+            <text x="56" y="34" font-family="'Poppins', sans-serif" font-weight="800" font-size="33" fill="#032B61" letter-spacing="-0.03em">prompi</text>
+            <circle cx="180" cy="19" r="4.5" fill="#FF621A"/>
+            <text x="58" y="47" font-family="'Inter', sans-serif" font-weight="700" font-size="9" fill="#035791" letter-spacing="0.16em">PET SHOP · VETERINARIA · SPA</text>
           </svg>
         </a>
       </div>
 
-      <!-- Chip informativo dinámico sin menú de navegación -->
-      <div class="top-bar-badge">
-        <span class="live-dot"></span>
-        <span class="top-bar-badge-text">Envíos express en el día · Atención Veterinaria</span>
+      <!-- Chip informativo de atención sin enlaces de menú -->
+      <div class="header-status-badge">
+        <span class="status-indicator"></span>
+        <span>Local Abierto hoy · Guardia y Envíos</span>
       </div>
     </div>
   </header>
 
   <main>
     <!-- ==========================================================================
-         HERO SECTION: VETERINARIA, ALIMENTOS & BIENESTAR ANIMAL
+         HERO SECTION: ESTILO PET SHOP CÁLIDO & FAMILIAR (AZUL MARINO Y BEIGE LINO)
          ========================================================================== -->
-    <section class="section-hero">
-      <div class="container hero-grid">
-        <div class="hero-content">
-          <div class="hero-tag">
-            <span class="tag-star">★</span> Especialistas en Perros y Gatos
+    <section class="hero-pet-section">
+      <div class="container hero-pet-grid">
+        <div class="hero-pet-text">
+          <div class="hero-pill-badge">
+            <span class="pill-dot"></span> Especialistas en Perros y Gatos
           </div>
-          <h1 class="hero-title">
-            Todo para su salud, nutrición y <span class="highlight-text">felicidad diaria.</span>
+          <h1 class="hero-pet-title">
+            Todo para el cuidado, salud y <span class="text-orange">felicidad de tu mascota.</span>
           </h1>
-          <p class="hero-description">
-            En <strong>Prompi</strong> encontrás las mejores marcas de alimentos balanceados, antiparasitarios y matapulgas líderes, farmacia veterinaria y servicio de baño &amp; peluquería canina con entrega rápida a domicilio.
+          <p class="hero-pet-lead">
+            Alimentos balanceados de primeras marcas, antiparasitarios y matapulgas garantizados, farmacia veterinaria y servicio de baño &amp; peluquería canina con despacho rápido a tu puerta.
           </p>
 
-          <div class="hero-actions">
-            <a href="https://wa.me/5491148907700?text=Hola%20Prompi!%20Quiero%20hacer%20un%20pedido%20para%20mi%20mascota" class="btn btn-primary" target="_blank" rel="noopener">
+          <div class="hero-btn-group">
+            <a href="https://wa.me/5491148907700?text=Hola%20Prompi!%20Quiero%20hacer%20un%20pedido%20para%20mi%20mascota" class="btn btn-orange" target="_blank" rel="noopener">
               <span>Hacer Pedido por WhatsApp</span>
-              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
-            <a href="#calculadora" class="btn btn-secondary">
-              <span>Calcular Ración de Alimento</span>
+            <a href="#calculadora" class="btn btn-navy-outline">
+              <span>Calculadora de Ración</span>
             </a>
           </div>
 
-          <!-- Píldoras de Acceso Rápido -->
-          <div class="hero-quick-filters">
-            <span class="quick-filter-label">Búsqueda rápida:</span>
-            <a href="#catalogo" class="quick-pill">🐶 Alimentos Perros</a>
-            <a href="#catalogo" class="quick-pill">🐱 Alimentos Gatos</a>
-            <a href="#catalogo" class="quick-pill">💊 Matapulgas &amp; Pipetas</a>
-            <a href="#servicios" class="quick-pill">✂️ Baño &amp; Spa</a>
-          </div>
-
-          <!-- Beneficios Clave -->
-          <div class="hero-trust-bar">
-            <div class="trust-item">
-              <span class="trust-title">Envíos en 24h</span>
-              <span class="trust-sub">Llegamos a tu puerta sin demoras</span>
-            </div>
-            <div class="trust-item">
-              <span class="trust-title">Productos 100% Originales</span>
-              <span class="trust-sub">Directo de laboratorios y marcas</span>
-            </div>
-            <div class="trust-item">
-              <span class="trust-title">Asesoramiento Veterinario</span>
-              <span class="trust-sub">Te ayudamos a elegir la dosis ideal</span>
-            </div>
+          <!-- Accesos rápidos tipo píldoras -->
+          <div class="hero-quick-categories">
+            <span class="quick-title">Comprar rápido:</span>
+            <a href="#catalogo" class="quick-chip" onclick="filterCatalog('perros')">🐶 Perros</a>
+            <a href="#catalogo" class="quick-chip" onclick="filterCatalog('gatos')">🐱 Gatos</a>
+            <a href="#catalogo" class="quick-chip" onclick="filterCatalog('farmacia')">💊 Matapulgas &amp; Pipetas</a>
+            <a href="#servicios" class="quick-chip">✂️ Baño &amp; Peluquería</a>
           </div>
         </div>
 
-        <div class="hero-visual">
-          <div class="hero-image-wrapper">
-            <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&w=1000&q=80" alt="Perro feliz y saludable cuidado con productos Prompi" class="hero-main-img">
+        <div class="hero-pet-visual">
+          <div class="hero-card-canvas">
+            <img src="https://images.unsplash.com/photo-1450778869180-41d0601e046e?auto=format&fit=crop&w=1000&q=80" alt="Perro y gato felices cuidados por Prompi" class="hero-pet-image">
             
-            <!-- Floating badge interactivo 1 -->
-            <div class="floating-badge badge-top">
-              <span class="badge-icon">💊</span>
+            <!-- Sticker flotante 1: Matapulgas -->
+            <div class="hero-floating-card card-top">
+              <span class="card-icon">💊</span>
               <div>
-                <strong>Matapulgas &amp; Pipetas</strong>
+                <strong>Antipulgas &amp; Pipetas</strong>
                 <small>Bravecto, NexGard, Simparica</small>
               </div>
             </div>
 
-            <!-- Floating badge interactivo 2 -->
-            <div class="floating-badge badge-bottom">
-              <span class="badge-icon">🚚</span>
+            <!-- Sticker flotante 2: Bolsas a domicilio -->
+            <div class="hero-floating-card card-bottom">
+              <span class="card-icon">🚚</span>
               <div>
-                <strong>Envío Express de Bolsas</strong>
-                <small>No cargues peso, te lo llevamos</small>
+                <strong>Envío Express de Alimentos</strong>
+                <small>Subimos bolsas de 15kg y 20kg</small>
               </div>
             </div>
           </div>
@@ -132,239 +128,105 @@
     </section>
 
     <!-- ==========================================================================
-         SECCIÓN NARANJA: CONFÍAN EN NOSOTROS / MARCAS LÍDERES (CARRUSEL INFINITO)
+         BARRA DE BENEFICIOS (CONFIANZA ESTILO CENTRO PET)
          ========================================================================== -->
-    <section class="section-trusted-brands">
-      <div class="container trusted-header">
-        <h2 class="trusted-title">Marcas Líderes que Cuidan a tu Mascota</h2>
-      </div>
-
-      <div class="logo-marquee-container" aria-label="Marcas de alimentos y farmacia veterinaria">
-        <div class="logo-marquee-track">
-          <!-- GRUPO 1 DE LOGOS EN BLANCO -->
-          <div class="marquee-logo-item" title="Royal Canin">
-            <svg viewBox="0 0 170 38" fill="none" class="white-logo">
-              <circle cx="14" cy="19" r="10" stroke="#FFFFFF" stroke-width="2.5"/>
-              <circle cx="14" cy="19" r="4" fill="#FFFFFF"/>
-              <text x="32" y="25" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="17" fill="#FFFFFF" letter-spacing="1">ROYAL CANIN</text>
-            </svg>
+    <section class="trust-bar-section">
+      <div class="container trust-bar-grid">
+        <div class="trust-box">
+          <div class="trust-icon-bubble">🚚</div>
+          <div class="trust-box-body">
+            <strong>Envíos en 24h</strong>
+            <span>CABA y Gran Buenos Aires a tu puerta</span>
           </div>
+        </div>
 
-          <div class="marquee-logo-item" title="Purina Pro Plan">
-            <svg viewBox="0 0 160 38" fill="none" class="white-logo">
-              <polygon points="6,27 16,9 26,27" fill="#FFFFFF"/>
-              <text x="34" y="24" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="16" fill="#FFFFFF" letter-spacing="0.5">PRO PLAN</text>
-            </svg>
+        <div class="trust-box">
+          <div class="trust-icon-bubble">🩺</div>
+          <div class="trust-box-body">
+            <strong>Atención Veterinaria</strong>
+            <span>Médicos profesionales para asesorarte</span>
           </div>
+        </div>
 
-          <div class="marquee-logo-item" title="Bravecto">
-            <svg viewBox="0 0 160 38" fill="none" class="white-logo">
-              <rect x="6" y="8" width="20" height="20" rx="4" fill="#FFFFFF"/>
-              <path d="M12 18L15 21L21 14" stroke="#FF6338" stroke-width="2.5" stroke-linecap="round"/>
-              <text x="34" y="25" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="17" fill="#FFFFFF" letter-spacing="1">BRAVECTO</text>
-            </svg>
+        <div class="trust-box">
+          <div class="trust-icon-bubble">🛡️</div>
+          <div class="trust-box-body">
+            <strong>100% Productos Originales</strong>
+            <span>Vencimiento garantizado y trazabilidad</span>
           </div>
+        </div>
 
-          <div class="marquee-logo-item" title="NexGard">
-            <svg viewBox="0 0 150 38" fill="none" class="white-logo">
-              <path d="M8 27L18 9L28 27H8Z" stroke="#FFFFFF" stroke-width="2"/>
-              <text x="34" y="25" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="17" fill="#FFFFFF" letter-spacing="1">NexGard</text>
-            </svg>
-          </div>
-
-          <div class="marquee-logo-item" title="Hill's Science Diet">
-            <svg viewBox="0 0 140 38" fill="none" class="white-logo">
-              <circle cx="14" cy="19" r="11" fill="#FFFFFF"/>
-              <text x="10" y="24" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="15" fill="#FF6338">H</text>
-              <text x="32" y="25" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="17" fill="#FFFFFF" letter-spacing="1">Hill's</text>
-            </svg>
-          </div>
-
-          <div class="marquee-logo-item" title="Simparica">
-            <svg viewBox="0 0 160 38" fill="none" class="white-logo">
-              <path d="M8 12C14 12 14 26 20 26C26 26 26 12 32 12" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/>
-              <text x="38" y="24" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="16" fill="#FFFFFF" letter-spacing="0.5">Simparica</text>
-            </svg>
-          </div>
-
-          <div class="marquee-logo-item" title="Frontline">
-            <svg viewBox="0 0 160 38" fill="none" class="white-logo">
-              <rect x="6" y="9" width="18" height="20" stroke="#FFFFFF" stroke-width="2.5"/>
-              <text x="30" y="25" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="17" fill="#FFFFFF" letter-spacing="1">FRONTLINE</text>
-            </svg>
-          </div>
-
-          <div class="marquee-logo-item" title="Eukanuba">
-            <svg viewBox="0 0 160 38" fill="none" class="white-logo">
-              <text x="8" y="25" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="18" fill="#FFFFFF" letter-spacing="1">Eukanuba</text>
-            </svg>
-          </div>
-
-          <div class="marquee-logo-item" title="Whiskas">
-            <svg viewBox="0 0 140 38" fill="none" class="white-logo">
-              <path d="M6 19C10 10 20 10 24 19C20 28 10 28 6 19Z" fill="#FFFFFF"/>
-              <text x="32" y="25" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="17" fill="#FFFFFF" letter-spacing="0.5">whiskas</text>
-            </svg>
-          </div>
-
-          <div class="marquee-logo-item" title="Vitalcan">
-            <svg viewBox="0 0 150 38" fill="none" class="white-logo">
-              <circle cx="14" cy="19" r="9" stroke="#FFFFFF" stroke-width="2.5"/>
-              <text x="30" y="25" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="17" fill="#FFFFFF" letter-spacing="0.5">vitalcan</text>
-            </svg>
-          </div>
-
-          <div class="marquee-logo-item" title="Sieger">
-            <svg viewBox="0 0 130 38" fill="none" class="white-logo">
-              <text x="8" y="25" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="18" fill="#FFFFFF" letter-spacing="1.5">SIEGER</text>
-            </svg>
-          </div>
-
-          <!-- GRUPO 2 (DUPLICADO PARA BUCLE CONTINUO SIN SALTOS) -->
-          <div class="marquee-logo-item" title="Royal Canin" aria-hidden="true">
-            <svg viewBox="0 0 170 38" fill="none" class="white-logo">
-              <circle cx="14" cy="19" r="10" stroke="#FFFFFF" stroke-width="2.5"/>
-              <circle cx="14" cy="19" r="4" fill="#FFFFFF"/>
-              <text x="32" y="25" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="17" fill="#FFFFFF" letter-spacing="1">ROYAL CANIN</text>
-            </svg>
-          </div>
-
-          <div class="marquee-logo-item" title="Purina Pro Plan" aria-hidden="true">
-            <svg viewBox="0 0 160 38" fill="none" class="white-logo">
-              <polygon points="6,27 16,9 26,27" fill="#FFFFFF"/>
-              <text x="34" y="24" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="16" fill="#FFFFFF" letter-spacing="0.5">PRO PLAN</text>
-            </svg>
-          </div>
-
-          <div class="marquee-logo-item" title="Bravecto" aria-hidden="true">
-            <svg viewBox="0 0 160 38" fill="none" class="white-logo">
-              <rect x="6" y="8" width="20" height="20" rx="4" fill="#FFFFFF"/>
-              <path d="M12 18L15 21L21 14" stroke="#FF6338" stroke-width="2.5" stroke-linecap="round"/>
-              <text x="34" y="25" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="17" fill="#FFFFFF" letter-spacing="1">BRAVECTO</text>
-            </svg>
-          </div>
-
-          <div class="marquee-logo-item" title="NexGard" aria-hidden="true">
-            <svg viewBox="0 0 150 38" fill="none" class="white-logo">
-              <path d="M8 27L18 9L28 27H8Z" stroke="#FFFFFF" stroke-width="2"/>
-              <text x="34" y="25" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="17" fill="#FFFFFF" letter-spacing="1">NexGard</text>
-            </svg>
-          </div>
-
-          <div class="marquee-logo-item" title="Hill's Science Diet" aria-hidden="true">
-            <svg viewBox="0 0 140 38" fill="none" class="white-logo">
-              <circle cx="14" cy="19" r="11" fill="#FFFFFF"/>
-              <text x="10" y="24" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="15" fill="#FF6338">H</text>
-              <text x="32" y="25" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="17" fill="#FFFFFF" letter-spacing="1">Hill's</text>
-            </svg>
-          </div>
-
-          <div class="marquee-logo-item" title="Simparica" aria-hidden="true">
-            <svg viewBox="0 0 160 38" fill="none" class="white-logo">
-              <path d="M8 12C14 12 14 26 20 26C26 26 26 12 32 12" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/>
-              <text x="38" y="24" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="16" fill="#FFFFFF" letter-spacing="0.5">Simparica</text>
-            </svg>
-          </div>
-
-          <div class="marquee-logo-item" title="Frontline" aria-hidden="true">
-            <svg viewBox="0 0 160 38" fill="none" class="white-logo">
-              <rect x="6" y="9" width="18" height="20" stroke="#FFFFFF" stroke-width="2.5"/>
-              <text x="30" y="25" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="17" fill="#FFFFFF" letter-spacing="1">FRONTLINE</text>
-            </svg>
-          </div>
-
-          <div class="marquee-logo-item" title="Eukanuba" aria-hidden="true">
-            <svg viewBox="0 0 160 38" fill="none" class="white-logo">
-              <text x="8" y="25" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="18" fill="#FFFFFF" letter-spacing="1">Eukanuba</text>
-            </svg>
-          </div>
-
-          <div class="marquee-logo-item" title="Whiskas" aria-hidden="true">
-            <svg viewBox="0 0 140 38" fill="none" class="white-logo">
-              <path d="M6 19C10 10 20 10 24 19C20 28 10 28 6 19Z" fill="#FFFFFF"/>
-              <text x="32" y="25" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="17" fill="#FFFFFF" letter-spacing="0.5">whiskas</text>
-            </svg>
-          </div>
-
-          <div class="marquee-logo-item" title="Vitalcan" aria-hidden="true">
-            <svg viewBox="0 0 150 38" fill="none" class="white-logo">
-              <circle cx="14" cy="19" r="9" stroke="#FFFFFF" stroke-width="2.5"/>
-              <text x="30" y="25" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="17" fill="#FFFFFF" letter-spacing="0.5">vitalcan</text>
-            </svg>
-          </div>
-
-          <div class="marquee-logo-item" title="Sieger" aria-hidden="true">
-            <svg viewBox="0 0 130 38" fill="none" class="white-logo">
-              <text x="8" y="25" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="18" fill="#FFFFFF" letter-spacing="1.5">SIEGER</text>
-            </svg>
+        <div class="trust-box">
+          <div class="trust-icon-bubble">💳</div>
+          <div class="trust-box-body">
+            <strong>Todos los Medios de Pago</strong>
+            <span>Transferencia con descuento, tarjetas y efectivo</span>
           </div>
         </div>
       </div>
     </section>
 
     <!-- ==========================================================================
-         SECCIÓN CATEGORÍAS PRINCIPALES (INSPIRADO EN PUPPIS)
+         CATEGORÍAS DE MASCOTAS (BURBUJAS CÁLIDAS Y AMIGABLES)
          ========================================================================== -->
-    <section class="section section-categories" id="categorias">
+    <section class="section-categories-pet">
       <div class="container">
-        <div class="section-header-center">
-          <span class="section-tag">Tienda Especializada</span>
-          <h2 class="section-title">Explorá por Categoría</h2>
-          <p class="section-subtitle">
-            Encontrá exactamente lo que tu compañero necesita, con stock garantizado y entrega express.
-          </p>
+        <div class="section-heading-centered">
+          <span class="heading-subtag">Explorá la Tienda</span>
+          <h2 class="heading-maintitle">Elegí la Categoría de tu Mascota</h2>
+          <p class="heading-description">Encontrá el alimento exacto, tratamientos antiparasitarios y servicios de bienestar.</p>
         </div>
 
-        <div class="categories-grid">
+        <div class="pet-categories-grid">
           <!-- Categoría 1: Perros -->
-          <div class="category-card" onclick="filterCatalog('perros')">
-            <div class="cat-image-box">
-              <img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&w=600&q=80" alt="Mundo Perros" class="cat-img">
+          <div class="pet-cat-card" onclick="filterCatalog('perros')">
+            <div class="pet-cat-thumb">
+              <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&w=500&q=80" alt="Mundo Perros" class="pet-cat-img">
             </div>
-            <div class="cat-content">
-              <span class="cat-badge">Para Caninos</span>
-              <h3 class="cat-title">Mundo Perros</h3>
-              <p class="cat-desc">Alimento seco y húmedo por edad, tamaño y patología, snacks y juguetes.</p>
-              <span class="cat-link">Ver catálogo perros &rarr;</span>
+            <div class="pet-cat-info">
+              <span class="pet-cat-tag">Para Caninos</span>
+              <h3 class="pet-cat-name">Mundo Perros</h3>
+              <p class="pet-cat-text">Alimentos secos y húmedos por tamaño, raza y edad, premios y accesorios.</p>
+              <span class="pet-cat-cta">Ver productos &rarr;</span>
             </div>
           </div>
 
           <!-- Categoría 2: Gatos -->
-          <div class="category-card" onclick="filterCatalog('gatos')">
-            <div class="cat-image-box">
-              <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=600&q=80" alt="Mundo Gatos" class="cat-img">
+          <div class="pet-cat-card" onclick="filterCatalog('gatos')">
+            <div class="pet-cat-thumb">
+              <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=500&q=80" alt="Mundo Gatos" class="pet-cat-img">
             </div>
-            <div class="cat-content">
-              <span class="cat-badge">Para Felinos</span>
-              <h3 class="cat-title">Mundo Gatos</h3>
-              <p class="cat-desc">Nutrición para esterilizados, urinario, piedras sanitarias y rascadores.</p>
-              <span class="cat-link">Ver catálogo gatos &rarr;</span>
-            </div>
-          </div>
-
-          <!-- Categoría 3: Matapulgas & Farmacia -->
-          <div class="category-card" onclick="filterCatalog('farmacia')">
-            <div class="cat-image-box">
-              <img src="https://images.unsplash.com/photo-1576201836106-db1758fd1c97?auto=format&fit=crop&w=600&q=80" alt="Matapulgas y Farmacia Veterinaria" class="cat-img">
-            </div>
-            <div class="cat-content">
-              <span class="cat-badge">Salud &amp; Prevención</span>
-              <h3 class="cat-title">Matapulgas &amp; Farmacia</h3>
-              <p class="cat-desc">Comprimidos masticables, pipetas, antiparasitarios internos y dermatología.</p>
-              <span class="cat-link">Ver antiparasitarios &rarr;</span>
+            <div class="pet-cat-info">
+              <span class="pet-cat-tag">Para Felinos</span>
+              <h3 class="pet-cat-name">Mundo Gatos</h3>
+              <p class="pet-cat-text">Nutrición especializada para castrados, urinario, piedras sanitarias y snacks.</p>
+              <span class="pet-cat-cta">Ver productos &rarr;</span>
             </div>
           </div>
 
-          <!-- Categoría 4: Baño & Estética -->
-          <div class="category-card" onclick="document.getElementById('servicios').scrollIntoView({behavior: 'smooth'})">
-            <div class="cat-image-box">
-              <img src="https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?auto=format&fit=crop&w=600&q=80" alt="Baño y Peluquería Canina" class="cat-img">
+          <!-- Categoría 3: Farmacia y Matapulgas -->
+          <div class="pet-cat-card" onclick="filterCatalog('farmacia')">
+            <div class="pet-cat-thumb">
+              <img src="https://images.unsplash.com/photo-1576201836106-db1758fd1c97?auto=format&fit=crop&w=500&q=80" alt="Farmacia Veterinaria y Antiparasitarios" class="pet-cat-img">
             </div>
-            <div class="cat-content">
-              <span class="cat-badge">Estética &amp; Spa</span>
-              <h3 class="cat-title">Baño &amp; Peluquería</h3>
-              <p class="cat-desc">Cortes de raza, baños relajantes, corte de uñas y deslanado profesional.</p>
-              <span class="cat-link">Reservar turno &rarr;</span>
+            <div class="pet-cat-info">
+              <span class="pet-cat-tag">Salud &amp; Prevención</span>
+              <h3 class="pet-cat-name">Matapulgas &amp; Farmacia</h3>
+              <p class="pet-cat-text">Comprimidos masticables, pipetas contra garrapatas, antiparasitarios y colirios.</p>
+              <span class="pet-cat-cta">Ver farmacia &rarr;</span>
+            </div>
+          </div>
+
+          <!-- Categoría 4: Baño y Peluquería -->
+          <div class="pet-cat-card" onclick="document.getElementById('servicios').scrollIntoView({behavior: 'smooth'})">
+            <div class="pet-cat-thumb">
+              <img src="https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?auto=format&fit=crop&w=500&q=80" alt="Baño y Peluquería Canina" class="pet-cat-img">
+            </div>
+            <div class="pet-cat-info">
+              <span class="pet-cat-tag">Estética &amp; Spa</span>
+              <h3 class="pet-cat-name">Baño &amp; Peluquería</h3>
+              <p class="pet-cat-text">Cortes higiénicos, baño con agua tibia y secado antiestrés con amor.</p>
+              <span class="pet-cat-cta">Reservar turno &rarr;</span>
             </div>
           </div>
         </div>
@@ -372,306 +234,435 @@
     </section>
 
     <!-- ==========================================================================
-         SECCIÓN PRODUCTOS DESTACADOS & MATAPULGAS CON FILTROS INTERACTIVOS
+         BANDA DE MARCAS OFICIALES (MARQUEE EN AZUL MARINO PROFUNDO DE CENTRO PET)
          ========================================================================== -->
-    <section class="section section-products" id="catalogo">
+    <section class="brands-marquee-band">
+      <div class="container brands-header">
+        <h2 class="brands-title">Las Mejores Marcas para la Nutrición y Salud Animal</h2>
+      </div>
+
+      <div class="brands-marquee-wrap" aria-label="Marcas oficiales comercializadas">
+        <div class="brands-marquee-rail">
+          <!-- Bucle de marcas -->
+          <div class="brand-item" title="Royal Canin">
+            <svg viewBox="0 0 170 38" fill="none" class="brand-vector">
+              <circle cx="14" cy="19" r="10" stroke="#FFFFFF" stroke-width="2.5"/>
+              <circle cx="14" cy="19" r="4" fill="#FFFFFF"/>
+              <text x="32" y="25" font-family="'Poppins', sans-serif" font-weight="800" font-size="17" fill="#FFFFFF" letter-spacing="1">ROYAL CANIN</text>
+            </svg>
+          </div>
+
+          <div class="brand-item" title="Purina Pro Plan">
+            <svg viewBox="0 0 160 38" fill="none" class="brand-vector">
+              <polygon points="6,27 16,9 26,27" fill="#FFFFFF"/>
+              <text x="34" y="24" font-family="'Poppins', sans-serif" font-weight="800" font-size="16" fill="#FFFFFF" letter-spacing="0.5">PRO PLAN</text>
+            </svg>
+          </div>
+
+          <div class="brand-item" title="Bravecto">
+            <svg viewBox="0 0 160 38" fill="none" class="brand-vector">
+              <rect x="6" y="8" width="20" height="20" rx="4" fill="#FFFFFF"/>
+              <path d="M12 18L15 21L21 14" stroke="#032B61" stroke-width="2.5" stroke-linecap="round"/>
+              <text x="34" y="25" font-family="'Poppins', sans-serif" font-weight="800" font-size="17" fill="#FFFFFF" letter-spacing="1">BRAVECTO</text>
+            </svg>
+          </div>
+
+          <div class="brand-item" title="NexGard">
+            <svg viewBox="0 0 150 38" fill="none" class="brand-vector">
+              <path d="M8 27L18 9L28 27H8Z" stroke="#FFFFFF" stroke-width="2"/>
+              <text x="34" y="25" font-family="'Poppins', sans-serif" font-weight="800" font-size="17" fill="#FFFFFF" letter-spacing="1">NexGard</text>
+            </svg>
+          </div>
+
+          <div class="brand-item" title="Hill's">
+            <svg viewBox="0 0 140 38" fill="none" class="brand-vector">
+              <circle cx="14" cy="19" r="11" fill="#FFFFFF"/>
+              <text x="10" y="24" font-family="'Poppins', sans-serif" font-weight="800" font-size="15" fill="#032B61">H</text>
+              <text x="32" y="25" font-family="'Poppins', sans-serif" font-weight="800" font-size="17" fill="#FFFFFF" letter-spacing="1">Hill's</text>
+            </svg>
+          </div>
+
+          <div class="brand-item" title="Simparica">
+            <svg viewBox="0 0 160 38" fill="none" class="brand-vector">
+              <path d="M8 12C14 12 14 26 20 26C26 26 26 12 32 12" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/>
+              <text x="38" y="24" font-family="'Poppins', sans-serif" font-weight="800" font-size="16" fill="#FFFFFF" letter-spacing="0.5">Simparica</text>
+            </svg>
+          </div>
+
+          <div class="brand-item" title="Frontline">
+            <svg viewBox="0 0 160 38" fill="none" class="brand-vector">
+              <rect x="6" y="9" width="18" height="20" stroke="#FFFFFF" stroke-width="2.5"/>
+              <text x="30" y="25" font-family="'Poppins', sans-serif" font-weight="800" font-size="17" fill="#FFFFFF" letter-spacing="1">FRONTLINE</text>
+            </svg>
+          </div>
+
+          <div class="brand-item" title="Eukanuba">
+            <svg viewBox="0 0 160 38" fill="none" class="brand-vector">
+              <text x="8" y="25" font-family="'Poppins', sans-serif" font-weight="800" font-size="18" fill="#FFFFFF" letter-spacing="1">Eukanuba</text>
+            </svg>
+          </div>
+
+          <div class="brand-item" title="Whiskas">
+            <svg viewBox="0 0 140 38" fill="none" class="brand-vector">
+              <path d="M6 19C10 10 20 10 24 19C20 28 10 28 6 19Z" fill="#FFFFFF"/>
+              <text x="32" y="25" font-family="'Poppins', sans-serif" font-weight="800" font-size="17" fill="#FFFFFF" letter-spacing="0.5">whiskas</text>
+            </svg>
+          </div>
+
+          <div class="brand-item" title="Vitalcan">
+            <svg viewBox="0 0 150 38" fill="none" class="brand-vector">
+              <circle cx="14" cy="19" r="9" stroke="#FFFFFF" stroke-width="2.5"/>
+              <text x="30" y="25" font-family="'Poppins', sans-serif" font-weight="800" font-size="17" fill="#FFFFFF" letter-spacing="0.5">vitalcan</text>
+            </svg>
+          </div>
+
+          <!-- DUPLICADO PARA LOOP CONTINUO -->
+          <div class="brand-item" title="Royal Canin" aria-hidden="true">
+            <svg viewBox="0 0 170 38" fill="none" class="brand-vector">
+              <circle cx="14" cy="19" r="10" stroke="#FFFFFF" stroke-width="2.5"/>
+              <circle cx="14" cy="19" r="4" fill="#FFFFFF"/>
+              <text x="32" y="25" font-family="'Poppins', sans-serif" font-weight="800" font-size="17" fill="#FFFFFF" letter-spacing="1">ROYAL CANIN</text>
+            </svg>
+          </div>
+
+          <div class="brand-item" title="Purina Pro Plan" aria-hidden="true">
+            <svg viewBox="0 0 160 38" fill="none" class="brand-vector">
+              <polygon points="6,27 16,9 26,27" fill="#FFFFFF"/>
+              <text x="34" y="24" font-family="'Poppins', sans-serif" font-weight="800" font-size="16" fill="#FFFFFF" letter-spacing="0.5">PRO PLAN</text>
+            </svg>
+          </div>
+
+          <div class="brand-item" title="Bravecto" aria-hidden="true">
+            <svg viewBox="0 0 160 38" fill="none" class="brand-vector">
+              <rect x="6" y="8" width="20" height="20" rx="4" fill="#FFFFFF"/>
+              <path d="M12 18L15 21L21 14" stroke="#032B61" stroke-width="2.5" stroke-linecap="round"/>
+              <text x="34" y="25" font-family="'Poppins', sans-serif" font-weight="800" font-size="17" fill="#FFFFFF" letter-spacing="1">BRAVECTO</text>
+            </svg>
+          </div>
+
+          <div class="brand-item" title="NexGard" aria-hidden="true">
+            <svg viewBox="0 0 150 38" fill="none" class="brand-vector">
+              <path d="M8 27L18 9L28 27H8Z" stroke="#FFFFFF" stroke-width="2"/>
+              <text x="34" y="25" font-family="'Poppins', sans-serif" font-weight="800" font-size="17" fill="#FFFFFF" letter-spacing="1">NexGard</text>
+            </svg>
+          </div>
+
+          <div class="brand-item" title="Hill's" aria-hidden="true">
+            <svg viewBox="0 0 140 38" fill="none" class="brand-vector">
+              <circle cx="14" cy="19" r="11" fill="#FFFFFF"/>
+              <text x="10" y="24" font-family="'Poppins', sans-serif" font-weight="800" font-size="15" fill="#032B61">H</text>
+              <text x="32" y="25" font-family="'Poppins', sans-serif" font-weight="800" font-size="17" fill="#FFFFFF" letter-spacing="1">Hill's</text>
+            </svg>
+          </div>
+
+          <div class="brand-item" title="Simparica" aria-hidden="true">
+            <svg viewBox="0 0 160 38" fill="none" class="brand-vector">
+              <path d="M8 12C14 12 14 26 20 26C26 26 26 12 32 12" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/>
+              <text x="38" y="24" font-family="'Poppins', sans-serif" font-weight="800" font-size="16" fill="#FFFFFF" letter-spacing="0.5">Simparica</text>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         CATÁLOGO DE PRODUCTOS (ESTILO E-COMMERCE PET SHOP REAL)
+         ========================================================================== -->
+    <section class="section-pet-catalog" id="catalogo">
       <div class="container">
-        <div class="section-header-center">
-          <span class="section-tag">Farmacia &amp; Pet Shop</span>
-          <h2 class="section-title">Productos Más Elegidos</h2>
-          <p class="section-subtitle">
-            Alimentos balanceados originales y los antiparasitarios más recomendados por médicos veterinarios.
-          </p>
+        <div class="section-heading-centered">
+          <span class="heading-subtag">Catálogo Online</span>
+          <h2 class="heading-maintitle">Productos Destacados &amp; Más Vendidos</h2>
+          <p class="heading-description">Comprá directo con stock inmediato o consultá a nuestro equipo veterinario por dosis y disponibilidad.</p>
         </div>
 
-        <!-- Filtros interactivos -->
-        <div class="product-filters">
-          <button class="filter-btn active" data-filter="all">Todos los Productos</button>
-          <button class="filter-btn" data-filter="perros">🐶 Perros</button>
-          <button class="filter-btn" data-filter="gatos">🐱 Gatos</button>
-          <button class="filter-btn" data-filter="farmacia">💊 Matapulgas &amp; Farmacia</button>
-          <button class="filter-btn" data-filter="higiene">✨ Higiene &amp; Accesorios</button>
+        <!-- Pestañas de filtrado con estilo píldora -->
+        <div class="catalog-filter-bar">
+          <button class="filter-chip active" data-filter="all">Todos los Productos</button>
+          <button class="filter-chip" data-filter="perros">🐶 Alimentos Perros</button>
+          <button class="filter-chip" data-filter="gatos">🐱 Alimentos Gatos</button>
+          <button class="filter-chip" data-filter="farmacia">💊 Antiparasitarios &amp; Pulgas</button>
+          <button class="filter-chip" data-filter="higiene">✨ Higiene &amp; Accesorios</button>
         </div>
 
-        <!-- Grilla de Productos -->
-        <div class="products-grid">
-          <!-- Producto 1: NexGard Spectra -->
-          <div class="product-card" data-category="farmacia perros">
-            <div class="product-image-box">
-              <span class="prod-badge badge-hot">Más Vendido</span>
-              <img src="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?auto=format&fit=crop&w=500&q=80" alt="NexGard Spectra Antiparasitario" class="product-img">
+        <!-- Grilla de Tarjetas de Productos -->
+        <div class="pet-products-grid">
+          <!-- Card 1: NexGard Spectra -->
+          <div class="pet-item-card" data-category="farmacia perros">
+            <div class="pet-item-media">
+              <span class="item-badge badge-orange-tag">Más Vendido</span>
+              <img src="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?auto=format&fit=crop&w=500&q=80" alt="NexGard Spectra" class="pet-item-img">
             </div>
-            <div class="product-body">
-              <span class="product-meta">Antiparasitario Completo · Perros</span>
-              <h3 class="product-name">NexGard Spectra (Todas las medidas)</h3>
-              <p class="product-desc">Comprimido masticable sabor carne. Elimina pulgas, garrapatas, sarna y parásitos intestinales por 30 días.</p>
-              <div class="product-features">
-                <span>✓ Acción rápida en 4 hs</span>
-                <span>✓ Sin olor ni pipetas sucias</span>
+            <div class="pet-item-body">
+              <span class="item-category-label">Antiparasitario Oral · Perros</span>
+              <h3 class="item-title">NexGard Spectra (Comprimido Masticable)</h3>
+              <p class="item-description">Elimina pulgas, garrapatas, ácaros de sarna y parásitos intestinales con sabor a carne que les encanta.</p>
+              <div class="item-bullets">
+                <span>✓ Acción inmediata en 4 horas</span>
+                <span>✓ Protección mensual 30 días</span>
               </div>
-              <div class="product-footer">
-                <div class="product-pricing">
-                  <span class="price-label">Dosis según peso</span>
-                  <strong class="price-val">Desde $14.500</strong>
+              <div class="item-bottom-bar">
+                <div class="item-price-block">
+                  <span class="price-hint">Según peso de tu perro</span>
+                  <strong class="price-amount">Desde $14.500</strong>
                 </div>
-                <a href="https://wa.me/5491148907700?text=Hola%20Prompi!%20Quiero%20consultar%20el%20precio%20de%20NexGard%20Spectra%20para%20mi%20perro" class="btn btn-sm btn-primary" target="_blank" rel="noopener">Pedir</a>
+                <a href="https://wa.me/5491148907700?text=Hola%20Prompi!%20Quiero%20consultar%20precio%20de%20NexGard%20Spectra" class="btn btn-sm btn-orange" target="_blank" rel="noopener">Pedir</a>
               </div>
             </div>
           </div>
 
-          <!-- Producto 2: Bravecto 3 Meses -->
-          <div class="product-card" data-category="farmacia perros gatos">
-            <div class="product-image-box">
-              <span class="prod-badge badge-premium">Protección 12 Semanas</span>
-              <img src="https://images.unsplash.com/photo-1548767797-d8c844163c4c?auto=format&fit=crop&w=500&q=80" alt="Bravecto Masticable Antipulgas" class="product-img">
+          <!-- Card 2: Bravecto 3 Meses -->
+          <div class="pet-item-card" data-category="farmacia perros gatos">
+            <div class="pet-item-media">
+              <span class="item-badge badge-navy-tag">Protección 12 Semanas</span>
+              <img src="https://images.unsplash.com/photo-1548767797-d8c844163c4c?auto=format&fit=crop&w=500&q=80" alt="Bravecto Antipulgas" class="pet-item-img">
             </div>
-            <div class="product-body">
-              <span class="product-meta">Antipulgas de Larga Duración</span>
-              <h3 class="product-name">Bravecto Comprimido (3 Meses)</h3>
-              <p class="product-desc">Una sola toma protege a tu mascota durante 3 meses ininterrumpidos contra pulgas y garrapatas.</p>
-              <div class="product-features">
-                <span>✓ 12 semanas continuas</span>
+            <div class="pet-item-body">
+              <span class="item-category-label">Antipulgas Trimestral · Larga Duración</span>
+              <h3 class="item-title">Bravecto Masticable (3 Meses Continuos)</h3>
+              <p class="item-description">Una sola toma protege a tu mascota durante 12 semanas completas contra pulgas y garrapatas sin olvidos.</p>
+              <div class="item-bullets">
+                <span>✓ 3 meses ininterrumpidos</span>
                 <span>✓ Apto cachorros desde 8 semanas</span>
               </div>
-              <div class="product-footer">
-                <div class="product-pricing">
-                  <span class="price-label">Presentación trimestral</span>
-                  <strong class="price-val">Desde $28.900</strong>
+              <div class="item-bottom-bar">
+                <div class="item-price-block">
+                  <span class="price-hint">Comprimido trimestral</span>
+                  <strong class="price-amount">Desde $28.900</strong>
                 </div>
-                <a href="https://wa.me/5491148907700?text=Hola%20Prompi!%20Quiero%20pedir%20Bravecto" class="btn btn-sm btn-primary" target="_blank" rel="noopener">Pedir</a>
+                <a href="https://wa.me/5491148907700?text=Hola%20Prompi!%20Quiero%20pedir%20Bravecto" class="btn btn-sm btn-orange" target="_blank" rel="noopener">Pedir</a>
               </div>
             </div>
           </div>
 
-          <!-- Producto 3: Royal Canin Mini Adult -->
-          <div class="product-card" data-category="perros">
-            <div class="product-image-box">
-              <span class="prod-badge badge-best">Súper Premium</span>
-              <img src="https://images.unsplash.com/photo-1589924691995-400dc9ecc119?auto=format&fit=crop&w=500&q=80" alt="Alimento Royal Canin Mini Adult" class="product-img">
+          <!-- Card 3: Royal Canin Mini Adult -->
+          <div class="pet-item-card" data-category="perros">
+            <div class="pet-item-media">
+              <span class="item-badge badge-green-tag">Envío Gratis CABA</span>
+              <img src="https://images.unsplash.com/photo-1589924691995-400dc9ecc119?auto=format&fit=crop&w=500&q=80" alt="Royal Canin Mini Adult" class="pet-item-img">
             </div>
-            <div class="product-body">
-              <span class="product-meta">Alimento Balanceado Seco</span>
-              <h3 class="product-name">Royal Canin Mini Adult (7.5kg y 15kg)</h3>
-              <p class="product-desc">Formulado para perros adultos de raza pequeña. Mantiene el peso óptimo y cuida el pelaje con ácidos grasos EPA-DHA.</p>
-              <div class="product-features">
-                <span>✓ Croqueta adaptada</span>
-                <span>✓ Digestibilidad reforzada</span>
+            <div class="pet-item-body">
+              <span class="item-category-label">Alimento Súper Premium · Perros</span>
+              <h3 class="item-title">Royal Canin Mini Adult (7.5kg y 15kg)</h3>
+              <p class="item-description">Nutrición de alta digestibilidad y croqueta adaptada para mandíbulas de razas pequeñas. Pelo brillante y vitalidad.</p>
+              <div class="item-bullets">
+                <span>✓ Con ácidos grasos EPA y DHA</span>
+                <span>✓ Mantiene el peso saludable</span>
               </div>
-              <div class="product-footer">
-                <div class="product-pricing">
-                  <span class="price-label">Envío bonificado</span>
-                  <strong class="price-val">Bolsa 7.5kg: $42.500</strong>
+              <div class="item-bottom-bar">
+                <div class="item-price-block">
+                  <span class="price-hint">Bolsa 7.5kg con envío</span>
+                  <strong class="price-amount">$42.500</strong>
                 </div>
-                <a href="https://wa.me/5491148907700?text=Hola%20Prompi!%20Quiero%20pedir%20Royal%20Canin%20Mini%20Adult" class="btn btn-sm btn-primary" target="_blank" rel="noopener">Pedir</a>
+                <a href="https://wa.me/5491148907700?text=Hola%20Prompi!%20Quiero%20pedir%20Royal%20Canin%20Mini%20Adult" class="btn btn-sm btn-orange" target="_blank" rel="noopener">Pedir</a>
               </div>
             </div>
           </div>
 
-          <!-- Producto 4: Purina Pro Plan Cat Sterilized -->
-          <div class="product-card" data-category="gatos">
-            <div class="product-image-box">
-              <span class="prod-badge badge-health">Salud Urinaria</span>
-              <img src="https://images.unsplash.com/photo-1574158622682-e40e69881006?auto=format&fit=crop&w=500&q=80" alt="Purina Pro Plan Sterilized Cat" class="product-img">
+          <!-- Card 4: Pro Plan Gato Esterilizado -->
+          <div class="pet-item-card" data-category="gatos">
+            <div class="pet-item-media">
+              <span class="item-badge badge-navy-tag">Salud Renal OptiRenal</span>
+              <img src="https://images.unsplash.com/photo-1574158622682-e40e69881006?auto=format&fit=crop&w=500&q=80" alt="Pro Plan Gatos Esterilizados" class="pet-item-img">
             </div>
-            <div class="product-body">
-              <span class="product-meta">Gatos Esterilizados · Adultos</span>
-              <h3 class="product-name">Pro Plan Sterilized OptiRenal (3kg / 7.5kg)</h3>
-              <p class="product-desc">Protección probada del sistema renal y control calórico para evitar el sobrepeso común tras la castración.</p>
-              <div class="product-features">
-                <span>✓ Tecnología OptiRenal</span>
+            <div class="pet-item-body">
+              <span class="item-category-label">Gatos Esterilizados · Adultos</span>
+              <h3 class="item-title">Purina Pro Plan Sterilized OptiRenal (3kg / 7.5kg)</h3>
+              <p class="item-description">Protección probada de los riñones y control calórico para prevenir el sobrepeso habitual tras la castración.</p>
+              <div class="item-bullets">
                 <span>✓ Previene cálculos urinarios</span>
+                <span>✓ Fórmula veterinaria avanzada</span>
               </div>
-              <div class="product-footer">
-                <div class="product-pricing">
-                  <span class="price-label">Fórmula veterinaria</span>
-                  <strong class="price-val">Bolsa 3kg: $24.800</strong>
+              <div class="item-bottom-bar">
+                <div class="item-price-block">
+                  <span class="price-hint">Bolsa 3kg</span>
+                  <strong class="price-amount">$24.800</strong>
                 </div>
-                <a href="https://wa.me/5491148907700?text=Hola%20Prompi!%20Quiero%20pedir%20Pro%20Plan%20Sterilized%20Cat" class="btn btn-sm btn-primary" target="_blank" rel="noopener">Pedir</a>
+                <a href="https://wa.me/5491148907700?text=Hola%20Prompi!%20Quiero%20pedir%20Pro%20Plan%20Sterilized%20Cat" class="btn btn-sm btn-orange" target="_blank" rel="noopener">Pedir</a>
               </div>
             </div>
           </div>
 
-          <!-- Producto 5: Simparica Trio -->
-          <div class="product-card" data-category="farmacia perros">
-            <div class="product-image-box">
-              <span class="prod-badge badge-hot">Triple Protección</span>
-              <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=500&q=80" alt="Simparica Trio Comprimido" class="product-img">
+          <!-- Card 5: Simparica Trio -->
+          <div class="pet-item-card" data-category="farmacia perros">
+            <div class="pet-item-media">
+              <span class="item-badge badge-orange-tag">Triple Acción</span>
+              <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=500&q=80" alt="Simparica Trio" class="pet-item-img">
             </div>
-            <div class="product-body">
-              <span class="product-meta">Zoetis Laboratorio · Mensual</span>
-              <h3 class="product-name">Simparica Trio Masticable</h3>
-              <p class="product-desc">Defensa mensual combinada contra pulgas, garrapatas y el temido parásito del corazón (Dirofilaria).</p>
-              <div class="product-features">
-                <span>✓ Eficacia comprobada</span>
-                <span>✓ Alta palatabilidad</span>
+            <div class="pet-item-body">
+              <span class="item-category-label">Laboratorio Zoetis · Mensual</span>
+              <h3 class="item-title">Simparica Trio Comprimido Masticable</h3>
+              <p class="item-description">Defensa combinada contra pulgas, garrapatas y el gusano del corazón (Dirofilaria). Sabor altamente apetecible.</p>
+              <div class="item-bullets">
+                <span>✓ Pulgas, garrapatas y parásitos internos</span>
+                <span>✓ Eficacia comprobada en 8 horas</span>
               </div>
-              <div class="product-footer">
-                <div class="product-pricing">
-                  <span class="price-label">Dosis individual</span>
-                  <strong class="price-val">Desde $13.200</strong>
+              <div class="item-bottom-bar">
+                <div class="item-price-block">
+                  <span class="price-hint">Por comprimido</span>
+                  <strong class="price-amount">Desde $13.200</strong>
                 </div>
-                <a href="https://wa.me/5491148907700?text=Hola%20Prompi!%20Quiero%20pedir%20Simparica%20Trio" class="btn btn-sm btn-primary" target="_blank" rel="noopener">Pedir</a>
+                <a href="https://wa.me/5491148907700?text=Hola%20Prompi!%20Quiero%20pedir%20Simparica%20Trio" class="btn btn-sm btn-orange" target="_blank" rel="noopener">Pedir</a>
               </div>
             </div>
           </div>
 
-          <!-- Producto 6: Pipeta Frontline Plus Perros y Gatos -->
-          <div class="product-card" data-category="farmacia perros gatos">
-            <div class="product-image-box">
-              <span class="prod-badge badge-best">Clásico Confiable</span>
-              <img src="https://images.unsplash.com/photo-1537151625747-768eb6cf92b2?auto=format&fit=crop&w=500&q=80" alt="Pipeta Frontline Plus" class="product-img">
+          <!-- Card 6: Pipeta Frontline Plus -->
+          <div class="pet-item-card" data-category="farmacia perros gatos">
+            <div class="pet-item-media">
+              <span class="item-badge badge-navy-tag">Uso Tópico Spot-on</span>
+              <img src="https://images.unsplash.com/photo-1537151625747-768eb6cf92b2?auto=format&fit=crop&w=500&q=80" alt="Pipeta Frontline Plus" class="pet-item-img">
             </div>
-            <div class="product-body">
-              <span class="product-meta">Uso Tópico Spot-on</span>
-              <h3 class="product-name">Frontline Plus Pipeta (Perro y Gato)</h3>
-              <p class="product-desc">Corta el ciclo biológico de las pulgas matando huevos y larvas. Ideal para mascotas con piel sensible a pastillas.</p>
-              <div class="product-features">
-                <span>✓ Resistente al agua</span>
-                <span>✓ Protección 30 días</span>
+            <div class="pet-item-body">
+              <span class="item-category-label">Antiparasitario Externo · Perros y Gatos</span>
+              <h3 class="item-title">Frontline Plus Pipeta (Todas las tallas)</h3>
+              <p class="item-description">Corta el ciclo biológico de las pulgas matando huevos y larvas en el ambiente y la mascota. Resistente a baños.</p>
+              <div class="item-bullets">
+                <span>✓ Ideal para animales con piel sensible</span>
+                <span>✓ 30 días de protección sobre el pelaje</span>
               </div>
-              <div class="product-footer">
-                <div class="product-pricing">
-                  <span class="price-label">Por unidad</span>
-                  <strong class="price-val">Desde $8.900</strong>
+              <div class="item-bottom-bar">
+                <div class="item-price-block">
+                  <span class="price-hint">Por unidad sellada</span>
+                  <strong class="price-amount">Desde $8.900</strong>
                 </div>
-                <a href="https://wa.me/5491148907700?text=Hola%20Prompi!%20Quiero%20pedir%20Pipeta%20Frontline" class="btn btn-sm btn-primary" target="_blank" rel="noopener">Pedir</a>
+                <a href="https://wa.me/5491148907700?text=Hola%20Prompi!%20Quiero%20pedir%20Pipeta%20Frontline" class="btn btn-sm btn-orange" target="_blank" rel="noopener">Pedir</a>
               </div>
             </div>
           </div>
 
-          <!-- Producto 7: Piedras Sanitarias Aglomerantes -->
-          <div class="product-card" data-category="gatos higiene">
-            <div class="product-image-box">
-              <span class="prod-badge badge-premium">Cero Olores</span>
-              <img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?auto=format&fit=crop&w=500&q=80" alt="Piedras Sanitarias Gatos" class="product-img">
+          <!-- Card 7: Piedras Sanitarias Aglomerantes -->
+          <div class="pet-item-card" data-category="gatos higiene">
+            <div class="pet-item-media">
+              <span class="item-badge badge-green-tag">Aglutinante Premium</span>
+              <img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?auto=format&fit=crop&w=500&q=80" alt="Piedras Sanitarias Gatos" class="pet-item-img">
             </div>
-            <div class="product-body">
-              <span class="product-meta">Bandeja Higiénica Felina</span>
-              <h3 class="product-name">Piedras Sanitarias Aglutinantes Ultra Clean</h3>
-              <p class="product-desc">Bentonita natural compacta en terrones instantáneos al contacto con la orina. Sin polvillo ni perfume invasivo.</p>
-              <div class="product-features">
-                <span>✓ Fácil de recoger</span>
-                <span>✓ Rinde el doble</span>
+            <div class="pet-item-body">
+              <span class="item-category-label">Bandeja Higiénica Felina</span>
+              <h3 class="item-title">Piedras Sanitarias Aglutinantes Ultra Clean</h3>
+              <p class="item-description">Bentonita natural que forma terrones sólidos al contacto con líquidos. Sin polvo ni olores en el hogar.</p>
+              <div class="item-bullets">
+                <span>✓ Limpieza en segundos con pala</span>
+                <span>✓ Rinde el doble que piedras comunes</span>
               </div>
-              <div class="product-footer">
-                <div class="product-pricing">
-                  <span class="price-label">Bolsa 4kg / 10kg</span>
-                  <strong class="price-val">Desde $6.500</strong>
+              <div class="item-bottom-bar">
+                <div class="item-price-block">
+                  <span class="price-hint">Bolsa 4kg / 10kg</span>
+                  <strong class="price-amount">Desde $6.500</strong>
                 </div>
-                <a href="https://wa.me/5491148907700?text=Hola%20Prompi!%20Quiero%20pedir%20Piedras%20Sanitarias" class="btn btn-sm btn-primary" target="_blank" rel="noopener">Pedir</a>
+                <a href="https://wa.me/5491148907700?text=Hola%20Prompi!%20Quiero%20pedir%20Piedras%20Sanitarias" class="btn btn-sm btn-orange" target="_blank" rel="noopener">Pedir</a>
               </div>
             </div>
           </div>
 
-          <!-- Producto 8: Eukanuba Adult Medium Breed -->
-          <div class="product-card" data-category="perros">
-            <div class="product-image-box">
-              <span class="prod-badge badge-health">Energía &amp; Vitalidad</span>
-              <img src="https://images.unsplash.com/photo-1544568100-847a948585b9?auto=format&fit=crop&w=500&q=80" alt="Eukanuba Adult Medium Breed" class="product-img">
+          <!-- Card 8: Eukanuba Adult Medium Breed -->
+          <div class="pet-item-card" data-category="perros">
+            <div class="pet-item-media">
+              <span class="item-badge badge-orange-tag">Bolsa Grande 15kg</span>
+              <img src="https://images.unsplash.com/photo-1544568100-847a948585b9?auto=format&fit=crop&w=500&q=80" alt="Eukanuba Adult Medium Breed" class="pet-item-img">
             </div>
-            <div class="product-body">
-              <span class="product-meta">Alimento Balanceado · Perros</span>
-              <h3 class="product-name">Eukanuba Adult Raza Mediana (15kg)</h3>
-              <p class="product-desc">Proteína animal de primer nivel para músculos firmes y sistema DentaDefense que reduce la formación de sarro.</p>
-              <div class="product-features">
-                <span>✓ Condroitina y glucosamina</span>
-                <span>✓ Digestión saludable</span>
+            <div class="pet-item-body">
+              <span class="item-category-label">Alimento Completo · Perros Adultos</span>
+              <h3 class="item-title">Eukanuba Adult Raza Mediana (15kg)</h3>
+              <p class="item-description">Proteína de pollo de calidad superior para músculos magros y condroitina para cuidar las articulaciones en cada paseo.</p>
+              <div class="item-bullets">
+                <span>✓ Tecnología DentaDefense antisarro</span>
+                <span>✓ Despacho gratis en 24h</span>
               </div>
-              <div class="product-footer">
-                <div class="product-pricing">
-                  <span class="price-label">Bolsa 15kg con envío</span>
-                  <strong class="price-val">$52.000</strong>
+              <div class="item-bottom-bar">
+                <div class="item-price-block">
+                  <span class="price-hint">Bolsa 15kg con envío</span>
+                  <strong class="price-amount">$52.000</strong>
                 </div>
-                <a href="https://wa.me/5491148907700?text=Hola%20Prompi!%20Quiero%20pedir%20Eukanuba%2015kg" class="btn btn-sm btn-primary" target="_blank" rel="noopener">Pedir</a>
+                <a href="https://wa.me/5491148907700?text=Hola%20Prompi!%20Quiero%20pedir%20Eukanuba%2015kg" class="btn btn-sm btn-orange" target="_blank" rel="noopener">Pedir</a>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Banner de asesoramiento dentro del catálogo -->
-        <div class="catalog-help-banner">
-          <div class="help-banner-content">
-            <h3>¿Buscás una marca específica o dieta medicada?</h3>
-            <p>Contamos con más de 2.500 productos en stock: Hill's Prescription Diet, Royal Canin Veterinary, Sieger, Vitalcan, golosinas y accesorios.</p>
+        <!-- Callout Banner estilo Centro Pet -->
+        <div class="catalog-callout-box">
+          <div class="callout-content">
+            <span class="callout-badge">¿Buscás una receta o alimento medicado?</span>
+            <h3>Dietas Clínicas Royal Canin Veterinary, Hill's Prescription &amp; Sieger</h3>
+            <p>Contamos con stock de alimentos para problemas renales, urinarios, gastrointestinales, alergias cutáneas y sobrepeso. Escribinos con la indicación de tu veterinario.</p>
           </div>
-          <a href="https://wa.me/5491148907700?text=Hola%20Prompi!%20Busco%20un%20producto%20espec%C3%ADfico" class="btn btn-primary" target="_blank" rel="noopener">
-            Consultar a un Asesor
+          <a href="https://wa.me/5491148907700?text=Hola%20Prompi!%20Busco%20un%20alimento%20medicado%20o%20espec%C3%ADfico" class="btn btn-navy" target="_blank" rel="noopener">
+            Consultar por WhatsApp
           </a>
         </div>
       </div>
     </section>
 
     <!-- ==========================================================================
-         SECCIÓN SERVICIOS: BAÑO, PELUQUERÍA & CLÍNICA VETERINARIA
+         SERVICIOS INTEGRALES: BAÑO, PELUQUERÍA & CONSULTORIO (ESTILO CENTRO PET)
          ========================================================================== -->
-    <section class="section section-services" id="servicios">
+    <section class="section-pet-services" id="servicios">
       <div class="container">
-        <div class="section-header-center">
-          <span class="section-tag">Cuidado Integral</span>
-          <h2 class="section-title">Servicios Veterinarios &amp; Peluquería Canina</h2>
-          <p class="section-subtitle">
-            Instalaciones modernas equipadas para que tu mascota viva una experiencia sin estrés y con máximo cariño.
-          </p>
+        <div class="section-heading-centered">
+          <span class="heading-subtag">Servicios Profesionales</span>
+          <h2 class="heading-maintitle">Peluquería Canina, Clínica Veterinaria &amp; Delivery</h2>
+          <p class="heading-description">Instalaciones higiénicas y confortables atendidas por médicos y peluqueros con verdadera vocación por los animales.</p>
         </div>
 
-        <div class="services-grid">
-          <!-- Servicio 1: Baño y Peluquería -->
-          <div class="service-box">
-            <div class="service-box-img">
-              <img src="https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?auto=format&fit=crop&w=700&q=80" alt="Baño y Peluquería Canina en Prompi">
-              <span class="service-pill">Turnos en el Día</span>
+        <div class="services-cards-grid">
+          <!-- Servicio 1: Peluquería Canina & Spa -->
+          <div class="pet-service-panel">
+            <div class="panel-image-wrap">
+              <img src="https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?auto=format&fit=crop&w=700&q=80" alt="Peluquería y Baño Canino">
+              <span class="panel-tag">Turnos en el Día</span>
             </div>
-            <div class="service-box-body">
-              <h3 class="service-name">Baño, Spa &amp; Peluquería Canina</h3>
-              <p class="service-desc">
-                Baño con agua templada y shampoo hipoalergénico específico según el tipo de manto, corte de raza o higiénico, deslanado, secado silencioso, corte de uñas y limpieza de oídos.
+            <div class="panel-body">
+              <h3 class="panel-title">Baño, Spa &amp; Peluquería Canina</h3>
+              <p class="panel-text">
+                Baño con agua templada y shampoo hipoalergénico, corte higiénico, corte de raza o tijera, deslanado, secado silencioso anti-estrés, corte de uñas y limpieza de oídos.
               </p>
-              <ul class="service-list">
-                <li>Productos cosméticos de primera línea sin irritación</li>
-                <li>Secadores con control térmico anti-estrés</li>
-                <li>Atención personalizada por peluqueros profesionales</li>
+              <ul class="panel-list">
+                <li>Productos cosméticos dermatológicamente testeados</li>
+                <li>Ambiente climatizado y sin jaulas de estrés</li>
+                <li>Atención cariñosa adaptada a cachorros o perritos temerosos</li>
               </ul>
-              <a href="https://wa.me/5491148907700?text=Hola%20Prompi!%20Quiero%20reservar%20un%20turno%20de%20ba%C3%B1o%20y%20peluquer%C3%ADa" class="btn btn-outline" target="_blank" rel="noopener">Reservar Turno</a>
+              <a href="https://wa.me/5491148907700?text=Hola%20Prompi!%20Quiero%20reservar%20un%20turno%20de%20ba%C3%B1o%20y%20peluquer%C3%ADa" class="btn btn-navy-outline" target="_blank" rel="noopener">Reservar Turno</a>
             </div>
           </div>
 
-          <!-- Servicio 2: Clínica Veterinaria & Vacunación -->
-          <div class="service-box">
-            <div class="service-box-img">
-              <img src="https://images.unsplash.com/photo-1628009368231-7bb7cfcb0def?auto=format&fit=crop&w=700&q=80" alt="Consultorio Veterinario en Prompi">
-              <span class="service-pill">Médicos Matriculados</span>
+          <!-- Servicio 2: Consultorio Veterinario & Vacunación -->
+          <div class="pet-service-panel">
+            <div class="panel-image-wrap">
+              <img src="https://images.unsplash.com/photo-1628009368231-7bb7cfcb0def?auto=format&fit=crop&w=700&q=80" alt="Consultorio Veterinario Prompi">
+              <span class="panel-tag">Médicos Matriculados</span>
             </div>
-            <div class="service-box-body">
-              <h3 class="service-name">Consultas Clínicas &amp; Vacunación</h3>
-              <p class="service-desc">
-                Chequeos preventivos, colocación de vacunas obligatorias y optativas (Séxtuple, Antirrábica, Triple Felina), planes de desparasitación interna periódica y certificados de salud.
+            <div class="panel-body">
+              <h3 class="panel-title">Consultas Clínicas &amp; Plan de Vacunación</h3>
+              <p class="panel-text">
+                Chequeos preventivos de rutina, aplicación de vacunas obligatorias (Séxtuple, Antirrábica, Triple Felina), desparasitaciones internas periódicas y libretas sanitarias oficiales.
               </p>
-              <ul class="service-list">
-                <li>Libreta sanitaria oficial al día</li>
+              <ul class="panel-list">
                 <li>Seguimiento de peso y condición corporal</li>
-                <li>Atención cálida y respetuosa de los tiempos de tu mascota</li>
+                <li>Recetas de farmacia veterinaria supervisadas</li>
+                <li>Atención respetuosa y sin apuros para cada paciente</li>
               </ul>
-              <a href="https://wa.me/5491148907700?text=Hola%20Prompi!%20Quiero%20consultar%20por%20vacunas%20o%20consulta%20veterinaria" class="btn btn-outline" target="_blank" rel="noopener">Consultar Vacunación</a>
+              <a href="https://wa.me/5491148907700?text=Hola%20Prompi!%20Quiero%20consultar%20por%20vacunas%20o%20consulta%20veterinaria" class="btn btn-navy-outline" target="_blank" rel="noopener">Consultar Vacunación</a>
             </div>
           </div>
 
           <!-- Servicio 3: Delivery Pesado a Domicilio -->
-          <div class="service-box">
-            <div class="service-box-img">
+          <div class="pet-service-panel">
+            <div class="panel-image-wrap">
               <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=700&q=80" alt="Delivery de Alimentos Prompi">
-              <span class="service-pill">Sin Cargar Peso</span>
+              <span class="panel-tag">Sin Cargar Peso</span>
             </div>
-            <div class="service-box-body">
-              <h3 class="service-name">Delivery Express a tu Puerta</h3>
-              <p class="service-desc">
-                ¿Comprás bolsas de 15kg o 20kg de alimento balanceado? Te las entregamos directamente en tu casa o departamento en franjas horarias convenientes para que nunca te quedes sin comida.
+            <div class="panel-body">
+              <h3 class="panel-title">Delivery Express a tu Puerta</h3>
+              <p class="panel-text">
+                ¿Comprás bolsas pesadas de 15kg o 20kg? Te las llevamos directamente a tu casa o departamento en franjas horarias coordinadas para que nunca te quedes sin alimento.
               </p>
-              <ul class="service-list">
-                <li>Entrega en 24 horas en CABA y GBA</li>
-                <li>Podés abonar con transferencia, tarjetas o efectivo</li>
-                <li>Subimos la bolsa hasta tu piso sin recargo</li>
+              <ul class="panel-list">
+                <li>Entregas programadas en 24h en CABA y GBA</li>
+                <li>Subimos la bolsa hasta tu piso sin recargo extra</li>
+                <li>Aboná con transferencia, Mercado Pago o efectivo al recibir</li>
               </ul>
-              <a href="https://wa.me/5491148907700?text=Hola%20Prompi!%20Quiero%20coordinar%20un%20env%C3%ADo%20de%20alimento%20a%20domicilio" class="btn btn-outline" target="_blank" rel="noopener">Pedir a Domicilio</a>
+              <a href="https://wa.me/5491148907700?text=Hola%20Prompi!%20Quiero%20coordinar%20un%20env%C3%ADo%20de%20alimento%20a%20domicilio" class="btn btn-navy-outline" target="_blank" rel="noopener">Pedir a Domicilio</a>
             </div>
           </div>
         </div>
@@ -679,71 +670,73 @@
     </section>
 
     <!-- ==========================================================================
-         SECCIÓN HERRAMIENTA INTERACTIVA: CALCULADORA PROMPI (RACIÓN & MATAPULGAS)
+         HERRAMIENTA INTERACTIVA: CALCULADORA PROMPI (RACIÓN & MATAPULGAS)
          ========================================================================== -->
-    <section class="section section-dark" id="calculadora">
+    <section class="section-pet-calc" id="calculadora">
       <div class="container">
-        <div class="section-badge badge-coral">Herramienta Interactiva Prompi</div>
-        <h2 class="section-title text-white">Calculadora Inteligente de Nutrición &amp; Salud</h2>
-        <p class="text-gray calc-intro">
-          Calculá la porción exacta de alimento diario según el peso de tu perro o gato, o descubrí cuál es el antipulgas correspondiente a su contextura.
-        </p>
+        <div class="calc-header-block">
+          <span class="calc-badge">Herramienta Interactiva</span>
+          <h2 class="calc-main-title">Calculadora Inteligente de Nutrición &amp; Antipulgas</h2>
+          <p class="calc-sub-text">
+            Calculá los gramos exactos de alimento diario según el peso de tu mascota o descubrí el matapulgas correspondiente a su contextura.
+          </p>
+        </div>
 
-        <div class="calc-wrapper">
-          <!-- Pestañas de cálculo -->
-          <div class="calc-tabs">
-            <button class="calc-tab active" data-tab="comida">Calculadora de Ración Diaria</button>
-            <button class="calc-tab" data-tab="antipulgas">Buscador de Antipulgas por Peso</button>
+        <div class="pet-calc-container">
+          <!-- Pestañas de la calculadora -->
+          <div class="pet-calc-tabs">
+            <button class="calc-pill-tab active" data-tab="comida">Calculadora de Ración Diaria</button>
+            <button class="calc-pill-tab" data-tab="antipulgas">Buscador de Antipulgas por Peso</button>
           </div>
 
           <!-- TAB 1: Ración Diaria -->
-          <div class="calc-content active" id="tab-comida">
-            <div class="calc-grid">
-              <div class="calc-inputs">
-                <div class="form-group">
+          <div class="pet-calc-panel active" id="tab-comida">
+            <div class="calc-two-columns">
+              <div class="calc-input-column">
+                <div class="calc-field">
                   <label for="pet-species">Especie:</label>
-                  <select id="pet-species" class="form-control">
+                  <select id="pet-species" class="calc-select">
                     <option value="perro" selected>🐶 Perro</option>
                     <option value="gato">🐱 Gato</option>
                   </select>
                 </div>
 
-                <div class="form-group">
+                <div class="calc-field">
                   <label for="pet-weight">Peso actual de tu mascota (kg):</label>
-                  <input type="number" id="pet-weight" class="form-control" value="12" min="0.5" max="90" step="0.5">
-                  <small class="form-hint">Ingresá el peso aproximado en kilogramos.</small>
+                  <input type="number" id="pet-weight" class="calc-input" value="12" min="0.5" max="90" step="0.5">
+                  <span class="field-hint">Ingresá el peso en kilogramos aproximado.</span>
                 </div>
 
-                <div class="form-group">
+                <div class="calc-field">
                   <label for="pet-activity">Nivel de Actividad &amp; Etapa:</label>
-                  <select id="pet-activity" class="form-control">
+                  <select id="pet-activity" class="calc-select">
                     <option value="moderada" selected>Adulto · Actividad normal de paseo</option>
                     <option value="alta">Adulto · Muy activo / Deporte / Patio grande</option>
-                    <option value="baja">Adulto mayor / Sedentario / Con sobrepeso</option>
+                    <option value="baja">Adulto mayor / Sedentario / Sobrepeso</option>
                     <option value="cachorro">Cachorro en crecimiento (hasta 12 meses)</option>
                   </select>
                 </div>
 
-                <button type="button" class="btn btn-primary" id="btn-calc-food">Calcular Porción Diaria</button>
+                <button type="button" class="btn btn-orange btn-full" id="btn-calc-food">Calcular Porción Diaria</button>
               </div>
 
-              <div class="calc-results" id="results-food">
-                <h4 class="results-title">Recomendación Nutricional Prompi:</h4>
-                <div class="result-item">
-                  <span class="result-label">Gramos diarios recomendados:</span>
-                  <span class="result-value" id="res-food-daily">190 g / día</span>
+              <div class="calc-result-column">
+                <h4 class="result-heading">Recomendación Nutricional Prompi:</h4>
+                <div class="result-row">
+                  <span class="row-label">Gramos diarios recomendados:</span>
+                  <span class="row-value" id="res-food-daily">190 g / día</span>
                 </div>
-                <div class="result-item">
-                  <span class="result-label">Porción por comida (2 tomas):</span>
-                  <span class="result-value" id="res-food-serving">95 g por toma</span>
+                <div class="result-row">
+                  <span class="row-label">Porción por comida (2 tomas):</span>
+                  <span class="row-value" id="res-food-serving">95 g por toma</span>
                 </div>
-                <div class="result-item">
-                  <span class="result-label">Duración bolsa de 15 kg:</span>
-                  <span class="result-value" id="res-food-duration">~78 días</span>
+                <div class="result-row">
+                  <span class="row-label">Duración bolsa de 15 kg:</span>
+                  <span class="row-value" id="res-food-duration">~78 días</span>
                 </div>
-                <div class="result-note">
+                <p class="result-disclaimer">
                   * Estimación veterinaria promedio para balanceados premium. Ajustá siempre según indicación de tu profesional.
-                </div>
+                </p>
 
                 <a href="#" class="btn btn-whatsapp btn-full" id="btn-whatsapp-food-calc" target="_blank" rel="noopener">
                   <span>Pedir Bolsa de Alimento Recomendada por WhatsApp</span>
@@ -752,21 +745,21 @@
             </div>
           </div>
 
-          <!-- TAB 2: Buscador de Antipulgas & Matapulgas -->
-          <div class="calc-content" id="tab-antipulgas">
-            <div class="calc-grid">
-              <div class="calc-inputs">
-                <div class="form-group">
+          <!-- TAB 2: Buscador de Antipulgas -->
+          <div class="pet-calc-panel" id="tab-antipulgas">
+            <div class="calc-two-columns">
+              <div class="calc-input-column">
+                <div class="calc-field">
                   <label for="flea-species">Mascota:</label>
-                  <select id="flea-species" class="form-control">
+                  <select id="flea-species" class="calc-select">
                     <option value="perro" selected>🐶 Perro</option>
                     <option value="gato">🐱 Gato</option>
                   </select>
                 </div>
 
-                <div class="form-group">
+                <div class="calc-field">
                   <label for="flea-weight">Rango de Peso:</label>
-                  <select id="flea-weight" class="form-control">
+                  <select id="flea-weight" class="calc-select">
                     <option value="toy">Muy pequeño (2 a 4.5 kg)</option>
                     <option value="chico" selected>Chico (4.5 a 10 kg)</option>
                     <option value="mediano">Mediano (10 a 20 kg)</option>
@@ -775,34 +768,34 @@
                   </select>
                 </div>
 
-                <div class="form-group">
-                  <label for="flea-format">Preferencia de Administración:</label>
-                  <select id="flea-format" class="form-control">
-                    <option value="oral" selected>Comprimido masticable saborizado (Más efectivo)</option>
+                <div class="calc-field">
+                  <label for="flea-format">Formato Preferido:</label>
+                  <select id="flea-format" class="calc-select">
+                    <option value="oral" selected>Comprimido masticable saborizado (Más eficaz)</option>
                     <option value="pipeta">Pipeta spot-on sobre el lomo</option>
                   </select>
                 </div>
 
-                <button type="button" class="btn btn-primary" id="btn-calc-flea">Buscar Matapulgas Ideal</button>
+                <button type="button" class="btn btn-orange btn-full" id="btn-calc-flea">Buscar Antipulgas Ideal</button>
               </div>
 
-              <div class="calc-results" id="results-flea">
-                <h4 class="results-title">Antiparasitario Sugerido:</h4>
-                <div class="result-item">
-                  <span class="result-label">Producto recomendado:</span>
-                  <span class="result-value" id="res-flea-prod">NexGard Spectra 4.5 - 10 kg</span>
+              <div class="calc-result-column">
+                <h4 class="result-heading">Antiparasitario Sugerido:</h4>
+                <div class="result-row">
+                  <span class="row-label">Producto recomendado:</span>
+                  <span class="row-value" id="res-flea-prod">NexGard Spectra 4.5 - 10 kg</span>
                 </div>
-                <div class="result-item">
-                  <span class="result-label">Duración de la protección:</span>
-                  <span class="result-value" id="res-flea-duration">30 días de protección total</span>
+                <div class="result-row">
+                  <span class="row-label">Duración de la protección:</span>
+                  <span class="row-value" id="res-flea-duration">30 días de protección total</span>
                 </div>
-                <div class="result-item">
-                  <span class="result-label">Efecto contra:</span>
-                  <span class="result-value" id="res-flea-covers">Pulgas, garrapatas, sarna y parásitos internos</span>
+                <div class="result-row">
+                  <span class="row-label">Efecto contra:</span>
+                  <span class="row-value" id="res-flea-covers">Pulgas, garrapatas, sarna y parásitos internos</span>
                 </div>
-                <div class="result-note">
+                <p class="result-disclaimer">
                   * Producto original con fecha de vencimiento garantizada y asesoramiento médico directo.
-                </div>
+                </p>
 
                 <a href="#" class="btn btn-whatsapp btn-full" id="btn-whatsapp-flea-calc" target="_blank" rel="noopener">
                   <span>Pedir este Antipulgas por WhatsApp</span>
@@ -815,127 +808,124 @@
     </section>
 
     <!-- ==========================================================================
-         SECCIÓN FORMULARIO DE PEDIDO RÁPIDO O CONSULTA
+         FORMULARIO DE PEDIDO RÁPIDO & RESERVA DE TURNOS
          ========================================================================== -->
-    <section class="section" id="pedido">
-      <div class="container">
-        <div class="presupuesto-grid">
-          <div class="presupuesto-media-col">
-            <div class="presupuesto-image-card">
-              <img src="https://images.unsplash.com/photo-1548767797-d8c844163c4c?auto=format&fit=crop&w=800&q=80" alt="Veterinaria Prompi Atención Personalizada" class="presupuesto-featured-img">
-              <div class="presupuesto-image-overlay">
-                <span class="media-badge">ATENCIÓN EXPRESS</span>
-                <h3 class="media-title">Cuidamos de tu mascota como en casa</h3>
-                <p class="media-desc">Hacé tu pedido o consultanos cualquier duda de nutrición, antiparasitarios o turnos de baño.</p>
-              </div>
+    <section class="section-order-pet" id="pedido">
+      <div class="container order-pet-grid">
+        <div class="order-media-col">
+          <div class="order-image-card">
+            <img src="https://images.unsplash.com/photo-1548767797-d8c844163c4c?auto=format&fit=crop&w=800&q=80" alt="Veterinaria Prompi Atención Personalizada" class="order-featured-img">
+            <div class="order-image-badge-overlay">
+              <span class="badge-mini-tag">ATENCIÓN EXPRESS</span>
+              <h3>Cuidamos a tu mascota con amor y experiencia</h3>
+              <p>Hacé tu pedido de alimento balanceado, pedí cotización de farmacia o reservá turno para peluquería canina.</p>
             </div>
           </div>
+        </div>
 
-          <div class="presupuesto-form-col">
-            <div class="presupuesto-header">
-              <div class="section-badge badge-coral">Pedidos &amp; Consultas</div>
-              <h2 class="section-title">Hacé tu Pedido a Domicilio</h2>
-              <p class="section-description">
-                Completá los datos y te enviamos la confirmación por WhatsApp o correo con los mejores precios y tiempos de entrega.
-              </p>
+        <div class="order-form-col">
+          <div class="order-header-text">
+            <span class="heading-subtag">Pedidos &amp; Consultas</span>
+            <h2 class="heading-maintitle">Coordiná tu Pedido a Domicilio</h2>
+            <p class="heading-description">Completá los datos y te enviamos la confirmación al instante con los mejores precios.</p>
+          </div>
+
+          <form id="order-form" class="order-card-form">
+            <div class="form-grid-two">
+              <div class="form-group-pet">
+                <label for="order-name">Tu Nombre y Apellido *</label>
+                <input type="text" id="order-name" name="name" class="pet-text-input" placeholder="Ej: Camila Rossi" required>
+              </div>
+              <div class="form-group-pet">
+                <label for="order-phone">Teléfono / WhatsApp *</label>
+                <input type="tel" id="order-phone" name="phone" class="pet-text-input" placeholder="Ej: 11 4890-7700" required>
+              </div>
             </div>
 
-            <form id="order-form" class="presupuesto-form">
-              <div class="form-row">
-                <div class="form-group col-half">
-                  <label for="order-name">Tu Nombre y Apellido *</label>
-                  <input type="text" id="order-name" name="name" class="form-control" placeholder="Ej: Camila Rossi" required>
-                </div>
-                <div class="form-group col-half">
-                  <label for="order-phone">Teléfono / WhatsApp *</label>
-                  <input type="tel" id="order-phone" name="phone" class="form-control" placeholder="Ej: 11 4890-7700" required>
-                </div>
+            <div class="form-grid-two">
+              <div class="form-group-pet">
+                <label for="order-pet">Nombre y Tipo de Mascota</label>
+                <input type="text" id="order-pet" name="pet" class="pet-text-input" placeholder="Ej: Milo (Golden Retriever 2 años)">
               </div>
-
-              <div class="form-row">
-                <div class="form-group col-half">
-                  <label for="order-pet">Nombre y Tipo de Mascota</label>
-                  <input type="text" id="order-pet" name="pet" class="form-control" placeholder="Ej: Milo (Golden Retriever 2 años)">
-                </div>
-                <div class="form-group col-half">
-                  <label for="order-service">¿Qué estás necesitando?</label>
-                  <select id="order-service" name="service" class="form-control">
-                    <option value="alimento">Pedido de Alimento Balanceado</option>
-                    <option value="antipulgas">Matapulgas / Pipetas / Medicamentos</option>
-                    <option value="bano">Turno de Baño &amp; Peluquería Canina</option>
-                    <option value="vacunas">Vacunación o Consulta Veterinaria</option>
-                    <option value="otro">Otro producto o consulta general</option>
-                  </select>
-                </div>
+              <div class="form-group-pet">
+                <label for="order-service">¿Qué estás necesitando?</label>
+                <select id="order-service" name="service" class="pet-text-input">
+                  <option value="alimento">Pedido de Alimento Balanceado</option>
+                  <option value="antipulgas">Matapulgas / Pipetas / Medicamentos</option>
+                  <option value="bano">Turno de Baño &amp; Peluquería Canina</option>
+                  <option value="vacunas">Vacunación o Consulta Veterinaria</option>
+                  <option value="otro">Otro producto o consulta general</option>
+                </select>
               </div>
+            </div>
 
-              <div class="form-group">
-                <label for="order-address">Localidad / Dirección para Entrega</label>
-                <input type="text" id="order-address" name="address" class="form-control" placeholder="Ej: Belgrano, CABA / San Isidro / Vicente López">
-              </div>
+            <div class="form-group-pet">
+              <label for="order-address">Localidad / Dirección para Entrega</label>
+              <input type="text" id="order-address" name="address" class="pet-text-input" placeholder="Ej: Belgrano, CABA / San Isidro / Vicente López">
+            </div>
 
-              <div class="form-group">
-                <label for="order-details">Detalle del Pedido o Consulta *</label>
-                <textarea id="order-details" name="details" rows="4" class="form-control" placeholder="Ejemplo:
+            <div class="form-group-pet">
+              <label for="order-details">Detalle del Pedido o Consulta *</label>
+              <textarea id="order-details" name="details" rows="3" class="pet-text-input" placeholder="Ejemplo:
 - 1 bolsa de Royal Canin Mini Adult de 7.5kg
 - 1 comprimido Nexgard Spectra para 10 a 20 kg" required></textarea>
-              </div>
+            </div>
 
-              <div class="form-actions">
-                <button type="submit" class="btn btn-primary btn-large" id="btn-submit-order">
-                  <span>Enviar Pedido a Prompi</span>
-                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
-                </button>
-              </div>
+            <div class="form-submit-row">
+              <button type="submit" class="btn btn-orange btn-large" id="btn-submit-order">
+                <span>Enviar Pedido a Prompi</span>
+                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+              </button>
+            </div>
 
-              <div id="order-feedback" class="form-feedback" aria-live="polite"></div>
-            </form>
-          </div>
+            <div id="order-feedback" class="form-feedback-pill" aria-live="polite"></div>
+          </form>
         </div>
       </div>
     </section>
 
     <!-- ==========================================================================
-         SECCIÓN 4 ISLAS: CONTACTO, SUCURSAL & ENVÍOS (2 ARRIBA Y 2 ABAJO, SIN ICONOS)
+         SECCIÓN 4 ISLAS: CONTACTO, SUCURSAL & ENVÍOS (2 ARRIBA Y 2 ABAJO, SIN ICONOS, ESTILO CENTRO PET)
          ========================================================================== -->
-    <section class="section section-dark" id="contacto">
+    <section class="section-pet-contact" id="contacto">
       <div class="container">
-        <div class="contact-grid">
-          <div class="contact-info">
-            <div class="section-badge badge-coral">Sucursal &amp; Envíos</div>
-            <h2 class="section-title text-white">Atención en Local y Delivery Express</h2>
-            <p class="text-gray">
-              Podés pasar a visitarnos con tu mascota por nuestro local y consultorio, o recibir tus compras cómodamente en tu casa.
+        <div class="contact-box-wrapper">
+          <div class="contact-heading-box">
+            <span class="heading-subtag-light">Sucursal &amp; Logística</span>
+            <h2 class="contact-title-white">Atención en Local &amp; Envíos a Domicilio</h2>
+            <p class="contact-subtitle-gray">
+              Podés visitarnos personalmente con tu mascota en nuestro local y consultorio, o recibir tus compras cómodamente en tu casa.
             </p>
 
-            <div class="info-items">
+            <!-- 4 ISLAS: 2 ARRIBA Y 2 ABAJO, PURAMENTE TIPOGRÁFICAS SIN ICONOS -->
+            <div class="info-islands-grid">
               <!-- Isla 1: Dirección -->
-              <div class="info-item">
-                <span class="info-item-label">Dirección de Tienda &amp; Consultorio</span>
-                <p class="info-item-value">Av. del Libertador 4250 <span class="info-item-sub">(Zona Belgrano / Colegiales · Estacionamiento para clientes)</span></p>
+              <div class="info-island-card">
+                <span class="island-tag-label">Dirección de Tienda &amp; Consultorio</span>
+                <p class="island-main-text">Av. Córdoba 1475 <span class="island-sub-text">(Zona Recoleta / San Nicolás, CABA · Estacionamiento para clientes)</span></p>
               </div>
 
               <!-- Isla 2: Horarios -->
-              <div class="info-item">
-                <span class="info-item-label">Horarios de Atención &amp; Baños</span>
-                <p class="info-item-value">Lunes a Sábados: 08:30 a 20:00 hs (corrido)<br>Domingos y Feriados: 10:00 a 14:00 hs (Farmacia de turno)</p>
+              <div class="info-island-card">
+                <span class="island-tag-label">Horarios de Atención &amp; Baños</span>
+                <p class="island-main-text">Lunes a Sábados: 08:30 a 20:00 hs (corrido)<br>Domingos y Feriados: 10:00 a 14:00 hs (Farmacia de turno)</p>
               </div>
 
               <!-- Isla 3: Teléfonos -->
-              <div class="info-item">
-                <span class="info-item-label">Teléfonos &amp; Pedidos por WhatsApp</span>
-                <p class="info-item-value">
-                  Línea directa: <a href="tel:01148907700" class="info-link">(011) 4890-7700</a><br>
-                  WhatsApp Oficial: <a href="https://wa.me/5491148907700" class="info-link" target="_blank" rel="noopener">+54 9 11 4890-7700</a>
+              <div class="info-island-card">
+                <span class="island-tag-label">Teléfonos &amp; Pedidos por WhatsApp</span>
+                <p class="island-main-text">
+                  Línea directa: <a href="tel:01148907700" class="island-anchor">(011) 4890-7700</a><br>
+                  WhatsApp Oficial: <a href="https://wa.me/5491148907700" class="island-anchor" target="_blank" rel="noopener">+54 9 11 4890-7700</a>
                 </p>
               </div>
 
-              <!-- Isla 4: Envíos & Cobertura -->
-              <div class="info-item">
-                <span class="info-item-label">Envíos a Domicilio &amp; Delivery</span>
-                <p class="info-item-value">
+              <!-- Isla 4: Envíos -->
+              <div class="info-island-card">
+                <span class="island-tag-label">Envíos a Domicilio &amp; Delivery</span>
+                <p class="island-main-text">
                   Envíos en el día en CABA y Zona Norte sin cargo en bolsas de 7.5kg o más.<br>
-                  Correo oficial para presupuestos: <a href="mailto:hola@prompi.com.ar" class="info-link">hola@prompi.com.ar</a>
+                  Correo para consultas: <a href="mailto:hola@prompi.com.ar" class="island-anchor">hola@prompi.com.ar</a>
                 </p>
               </div>
             </div>
@@ -946,32 +936,32 @@
   </main>
 
   <!-- ==========================================================================
-       FOOTER (SIN NAVEGACIÓN, PURAMENTE MARCA Y DERECHOS)
+       FOOTER (ESTILO CENTRO PET EN AZUL MARINO PROFUNDO, SIN MENÚS)
        ========================================================================== -->
-  <footer class="footer">
-    <div class="container footer-content">
-      <div class="footer-brand">
-        <!-- Logo en footer -->
-        <div class="footer-logo">
-          <svg class="prompi-footer-logo" viewBox="0 0 200 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <g transform="translate(2, 6)">
-              <circle cx="16" cy="18" r="11" fill="#FF6338"/>
-              <ellipse cx="9" cy="8" rx="3.5" ry="5" fill="#4F46E5"/>
-              <ellipse cx="16" cy="4" rx="3.5" ry="5" fill="#FF6338"/>
-              <ellipse cx="23" cy="8" rx="3.5" ry="5" fill="#4F46E5"/>
+  <footer class="pet-footer">
+    <div class="container footer-flex-container">
+      <div class="footer-brand-side">
+        <div class="footer-logo-box">
+          <svg class="prompi-footer-vector" viewBox="0 0 220 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g transform="translate(4, 7)">
+              <circle cx="18" cy="20" r="13" fill="#FFFFFF"/>
+              <ellipse cx="8" cy="8" rx="4.5" ry="6" fill="#FF621A"/>
+              <ellipse cx="18" cy="3" rx="4" ry="5.5" fill="#5AA9E6"/>
+              <ellipse cx="28" cy="8" rx="4.5" ry="6" fill="#FF621A"/>
+              <ellipse cx="18" cy="20" rx="6.5" ry="5" fill="#032B61"/>
             </g>
-            <text x="42" y="27" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="26" fill="#FFFFFF" letter-spacing="-0.03em">prompi</text>
-            <text x="44" y="39" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="7.5" fill="#94A3B8" letter-spacing="0.16em">VETERINARIA &amp; PET SHOP</text>
+            <text x="52" y="32" font-family="'Poppins', sans-serif" font-weight="800" font-size="28" fill="#FFFFFF" letter-spacing="-0.03em">prompi</text>
+            <text x="54" y="44" font-family="'Inter', sans-serif" font-weight="700" font-size="8" fill="#A9D9F7" letter-spacing="0.16em">PET SHOP · VETERINARIA · SPA</text>
           </svg>
         </div>
-        <p>
-          Prompi es tu aliado diario en nutrición, salud y bienestar para perros y gatos. Alimentos balanceados originales, farmacia veterinaria y peluquería canina.
+        <p class="footer-mission-text">
+          Prompi es tu aliado diario en nutrición, farmacia veterinaria, matapulgas y estética para perros y gatos. Productos 100% originales con despacho en 24h.
         </p>
       </div>
 
-      <div class="footer-legal">
+      <div class="footer-rights-side">
         <p>&copy; 2026 Prompi Pet Shop &amp; Veterinaria. Todos los derechos reservados.</p>
-        <p class="footer-subtext">Cuidado animal profesional · Asesoramiento médico certificado</p>
+        <p class="footer-vet-legend">Atención veterinaria profesional · Cuidado animal responsable</p>
       </div>
     </div>
   </footer>
@@ -979,11 +969,11 @@
   <!-- ==========================================================================
        BOTÓN FLOTANTE DE WHATSAPP
        ========================================================================== -->
-  <a href="https://wa.me/5491148907700?text=Hola%20Prompi!%20Quiero%20consultar%20por%20alimento%20o%20un%20turno" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contactar a Prompi por WhatsApp">
+  <a href="https://wa.me/5491148907700?text=Hola%20Prompi!%20Quiero%20consultar%20por%20alimento%20o%20un%20turno" class="whatsapp-float-btn" target="_blank" rel="noopener" aria-label="Contactar a Prompi por WhatsApp">
     <svg viewBox="0 0 24 24" fill="currentColor">
       <path d="M12.031 2C6.496 2 2 6.48 2 12c0 1.83.497 3.55 1.365 5.035L2 22l5.127-1.34A9.957 9.957 0 0012.031 22C17.566 22 22 17.52 22 12s-4.434-10-9.969-10zm0 18.272a8.23 8.23 0 01-4.218-1.157l-.302-.18-3.13.82.836-3.048-.198-.314A8.225 8.225 0 013.75 12c0-4.566 3.715-8.28 8.281-8.28 4.567 0 8.282 3.714 8.282 8.28 0 4.567-3.715 8.272-8.282 8.272zm4.54-6.19c-.248-.124-1.472-.726-1.7-.81-.228-.083-.394-.124-.56.124-.166.248-.642.81-.786.975-.145.166-.29.186-.538.062a6.837 6.837 0 01-2.002-1.234 7.545 7.545 0 01-1.385-1.724c-.145-.248-.016-.382.108-.506.111-.112.248-.29.373-.435.124-.145.166-.248.248-.414.083-.166.042-.31-.02-.435-.063-.124-.56-1.348-.767-1.846-.202-.486-.407-.42-.56-.428l-.477-.008c-.166 0-.435.062-.663.31-.228.248-.87 0.85-.87 2.073s.891 2.404 1.015 2.57c.125.166 1.752 2.675 4.246 3.75.593.256 1.057.409 1.418.524.596.19 1.138.163 1.567.099.478-.071 1.472-.602 1.68-1.183.207-.58.207-1.077.145-1.183-.062-.104-.228-.166-.477-.29z"/>
     </svg>
-    <span class="whatsapp-tooltip">¿Consultas o pedidos? Chateá acá</span>
+    <span class="whatsapp-pill-hint">¿Dudas o pedidos? Chateá acá</span>
   </a>
 
   <script src="script.js"></script>
