@@ -1165,7 +1165,7 @@ body {
    SECCIÓN 8: CONTACTO Y DEPÓSITO
    ========================================================================== */
 .contact-grid {
-  max-width: 960px;
+  max-width: 1060px;
   margin: 0 auto;
 }
 
@@ -1175,24 +1175,67 @@ body {
 
 .info-items {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
   margin-top: 2.5rem;
 }
 
 .info-item {
-  display: flex;
-  gap: 1rem;
-  align-items: flex-start;
   background-color: var(--color-dark-card);
-  padding: 1.5rem;
-  border-radius: var(--radius-md);
   border: 1px solid var(--color-dark-border);
+  border-radius: var(--radius-md);
+  padding: 1.85rem 2.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-.info-icon {
-  font-size: 1.5rem;
-  line-height: 1;
+.info-item:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 94, 20, 0.45);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+.info-item-label {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-primary);
+  margin-bottom: 0.65rem;
+}
+
+.info-item-value {
+  font-size: 1.05rem;
+  color: #F8FAFC;
+  line-height: 1.55;
+  margin: 0;
+  word-break: break-word;
+}
+
+.info-item-sub {
+  display: block;
+  font-size: 0.875rem;
+  color: var(--color-text-light);
+  margin-top: 0.25rem;
+}
+
+.info-link {
+  color: #F8FAFC;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.info-link:hover {
+  color: var(--color-primary);
+  text-decoration: underline;
 }
 
 /* ==========================================================================
@@ -1293,6 +1336,17 @@ body {
 .whatsapp-float:hover .whatsapp-tooltip {
   opacity: 1;
   transform: translateX(0);
+}
+
+@media (max-width: 768px) {
+  .info-items {
+    grid-template-columns: 1fr;
+    gap: 1.15rem;
+  }
+
+  .info-item {
+    padding: 1.4rem 1.5rem;
+  }
 }
 
 /* ==========================================================================
