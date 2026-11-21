@@ -3,216 +3,127 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VÉRTICE Materiales de Construcción — Corralón Mayorista y Minorista</title>
-  <meta name="description" content="Comercio de materiales para la construcción. Áridos, cementos, hierros, ladrillos, cubiertas y herramientas. Entregas en obra en 24h con hidrogrúa y acopio sin cargo.">
-  <link rel="icon" type="image/png" href="assets/logo.png">
-  
-  <!-- Tipografía Google: Inter (moderna y contundente) y Plus Jakarta Sans (legibilidad técnica) -->
+  <title>Prompi | Veterinaria, Alimentos Balanceados &amp; Pet Shop</title>
+  <meta name="description" content="Prompi: Alimentos balanceados para perros y gatos, matapulgas, farmacia veterinaria, baño y peluquería canina con envíos rápidos a domicilio.">
+  <meta name="theme-color" content="#FF6338">
+
+  <!-- Tipografía moderna Google Fonts: Plus Jakarta Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <!-- BARRA DE MARCA SUPERIOR (Solo logo oficial transparente) -->
-  <header class="top-bar" role="banner">
+  <!-- ==========================================================================
+       BARRA SUPERIOR: EXCLUSIVAMENTE LOGO PROMPI (SIN ENLACES NI MENÚ)
+       ========================================================================== -->
+  <header class="top-bar">
     <div class="container top-bar-inner">
-      <a href="#inicio" class="brand-logo-link" title="VÉRTICE Materiales de Construcción">
-        <img src="assets/logo.png" alt="VÉRTICE Materiales de Construcción" class="brand-logo-img">
-      </a>
+      <div class="brand-logo-container">
+        <!-- Logotipo Prompi Vectorial Moderno -->
+        <a href="#" class="brand-logo-link" aria-label="Prompi - Veterinaria &amp; Pet Shop">
+          <svg class="prompi-logo" viewBox="0 0 220 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Icono Mascota / Patita estilizada en tonos coral y violeta -->
+            <g transform="translate(4, 7)">
+              <circle cx="20" cy="24" r="14" fill="#FF6338"/>
+              <ellipse cx="10" cy="11" rx="4.5" ry="6.5" fill="#4F46E5"/>
+              <ellipse cx="20" cy="6" rx="4.5" ry="6.5" fill="#FF6338"/>
+              <ellipse cx="30" cy="11" rx="4.5" ry="6.5" fill="#4F46E5"/>
+              <!-- Huellita interna blanca -->
+              <ellipse cx="20" cy="24" rx="7" ry="5.5" fill="#FFFFFF"/>
+              <circle cx="16" cy="18" r="2" fill="#FFFFFF"/>
+              <circle cx="24" cy="18" r="2" fill="#FFFFFF"/>
+            </g>
+            <!-- Tipografía del Logo: Prompi -->
+            <text x="50" y="34" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="32" fill="#0F172A" letter-spacing="-0.03em">prompi</text>
+            <circle cx="168" cy="18" r="4" fill="#FF6338"/>
+            <text x="52" y="47" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="8.5" fill="#64748B" letter-spacing="0.18em">VETERINARIA &amp; PET SHOP</text>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Chip informativo dinámico sin menú de navegación -->
+      <div class="top-bar-badge">
+        <span class="live-dot"></span>
+        <span class="top-bar-badge-text">Envíos express en el día · Atención Veterinaria</span>
+      </div>
     </div>
   </header>
 
-  <main id="main-content">
-
-    <!-- SECCIÓN 1: HERO / PORTADA PRINCIPAL DE LA EMPRESA (Sin header previo) -->
-    <section class="section-hero" id="inicio">
-      <div class="hero-overlay"></div>
-      <div class="container hero-content">
-        <div class="hero-badge">
-          <span class="badge-icon">🏗️</span>
-          <span>Corralón &amp; Distribuidora de Materiales de Construcción</span>
-        </div>
-
-        <h1 class="hero-title">
-          Todo para tu obra: <br>
-          <span class="hero-highlight">desde los cimientos</span> hasta la última terminación
-        </h1>
-
-        <p class="hero-subtitle">
-          Abastecemos a constructoras, arquitectos, desarrolladores y particulares. Más de 4.000 productos con entrega directa en obra con camión hidrogrúa en 24 hs, acopio bonificado y precios especiales por pallet cerrado.
-        </p>
-
-        <!-- Ventajas clave inmediatas -->
-        <div class="hero-trust-bar">
-          <div class="trust-item">
-            <span class="trust-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
-            </span>
-            <div>
-              <strong>Envíos en 24 Horas</strong>
-              <p>Descarga mecanizada con hidrogrúa</p>
-            </div>
+  <main>
+    <!-- ==========================================================================
+         HERO SECTION: VETERINARIA, ALIMENTOS & BIENESTAR ANIMAL
+         ========================================================================== -->
+    <section class="section-hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-tag">
+            <span class="tag-star">★</span> Especialistas en Perros y Gatos
           </div>
-          <div class="trust-item">
-            <span class="trust-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
-            </span>
-            <div>
-              <strong>Acopio sin Costo</strong>
-              <p>Congelá precio y retirá hasta 90 días</p>
-            </div>
+          <h1 class="hero-title">
+            Todo para su salud, nutrición y <span class="highlight-text">felicidad diaria.</span>
+          </h1>
+          <p class="hero-description">
+            En <strong>Prompi</strong> encontrás las mejores marcas de alimentos balanceados, antiparasitarios y matapulgas líderes, farmacia veterinaria y servicio de baño &amp; peluquería canina con entrega rápida a domicilio.
+          </p>
+
+          <div class="hero-actions">
+            <a href="https://wa.me/5491148907700?text=Hola%20Prompi!%20Quiero%20hacer%20un%20pedido%20para%20mi%20mascota" class="btn btn-primary" target="_blank" rel="noopener">
+              <span>Hacer Pedido por WhatsApp</span>
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="#calculadora" class="btn btn-secondary">
+              <span>Calcular Ración de Alimento</span>
+            </a>
           </div>
-          <div class="trust-item">
-            <span class="trust-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12h20M12 2v20M7 7l10 10M17 7L7 17"></path></svg>
-            </span>
-            <div>
-              <strong>Cómputo sobre Plano</strong>
-              <p>Asesoramiento técnico de arquitectos</p>
-            </div>
+
+          <!-- Píldoras de Acceso Rápido -->
+          <div class="hero-quick-filters">
+            <span class="quick-filter-label">Búsqueda rápida:</span>
+            <a href="#catalogo" class="quick-pill">🐶 Alimentos Perros</a>
+            <a href="#catalogo" class="quick-pill">🐱 Alimentos Gatos</a>
+            <a href="#catalogo" class="quick-pill">💊 Matapulgas &amp; Pipetas</a>
+            <a href="#servicios" class="quick-pill">✂️ Baño &amp; Spa</a>
           </div>
-          <div class="trust-item">
-            <span class="trust-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>
-            </span>
-            <div>
-              <strong>Facturación A y B</strong>
-              <p>Precios mayoristas por bulto/pallet</p>
+
+          <!-- Beneficios Clave -->
+          <div class="hero-trust-bar">
+            <div class="trust-item">
+              <span class="trust-title">Envíos en 24h</span>
+              <span class="trust-sub">Llegamos a tu puerta sin demoras</span>
+            </div>
+            <div class="trust-item">
+              <span class="trust-title">Productos 100% Originales</span>
+              <span class="trust-sub">Directo de laboratorios y marcas</span>
+            </div>
+            <div class="trust-item">
+              <span class="trust-title">Asesoramiento Veterinario</span>
+              <span class="trust-sub">Te ayudamos a elegir la dosis ideal</span>
             </div>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- SECCIÓN 2: CATÁLOGO Y RUBROS PRINCIPALES DE MATERIALES -->
-    <section class="section" id="catalogo">
-      <div class="container">
-        <div class="section-badge">Catálogo de Materiales</div>
-        <h2 class="section-title">Rubros y Materiales para Todas las Etapas</h2>
-        <p class="section-description">
-          Disponemos de stock permanente en nuestro centro de distribución de más de 6.000 m² para que tu proyecto nunca se detenga.
-        </p>
-
-        <div class="catalog-grid">
-          <!-- Categoría 1 -->
-          <div class="catalog-card">
-            <div class="card-image-box">
-              <img src="assets/ladrillos.jpg" alt="Pallet de ladrillos huecos y cerámicos de construcción" class="card-product-img" loading="lazy">
-              <span class="card-img-badge">Pallet / Bulto</span>
-            </div>
-            <div class="card-content">
-              <h3 class="card-title">Mampostería &amp; Ladrillos</h3>
-              <p class="card-text">Ladrillo hueco de todas las medidas (8, 12 y 18), ladrillo común seleccionado, bloques de hormigón celular curado en autoclave (HCCA) y bloques de cemento vibrocomprimido.</p>
-              <ul class="card-list">
-                <li>Ladrillo cerámico 12x18x33 y 18x18x33</li>
-                <li>Ladrillo común para vista y cimientos</li>
-                <li>Bloques portantes y de tabique</li>
-              </ul>
-              <div class="card-footer">
-                <span class="card-tag">Pallet cerrado disponible</span>
+        <div class="hero-visual">
+          <div class="hero-image-wrapper">
+            <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&w=1000&q=80" alt="Perro feliz y saludable cuidado con productos Prompi" class="hero-main-img">
+            
+            <!-- Floating badge interactivo 1 -->
+            <div class="floating-badge badge-top">
+              <span class="badge-icon">💊</span>
+              <div>
+                <strong>Matapulgas &amp; Pipetas</strong>
+                <small>Bravecto, NexGard, Simparica</small>
               </div>
             </div>
-          </div>
 
-          <!-- Categoría 2 -->
-          <div class="catalog-card">
-            <div class="card-image-box">
-              <img src="assets/aridos.jpg" alt="Acopio de arena lavada de río y piedra partida a granel" class="card-product-img" loading="lazy">
-              <span class="card-img-badge">Bolsón Big Bag / Camión</span>
-            </div>
-            <div class="card-content">
-              <h3 class="card-title">Áridos &amp; Granel</h3>
-              <p class="card-text">Arenas limpias de río, piedras partidas graníticas de gradación controlada, tosca compactable y leca para alivianar losas y contrapisos.</p>
-              <ul class="card-list">
-                <li>Arena fina de río en bolsón y a granel</li>
-                <li>Piedra partida 6/20 y binder</li>
-                <li>Cascote limpio picado y tosca</li>
-              </ul>
-              <div class="card-footer">
-                <span class="card-tag">Bolsón Big Bag 1m³ o camión</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Categoría 3 -->
-          <div class="catalog-card">
-            <div class="card-image-box">
-              <img src="assets/hierros.jpg" alt="Barras de acero corrugado de construcción ADN 420 y mallas" class="card-product-img" loading="lazy">
-              <span class="card-img-badge">Acero ADN 420</span>
-            </div>
-            <div class="card-content">
-              <h3 class="card-title">Hierros, Acero &amp; Mallas</h3>
-              <p class="card-text">Barras de acero conformadas ADN 420 soldables para estructuras de hormigón armado, mallas electrosoldadas estándar y especiales, perfiles estructurales UPN/IPN.</p>
-              <ul class="card-list">
-                <li>Hierro del ø6, ø8, ø10, ø12, ø16, ø20 y ø25</li>
-                <li>Mallas cima 15x15 (ø4.2, ø6 y ø8)</li>
-                <li>Alambre recocido, estribos y clavos de obra</li>
-              </ul>
-              <div class="card-footer">
-                <span class="card-tag">Certificación IRAM</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Categoría 4 -->
-          <div class="catalog-card">
-            <div class="card-image-box">
-              <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=800&h=480&q=80" alt="Bolsas de cemento Portland, cales y aditivos químicos" class="card-product-img" loading="lazy">
-              <span class="card-img-badge">Distribuidor Oficial</span>
-            </div>
-            <div class="card-content">
-              <h3 class="card-title">Cementos, Cales &amp; Aditivos</h3>
-              <p class="card-text">Distribuidor oficial de las principales marcas. Cemento Portland normal, cemento de albañilería (plasticor), cal aérea viva e hidratada, y aditivos de tecnología química.</p>
-              <ul class="card-list">
-                <li>Cemento en bolsas de 50 kg (Loma Negra / Holcim)</li>
-                <li>Cal común y milagro hidratada</li>
-                <li>Hidrófugos, acelerantes de fragüe y selladores</li>
-              </ul>
-              <div class="card-footer">
-                <span class="card-tag">Descuento por equipo completo</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Categoría 5 -->
-          <div class="catalog-card">
-            <div class="card-image-box">
-              <img src="https://images.unsplash.com/photo-1632759145351-1d592919f522?auto=format&fit=crop&w=800&h=480&q=80" alt="Chapas para techos galvanizadas, aislantes y tirantes" class="card-product-img" loading="lazy">
-              <span class="card-img-badge">Chapa Cincalum / Color</span>
-            </div>
-            <div class="card-content">
-              <h3 class="card-title">Techos, Chapas &amp; Aislantes</h3>
-              <p class="card-text">Soluciones completas para techos y cubiertas industriales y residenciales: chapas galvanizadas, cincalum y prepintadas color, tirantes de pino y eucalipto seleccionado.</p>
-              <ul class="card-list">
-                <li>Chapas acanaladas y trapezoidales a medida</li>
-                <li>Membranas asfálticas con aluminio de 4mm</li>
-                <li>Aislantes termoacústicos (lana de vidrio, espuma)</li>
-              </ul>
-              <div class="card-footer">
-                <span class="card-tag">Cortes a medida en chapa</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Categoría 6 -->
-          <div class="catalog-card">
-            <div class="card-image-box">
-              <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=800&h=480&q=80" alt="Placas de yeso Durlock, perfilería Steel Framing y masillas" class="card-product-img" loading="lazy">
-              <span class="card-img-badge">Sistema Steel Framing</span>
-            </div>
-            <div class="card-content">
-              <h3 class="card-title">Construcción en Seco &amp; Terminación</h3>
-              <p class="card-text">Placas de yeso estándar, resistentes a la humedad y resistentes al fuego. Perfilería de chapa galvanizada liviana y estructural para Steel Framing, masillas y cintas.</p>
-              <ul class="card-list">
-                <li>Placas de yeso 12.5mm y 9.5mm (Knauf / Durlock)</li>
-                <li>Montantes, soleras, omegas y tornillos autoperforantes</li>
-                <li>Pegamentos impermeables para porcelanato y cerámicas</li>
-              </ul>
-              <div class="card-footer">
-                <span class="card-tag">Stock permanente</span>
+            <!-- Floating badge interactivo 2 -->
+            <div class="floating-badge badge-bottom">
+              <span class="badge-icon">🚚</span>
+              <div>
+                <strong>Envío Express de Bolsas</strong>
+                <small>No cargues peso, te lo llevamos</small>
               </div>
             </div>
           </div>
@@ -220,615 +131,811 @@
       </div>
     </section>
 
-    <!-- SECCIÓN NARANJA: CONFÍAN EN NOSOTROS (CARRUSEL INFINITO DE MARCAS) -->
+    <!-- ==========================================================================
+         SECCIÓN NARANJA: CONFÍAN EN NOSOTROS / MARCAS LÍDERES (CARRUSEL INFINITO)
+         ========================================================================== -->
     <section class="section-trusted-brands">
       <div class="container trusted-header">
-        <h2 class="trusted-title">Confían en Nosotros</h2>
+        <h2 class="trusted-title">Marcas Líderes que Cuidan a tu Mascota</h2>
       </div>
 
-      <div class="logo-marquee-container" aria-label="Empresas que confían en nuestra logística">
+      <div class="logo-marquee-container" aria-label="Marcas de alimentos y farmacia veterinaria">
         <div class="logo-marquee-track">
           <!-- GRUPO 1 DE LOGOS EN BLANCO -->
-          <div class="marquee-logo-item" title="Techint">
-            <svg viewBox="0 0 160 40" fill="none" class="white-logo">
-              <path d="M12 6L24 18L12 30L0 18L12 6Z" fill="#FFFFFF"/>
-              <path d="M22 6L34 18L22 30L10 18L22 6Z" fill="#FFFFFF" fill-opacity="0.6"/>
-              <text x="46" y="26" font-family="'Inter', sans-serif" font-weight="900" font-size="20" fill="#FFFFFF" letter-spacing="1.5">TECHINT</text>
+          <div class="marquee-logo-item" title="Royal Canin">
+            <svg viewBox="0 0 170 38" fill="none" class="white-logo">
+              <circle cx="14" cy="19" r="10" stroke="#FFFFFF" stroke-width="2.5"/>
+              <circle cx="14" cy="19" r="4" fill="#FFFFFF"/>
+              <text x="32" y="25" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="17" fill="#FFFFFF" letter-spacing="1">ROYAL CANIN</text>
             </svg>
           </div>
 
-          <div class="marquee-logo-item" title="Duralitte">
-            <svg viewBox="0 0 160 40" fill="none" class="white-logo">
-              <path d="M8 26L16 12H24L16 26H8Z" fill="#FFFFFF"/>
-              <path d="M22 26L30 12H38L30 26H22Z" fill="#FFFFFF"/>
-              <text x="44" y="24" font-family="'Inter', sans-serif" font-style="italic" font-weight="900" font-size="18" fill="#FFFFFF" letter-spacing="1">DURALITTE</text>
+          <div class="marquee-logo-item" title="Purina Pro Plan">
+            <svg viewBox="0 0 160 38" fill="none" class="white-logo">
+              <polygon points="6,27 16,9 26,27" fill="#FFFFFF"/>
+              <text x="34" y="24" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="16" fill="#FFFFFF" letter-spacing="0.5">PRO PLAN</text>
             </svg>
           </div>
 
-          <div class="marquee-logo-item" title="Holcim">
-            <svg viewBox="0 0 150 40" fill="none" class="white-logo">
-              <circle cx="16" cy="20" r="12" stroke="#FFFFFF" stroke-width="4"/>
-              <circle cx="16" cy="20" r="4" fill="#FFFFFF"/>
-              <text x="38" y="26" font-family="'Inter', sans-serif" font-weight="800" font-size="20" fill="#FFFFFF" letter-spacing="1">HOLCIM</text>
+          <div class="marquee-logo-item" title="Bravecto">
+            <svg viewBox="0 0 160 38" fill="none" class="white-logo">
+              <rect x="6" y="8" width="20" height="20" rx="4" fill="#FFFFFF"/>
+              <path d="M12 18L15 21L21 14" stroke="#FF6338" stroke-width="2.5" stroke-linecap="round"/>
+              <text x="34" y="25" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="17" fill="#FFFFFF" letter-spacing="1">BRAVECTO</text>
             </svg>
           </div>
 
-          <div class="marquee-logo-item" title="Ternium">
-            <svg viewBox="0 0 160 40" fill="none" class="white-logo">
-              <polygon points="6,28 18,8 30,28" fill="#FFFFFF"/>
-              <polygon points="20,28 28,14 36,28" fill="#FFFFFF" fill-opacity="0.6"/>
-              <text x="44" y="25" font-family="'Inter', sans-serif" font-weight="800" font-size="19" fill="#FFFFFF" letter-spacing="0.5">Ternium</text>
+          <div class="marquee-logo-item" title="NexGard">
+            <svg viewBox="0 0 150 38" fill="none" class="white-logo">
+              <path d="M8 27L18 9L28 27H8Z" stroke="#FFFFFF" stroke-width="2"/>
+              <text x="34" y="25" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="17" fill="#FFFFFF" letter-spacing="1">NexGard</text>
             </svg>
           </div>
 
-          <div class="marquee-logo-item" title="Loma Negra">
-            <svg viewBox="0 0 180 40" fill="none" class="white-logo">
-              <path d="M6 26C12 14 20 10 26 26H6Z" fill="#FFFFFF"/>
-              <path d="M18 26C24 16 30 13 36 26H18Z" fill="#FFFFFF" fill-opacity="0.7"/>
-              <text x="44" y="24" font-family="'Inter', sans-serif" font-weight="900" font-size="17" fill="#FFFFFF" letter-spacing="1">LOMA NEGRA</text>
+          <div class="marquee-logo-item" title="Hill's Science Diet">
+            <svg viewBox="0 0 140 38" fill="none" class="white-logo">
+              <circle cx="14" cy="19" r="11" fill="#FFFFFF"/>
+              <text x="10" y="24" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="15" fill="#FF6338">H</text>
+              <text x="32" y="25" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="17" fill="#FFFFFF" letter-spacing="1">Hill's</text>
             </svg>
           </div>
 
-          <div class="marquee-logo-item" title="Veritran">
-            <svg viewBox="0 0 150 40" fill="none" class="white-logo">
-              <polygon points="8,26 18,10 28,26" stroke="#FFFFFF" stroke-width="3" fill="none"/>
-              <polygon points="14,26 18,18 22,26" fill="#FFFFFF"/>
-              <text x="36" y="25" font-family="'Inter', sans-serif" font-weight="700" font-size="19" fill="#FFFFFF" letter-spacing="0.5">veritran</text>
+          <div class="marquee-logo-item" title="Simparica">
+            <svg viewBox="0 0 160 38" fill="none" class="white-logo">
+              <path d="M8 12C14 12 14 26 20 26C26 26 26 12 32 12" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/>
+              <text x="38" y="24" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="16" fill="#FFFFFF" letter-spacing="0.5">Simparica</text>
             </svg>
           </div>
 
-          <div class="marquee-logo-item" title="Knauf">
-            <svg viewBox="0 0 140 40" fill="none" class="white-logo">
-              <rect x="6" y="8" width="24" height="24" rx="3" stroke="#FFFFFF" stroke-width="3"/>
-              <text x="13" y="26" font-family="'Inter', sans-serif" font-weight="900" font-size="18" fill="#FFFFFF">K</text>
-              <text x="38" y="25" font-family="'Inter', sans-serif" font-weight="900" font-size="19" fill="#FFFFFF" letter-spacing="1">KNAUF</text>
+          <div class="marquee-logo-item" title="Frontline">
+            <svg viewBox="0 0 160 38" fill="none" class="white-logo">
+              <rect x="6" y="9" width="18" height="20" stroke="#FFFFFF" stroke-width="2.5"/>
+              <text x="30" y="25" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="17" fill="#FFFFFF" letter-spacing="1">FRONTLINE</text>
             </svg>
           </div>
 
-          <div class="marquee-logo-item" title="Lucciano's">
-            <svg viewBox="0 0 160 40" fill="none" class="white-logo">
-              <text x="10" y="25" font-family="'Inter', sans-serif" font-style="italic" font-weight="900" font-size="21" fill="#FFFFFF" letter-spacing="0.5">Lucciano's</text>
-              <line x1="10" y1="29" x2="140" y2="29" stroke="#FFFFFF" stroke-width="2"/>
+          <div class="marquee-logo-item" title="Eukanuba">
+            <svg viewBox="0 0 160 38" fill="none" class="white-logo">
+              <text x="8" y="25" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="18" fill="#FFFFFF" letter-spacing="1">Eukanuba</text>
             </svg>
           </div>
 
-          <div class="marquee-logo-item" title="Sika">
-            <svg viewBox="0 0 120 40" fill="none" class="white-logo">
-              <polygon points="6,28 20,8 34,28" fill="#FFFFFF"/>
-              <polygon points="12,25 20,13 28,25" fill="#FF5E14"/>
-              <text x="40" y="25" font-family="'Inter', sans-serif" font-weight="900" font-size="21" fill="#FFFFFF" letter-spacing="1">SIKA</text>
+          <div class="marquee-logo-item" title="Whiskas">
+            <svg viewBox="0 0 140 38" fill="none" class="white-logo">
+              <path d="M6 19C10 10 20 10 24 19C20 28 10 28 6 19Z" fill="#FFFFFF"/>
+              <text x="32" y="25" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="17" fill="#FFFFFF" letter-spacing="0.5">whiskas</text>
             </svg>
           </div>
 
-          <div class="marquee-logo-item" title="Franuí">
-            <svg viewBox="0 0 130 40" fill="none" class="white-logo">
-              <circle cx="12" cy="18" r="4" fill="#FFFFFF"/>
-              <circle cx="20" cy="14" r="3.5" fill="#FFFFFF"/>
-              <circle cx="22" cy="22" r="3.5" fill="#FFFFFF"/>
-              <text x="34" y="25" font-family="'Inter', sans-serif" font-weight="900" font-size="21" fill="#FFFFFF" letter-spacing="-0.5">franuí</text>
+          <div class="marquee-logo-item" title="Vitalcan">
+            <svg viewBox="0 0 150 38" fill="none" class="white-logo">
+              <circle cx="14" cy="19" r="9" stroke="#FFFFFF" stroke-width="2.5"/>
+              <text x="30" y="25" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="17" fill="#FFFFFF" letter-spacing="0.5">vitalcan</text>
             </svg>
           </div>
 
-          <div class="marquee-logo-item" title="Freddo">
-            <svg viewBox="0 0 130 40" fill="none" class="white-logo">
-              <text x="10" y="25" font-family="'Inter', sans-serif" font-weight="800" font-size="22" fill="#FFFFFF" letter-spacing="1">freddo</text>
+          <div class="marquee-logo-item" title="Sieger">
+            <svg viewBox="0 0 130 38" fill="none" class="white-logo">
+              <text x="8" y="25" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="18" fill="#FFFFFF" letter-spacing="1.5">SIEGER</text>
             </svg>
           </div>
 
-          <div class="marquee-logo-item" title="Carbo-Ar">
-            <svg viewBox="0 0 150 40" fill="none" class="white-logo">
-              <rect x="6" y="10" width="18" height="20" stroke="#FFFFFF" stroke-width="3"/>
-              <text x="32" y="24" font-family="'Inter', sans-serif" font-weight="900" font-size="17" fill="#FFFFFF" letter-spacing="1">CARBO-AR</text>
+          <!-- GRUPO 2 (DUPLICADO PARA BUCLE CONTINUO SIN SALTOS) -->
+          <div class="marquee-logo-item" title="Royal Canin" aria-hidden="true">
+            <svg viewBox="0 0 170 38" fill="none" class="white-logo">
+              <circle cx="14" cy="19" r="10" stroke="#FFFFFF" stroke-width="2.5"/>
+              <circle cx="14" cy="19" r="4" fill="#FFFFFF"/>
+              <text x="32" y="25" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="17" fill="#FFFFFF" letter-spacing="1">ROYAL CANIN</text>
             </svg>
           </div>
 
-          <!-- GRUPO 2 DE LOGOS EN BLANCO (DUPLICADO PARA BUCLE CONTINUO INFINITO) -->
-          <div class="marquee-logo-item" title="Techint" aria-hidden="true">
-            <svg viewBox="0 0 160 40" fill="none" class="white-logo">
-              <path d="M12 6L24 18L12 30L0 18L12 6Z" fill="#FFFFFF"/>
-              <path d="M22 6L34 18L22 30L10 18L22 6Z" fill="#FFFFFF" fill-opacity="0.6"/>
-              <text x="46" y="26" font-family="'Inter', sans-serif" font-weight="900" font-size="20" fill="#FFFFFF" letter-spacing="1.5">TECHINT</text>
+          <div class="marquee-logo-item" title="Purina Pro Plan" aria-hidden="true">
+            <svg viewBox="0 0 160 38" fill="none" class="white-logo">
+              <polygon points="6,27 16,9 26,27" fill="#FFFFFF"/>
+              <text x="34" y="24" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="16" fill="#FFFFFF" letter-spacing="0.5">PRO PLAN</text>
             </svg>
           </div>
 
-          <div class="marquee-logo-item" title="Duralitte" aria-hidden="true">
-            <svg viewBox="0 0 160 40" fill="none" class="white-logo">
-              <path d="M8 26L16 12H24L16 26H8Z" fill="#FFFFFF"/>
-              <path d="M22 26L30 12H38L30 26H22Z" fill="#FFFFFF"/>
-              <text x="44" y="24" font-family="'Inter', sans-serif" font-style="italic" font-weight="900" font-size="18" fill="#FFFFFF" letter-spacing="1">DURALITTE</text>
+          <div class="marquee-logo-item" title="Bravecto" aria-hidden="true">
+            <svg viewBox="0 0 160 38" fill="none" class="white-logo">
+              <rect x="6" y="8" width="20" height="20" rx="4" fill="#FFFFFF"/>
+              <path d="M12 18L15 21L21 14" stroke="#FF6338" stroke-width="2.5" stroke-linecap="round"/>
+              <text x="34" y="25" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="17" fill="#FFFFFF" letter-spacing="1">BRAVECTO</text>
             </svg>
           </div>
 
-          <div class="marquee-logo-item" title="Holcim" aria-hidden="true">
-            <svg viewBox="0 0 150 40" fill="none" class="white-logo">
-              <circle cx="16" cy="20" r="12" stroke="#FFFFFF" stroke-width="4"/>
-              <circle cx="16" cy="20" r="4" fill="#FFFFFF"/>
-              <text x="38" y="26" font-family="'Inter', sans-serif" font-weight="800" font-size="20" fill="#FFFFFF" letter-spacing="1">HOLCIM</text>
+          <div class="marquee-logo-item" title="NexGard" aria-hidden="true">
+            <svg viewBox="0 0 150 38" fill="none" class="white-logo">
+              <path d="M8 27L18 9L28 27H8Z" stroke="#FFFFFF" stroke-width="2"/>
+              <text x="34" y="25" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="17" fill="#FFFFFF" letter-spacing="1">NexGard</text>
             </svg>
           </div>
 
-          <div class="marquee-logo-item" title="Ternium" aria-hidden="true">
-            <svg viewBox="0 0 160 40" fill="none" class="white-logo">
-              <polygon points="6,28 18,8 30,28" fill="#FFFFFF"/>
-              <polygon points="20,28 28,14 36,28" fill="#FFFFFF" fill-opacity="0.6"/>
-              <text x="44" y="25" font-family="'Inter', sans-serif" font-weight="800" font-size="19" fill="#FFFFFF" letter-spacing="0.5">Ternium</text>
+          <div class="marquee-logo-item" title="Hill's Science Diet" aria-hidden="true">
+            <svg viewBox="0 0 140 38" fill="none" class="white-logo">
+              <circle cx="14" cy="19" r="11" fill="#FFFFFF"/>
+              <text x="10" y="24" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="15" fill="#FF6338">H</text>
+              <text x="32" y="25" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="17" fill="#FFFFFF" letter-spacing="1">Hill's</text>
             </svg>
           </div>
 
-          <div class="marquee-logo-item" title="Loma Negra" aria-hidden="true">
-            <svg viewBox="0 0 180 40" fill="none" class="white-logo">
-              <path d="M6 26C12 14 20 10 26 26H6Z" fill="#FFFFFF"/>
-              <path d="M18 26C24 16 30 13 36 26H18Z" fill="#FFFFFF" fill-opacity="0.7"/>
-              <text x="44" y="24" font-family="'Inter', sans-serif" font-weight="900" font-size="17" fill="#FFFFFF" letter-spacing="1">LOMA NEGRA</text>
+          <div class="marquee-logo-item" title="Simparica" aria-hidden="true">
+            <svg viewBox="0 0 160 38" fill="none" class="white-logo">
+              <path d="M8 12C14 12 14 26 20 26C26 26 26 12 32 12" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/>
+              <text x="38" y="24" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="16" fill="#FFFFFF" letter-spacing="0.5">Simparica</text>
             </svg>
           </div>
 
-          <div class="marquee-logo-item" title="Veritran" aria-hidden="true">
-            <svg viewBox="0 0 150 40" fill="none" class="white-logo">
-              <polygon points="8,26 18,10 28,26" stroke="#FFFFFF" stroke-width="3" fill="none"/>
-              <polygon points="14,26 18,18 22,26" fill="#FFFFFF"/>
-              <text x="36" y="25" font-family="'Inter', sans-serif" font-weight="700" font-size="19" fill="#FFFFFF" letter-spacing="0.5">veritran</text>
+          <div class="marquee-logo-item" title="Frontline" aria-hidden="true">
+            <svg viewBox="0 0 160 38" fill="none" class="white-logo">
+              <rect x="6" y="9" width="18" height="20" stroke="#FFFFFF" stroke-width="2.5"/>
+              <text x="30" y="25" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="17" fill="#FFFFFF" letter-spacing="1">FRONTLINE</text>
             </svg>
           </div>
 
-          <div class="marquee-logo-item" title="Knauf" aria-hidden="true">
-            <svg viewBox="0 0 140 40" fill="none" class="white-logo">
-              <rect x="6" y="8" width="24" height="24" rx="3" stroke="#FFFFFF" stroke-width="3"/>
-              <text x="13" y="26" font-family="'Inter', sans-serif" font-weight="900" font-size="18" fill="#FFFFFF">K</text>
-              <text x="38" y="25" font-family="'Inter', sans-serif" font-weight="900" font-size="19" fill="#FFFFFF" letter-spacing="1">KNAUF</text>
+          <div class="marquee-logo-item" title="Eukanuba" aria-hidden="true">
+            <svg viewBox="0 0 160 38" fill="none" class="white-logo">
+              <text x="8" y="25" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="18" fill="#FFFFFF" letter-spacing="1">Eukanuba</text>
             </svg>
           </div>
 
-          <div class="marquee-logo-item" title="Lucciano's" aria-hidden="true">
-            <svg viewBox="0 0 160 40" fill="none" class="white-logo">
-              <text x="10" y="25" font-family="'Inter', sans-serif" font-style="italic" font-weight="900" font-size="21" fill="#FFFFFF" letter-spacing="0.5">Lucciano's</text>
-              <line x1="10" y1="29" x2="140" y2="29" stroke="#FFFFFF" stroke-width="2"/>
+          <div class="marquee-logo-item" title="Whiskas" aria-hidden="true">
+            <svg viewBox="0 0 140 38" fill="none" class="white-logo">
+              <path d="M6 19C10 10 20 10 24 19C20 28 10 28 6 19Z" fill="#FFFFFF"/>
+              <text x="32" y="25" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="17" fill="#FFFFFF" letter-spacing="0.5">whiskas</text>
             </svg>
           </div>
 
-          <div class="marquee-logo-item" title="Sika" aria-hidden="true">
-            <svg viewBox="0 0 120 40" fill="none" class="white-logo">
-              <polygon points="6,28 20,8 34,28" fill="#FFFFFF"/>
-              <polygon points="12,25 20,13 28,25" fill="#FF5E14"/>
-              <text x="40" y="25" font-family="'Inter', sans-serif" font-weight="900" font-size="21" fill="#FFFFFF" letter-spacing="1">SIKA</text>
+          <div class="marquee-logo-item" title="Vitalcan" aria-hidden="true">
+            <svg viewBox="0 0 150 38" fill="none" class="white-logo">
+              <circle cx="14" cy="19" r="9" stroke="#FFFFFF" stroke-width="2.5"/>
+              <text x="30" y="25" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="17" fill="#FFFFFF" letter-spacing="0.5">vitalcan</text>
             </svg>
           </div>
 
-          <div class="marquee-logo-item" title="Franuí" aria-hidden="true">
-            <svg viewBox="0 0 130 40" fill="none" class="white-logo">
-              <circle cx="12" cy="18" r="4" fill="#FFFFFF"/>
-              <circle cx="20" cy="14" r="3.5" fill="#FFFFFF"/>
-              <circle cx="22" cy="22" r="3.5" fill="#FFFFFF"/>
-              <text x="34" y="25" font-family="'Inter', sans-serif" font-weight="900" font-size="21" fill="#FFFFFF" letter-spacing="-0.5">franuí</text>
-            </svg>
-          </div>
-
-          <div class="marquee-logo-item" title="Freddo" aria-hidden="true">
-            <svg viewBox="0 0 130 40" fill="none" class="white-logo">
-              <text x="10" y="25" font-family="'Inter', sans-serif" font-weight="800" font-size="22" fill="#FFFFFF" letter-spacing="1">freddo</text>
-            </svg>
-          </div>
-
-          <div class="marquee-logo-item" title="Carbo-Ar" aria-hidden="true">
-            <svg viewBox="0 0 150 40" fill="none" class="white-logo">
-              <rect x="6" y="10" width="18" height="20" stroke="#FFFFFF" stroke-width="3"/>
-              <text x="32" y="24" font-family="'Inter', sans-serif" font-weight="900" font-size="17" fill="#FFFFFF" letter-spacing="1">CARBO-AR</text>
+          <div class="marquee-logo-item" title="Sieger" aria-hidden="true">
+            <svg viewBox="0 0 130 38" fill="none" class="white-logo">
+              <text x="8" y="25" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="18" fill="#FFFFFF" letter-spacing="1.5">SIEGER</text>
             </svg>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- SECCIÓN 3: CALCULADORA RÁPIDA DE MATERIALES DE OBRA (Interactiva) -->
+    <!-- ==========================================================================
+         SECCIÓN CATEGORÍAS PRINCIPALES (INSPIRADO EN PUPPIS)
+         ========================================================================== -->
+    <section class="section section-categories" id="categorias">
+      <div class="container">
+        <div class="section-header-center">
+          <span class="section-tag">Tienda Especializada</span>
+          <h2 class="section-title">Explorá por Categoría</h2>
+          <p class="section-subtitle">
+            Encontrá exactamente lo que tu compañero necesita, con stock garantizado y entrega express.
+          </p>
+        </div>
+
+        <div class="categories-grid">
+          <!-- Categoría 1: Perros -->
+          <div class="category-card" onclick="filterCatalog('perros')">
+            <div class="cat-image-box">
+              <img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&w=600&q=80" alt="Mundo Perros" class="cat-img">
+            </div>
+            <div class="cat-content">
+              <span class="cat-badge">Para Caninos</span>
+              <h3 class="cat-title">Mundo Perros</h3>
+              <p class="cat-desc">Alimento seco y húmedo por edad, tamaño y patología, snacks y juguetes.</p>
+              <span class="cat-link">Ver catálogo perros &rarr;</span>
+            </div>
+          </div>
+
+          <!-- Categoría 2: Gatos -->
+          <div class="category-card" onclick="filterCatalog('gatos')">
+            <div class="cat-image-box">
+              <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=600&q=80" alt="Mundo Gatos" class="cat-img">
+            </div>
+            <div class="cat-content">
+              <span class="cat-badge">Para Felinos</span>
+              <h3 class="cat-title">Mundo Gatos</h3>
+              <p class="cat-desc">Nutrición para esterilizados, urinario, piedras sanitarias y rascadores.</p>
+              <span class="cat-link">Ver catálogo gatos &rarr;</span>
+            </div>
+          </div>
+
+          <!-- Categoría 3: Matapulgas & Farmacia -->
+          <div class="category-card" onclick="filterCatalog('farmacia')">
+            <div class="cat-image-box">
+              <img src="https://images.unsplash.com/photo-1576201836106-db1758fd1c97?auto=format&fit=crop&w=600&q=80" alt="Matapulgas y Farmacia Veterinaria" class="cat-img">
+            </div>
+            <div class="cat-content">
+              <span class="cat-badge">Salud &amp; Prevención</span>
+              <h3 class="cat-title">Matapulgas &amp; Farmacia</h3>
+              <p class="cat-desc">Comprimidos masticables, pipetas, antiparasitarios internos y dermatología.</p>
+              <span class="cat-link">Ver antiparasitarios &rarr;</span>
+            </div>
+          </div>
+
+          <!-- Categoría 4: Baño & Estética -->
+          <div class="category-card" onclick="document.getElementById('servicios').scrollIntoView({behavior: 'smooth'})">
+            <div class="cat-image-box">
+              <img src="https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?auto=format&fit=crop&w=600&q=80" alt="Baño y Peluquería Canina" class="cat-img">
+            </div>
+            <div class="cat-content">
+              <span class="cat-badge">Estética &amp; Spa</span>
+              <h3 class="cat-title">Baño &amp; Peluquería</h3>
+              <p class="cat-desc">Cortes de raza, baños relajantes, corte de uñas y deslanado profesional.</p>
+              <span class="cat-link">Reservar turno &rarr;</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECCIÓN PRODUCTOS DESTACADOS & MATAPULGAS CON FILTROS INTERACTIVOS
+         ========================================================================== -->
+    <section class="section section-products" id="catalogo">
+      <div class="container">
+        <div class="section-header-center">
+          <span class="section-tag">Farmacia &amp; Pet Shop</span>
+          <h2 class="section-title">Productos Más Elegidos</h2>
+          <p class="section-subtitle">
+            Alimentos balanceados originales y los antiparasitarios más recomendados por médicos veterinarios.
+          </p>
+        </div>
+
+        <!-- Filtros interactivos -->
+        <div class="product-filters">
+          <button class="filter-btn active" data-filter="all">Todos los Productos</button>
+          <button class="filter-btn" data-filter="perros">🐶 Perros</button>
+          <button class="filter-btn" data-filter="gatos">🐱 Gatos</button>
+          <button class="filter-btn" data-filter="farmacia">💊 Matapulgas &amp; Farmacia</button>
+          <button class="filter-btn" data-filter="higiene">✨ Higiene &amp; Accesorios</button>
+        </div>
+
+        <!-- Grilla de Productos -->
+        <div class="products-grid">
+          <!-- Producto 1: NexGard Spectra -->
+          <div class="product-card" data-category="farmacia perros">
+            <div class="product-image-box">
+              <span class="prod-badge badge-hot">Más Vendido</span>
+              <img src="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?auto=format&fit=crop&w=500&q=80" alt="NexGard Spectra Antiparasitario" class="product-img">
+            </div>
+            <div class="product-body">
+              <span class="product-meta">Antiparasitario Completo · Perros</span>
+              <h3 class="product-name">NexGard Spectra (Todas las medidas)</h3>
+              <p class="product-desc">Comprimido masticable sabor carne. Elimina pulgas, garrapatas, sarna y parásitos intestinales por 30 días.</p>
+              <div class="product-features">
+                <span>✓ Acción rápida en 4 hs</span>
+                <span>✓ Sin olor ni pipetas sucias</span>
+              </div>
+              <div class="product-footer">
+                <div class="product-pricing">
+                  <span class="price-label">Dosis según peso</span>
+                  <strong class="price-val">Desde $14.500</strong>
+                </div>
+                <a href="https://wa.me/5491148907700?text=Hola%20Prompi!%20Quiero%20consultar%20el%20precio%20de%20NexGard%20Spectra%20para%20mi%20perro" class="btn btn-sm btn-primary" target="_blank" rel="noopener">Pedir</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Producto 2: Bravecto 3 Meses -->
+          <div class="product-card" data-category="farmacia perros gatos">
+            <div class="product-image-box">
+              <span class="prod-badge badge-premium">Protección 12 Semanas</span>
+              <img src="https://images.unsplash.com/photo-1548767797-d8c844163c4c?auto=format&fit=crop&w=500&q=80" alt="Bravecto Masticable Antipulgas" class="product-img">
+            </div>
+            <div class="product-body">
+              <span class="product-meta">Antipulgas de Larga Duración</span>
+              <h3 class="product-name">Bravecto Comprimido (3 Meses)</h3>
+              <p class="product-desc">Una sola toma protege a tu mascota durante 3 meses ininterrumpidos contra pulgas y garrapatas.</p>
+              <div class="product-features">
+                <span>✓ 12 semanas continuas</span>
+                <span>✓ Apto cachorros desde 8 semanas</span>
+              </div>
+              <div class="product-footer">
+                <div class="product-pricing">
+                  <span class="price-label">Presentación trimestral</span>
+                  <strong class="price-val">Desde $28.900</strong>
+                </div>
+                <a href="https://wa.me/5491148907700?text=Hola%20Prompi!%20Quiero%20pedir%20Bravecto" class="btn btn-sm btn-primary" target="_blank" rel="noopener">Pedir</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Producto 3: Royal Canin Mini Adult -->
+          <div class="product-card" data-category="perros">
+            <div class="product-image-box">
+              <span class="prod-badge badge-best">Súper Premium</span>
+              <img src="https://images.unsplash.com/photo-1589924691995-400dc9ecc119?auto=format&fit=crop&w=500&q=80" alt="Alimento Royal Canin Mini Adult" class="product-img">
+            </div>
+            <div class="product-body">
+              <span class="product-meta">Alimento Balanceado Seco</span>
+              <h3 class="product-name">Royal Canin Mini Adult (7.5kg y 15kg)</h3>
+              <p class="product-desc">Formulado para perros adultos de raza pequeña. Mantiene el peso óptimo y cuida el pelaje con ácidos grasos EPA-DHA.</p>
+              <div class="product-features">
+                <span>✓ Croqueta adaptada</span>
+                <span>✓ Digestibilidad reforzada</span>
+              </div>
+              <div class="product-footer">
+                <div class="product-pricing">
+                  <span class="price-label">Envío bonificado</span>
+                  <strong class="price-val">Bolsa 7.5kg: $42.500</strong>
+                </div>
+                <a href="https://wa.me/5491148907700?text=Hola%20Prompi!%20Quiero%20pedir%20Royal%20Canin%20Mini%20Adult" class="btn btn-sm btn-primary" target="_blank" rel="noopener">Pedir</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Producto 4: Purina Pro Plan Cat Sterilized -->
+          <div class="product-card" data-category="gatos">
+            <div class="product-image-box">
+              <span class="prod-badge badge-health">Salud Urinaria</span>
+              <img src="https://images.unsplash.com/photo-1574158622682-e40e69881006?auto=format&fit=crop&w=500&q=80" alt="Purina Pro Plan Sterilized Cat" class="product-img">
+            </div>
+            <div class="product-body">
+              <span class="product-meta">Gatos Esterilizados · Adultos</span>
+              <h3 class="product-name">Pro Plan Sterilized OptiRenal (3kg / 7.5kg)</h3>
+              <p class="product-desc">Protección probada del sistema renal y control calórico para evitar el sobrepeso común tras la castración.</p>
+              <div class="product-features">
+                <span>✓ Tecnología OptiRenal</span>
+                <span>✓ Previene cálculos urinarios</span>
+              </div>
+              <div class="product-footer">
+                <div class="product-pricing">
+                  <span class="price-label">Fórmula veterinaria</span>
+                  <strong class="price-val">Bolsa 3kg: $24.800</strong>
+                </div>
+                <a href="https://wa.me/5491148907700?text=Hola%20Prompi!%20Quiero%20pedir%20Pro%20Plan%20Sterilized%20Cat" class="btn btn-sm btn-primary" target="_blank" rel="noopener">Pedir</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Producto 5: Simparica Trio -->
+          <div class="product-card" data-category="farmacia perros">
+            <div class="product-image-box">
+              <span class="prod-badge badge-hot">Triple Protección</span>
+              <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=500&q=80" alt="Simparica Trio Comprimido" class="product-img">
+            </div>
+            <div class="product-body">
+              <span class="product-meta">Zoetis Laboratorio · Mensual</span>
+              <h3 class="product-name">Simparica Trio Masticable</h3>
+              <p class="product-desc">Defensa mensual combinada contra pulgas, garrapatas y el temido parásito del corazón (Dirofilaria).</p>
+              <div class="product-features">
+                <span>✓ Eficacia comprobada</span>
+                <span>✓ Alta palatabilidad</span>
+              </div>
+              <div class="product-footer">
+                <div class="product-pricing">
+                  <span class="price-label">Dosis individual</span>
+                  <strong class="price-val">Desde $13.200</strong>
+                </div>
+                <a href="https://wa.me/5491148907700?text=Hola%20Prompi!%20Quiero%20pedir%20Simparica%20Trio" class="btn btn-sm btn-primary" target="_blank" rel="noopener">Pedir</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Producto 6: Pipeta Frontline Plus Perros y Gatos -->
+          <div class="product-card" data-category="farmacia perros gatos">
+            <div class="product-image-box">
+              <span class="prod-badge badge-best">Clásico Confiable</span>
+              <img src="https://images.unsplash.com/photo-1537151625747-768eb6cf92b2?auto=format&fit=crop&w=500&q=80" alt="Pipeta Frontline Plus" class="product-img">
+            </div>
+            <div class="product-body">
+              <span class="product-meta">Uso Tópico Spot-on</span>
+              <h3 class="product-name">Frontline Plus Pipeta (Perro y Gato)</h3>
+              <p class="product-desc">Corta el ciclo biológico de las pulgas matando huevos y larvas. Ideal para mascotas con piel sensible a pastillas.</p>
+              <div class="product-features">
+                <span>✓ Resistente al agua</span>
+                <span>✓ Protección 30 días</span>
+              </div>
+              <div class="product-footer">
+                <div class="product-pricing">
+                  <span class="price-label">Por unidad</span>
+                  <strong class="price-val">Desde $8.900</strong>
+                </div>
+                <a href="https://wa.me/5491148907700?text=Hola%20Prompi!%20Quiero%20pedir%20Pipeta%20Frontline" class="btn btn-sm btn-primary" target="_blank" rel="noopener">Pedir</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Producto 7: Piedras Sanitarias Aglomerantes -->
+          <div class="product-card" data-category="gatos higiene">
+            <div class="product-image-box">
+              <span class="prod-badge badge-premium">Cero Olores</span>
+              <img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?auto=format&fit=crop&w=500&q=80" alt="Piedras Sanitarias Gatos" class="product-img">
+            </div>
+            <div class="product-body">
+              <span class="product-meta">Bandeja Higiénica Felina</span>
+              <h3 class="product-name">Piedras Sanitarias Aglutinantes Ultra Clean</h3>
+              <p class="product-desc">Bentonita natural compacta en terrones instantáneos al contacto con la orina. Sin polvillo ni perfume invasivo.</p>
+              <div class="product-features">
+                <span>✓ Fácil de recoger</span>
+                <span>✓ Rinde el doble</span>
+              </div>
+              <div class="product-footer">
+                <div class="product-pricing">
+                  <span class="price-label">Bolsa 4kg / 10kg</span>
+                  <strong class="price-val">Desde $6.500</strong>
+                </div>
+                <a href="https://wa.me/5491148907700?text=Hola%20Prompi!%20Quiero%20pedir%20Piedras%20Sanitarias" class="btn btn-sm btn-primary" target="_blank" rel="noopener">Pedir</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Producto 8: Eukanuba Adult Medium Breed -->
+          <div class="product-card" data-category="perros">
+            <div class="product-image-box">
+              <span class="prod-badge badge-health">Energía &amp; Vitalidad</span>
+              <img src="https://images.unsplash.com/photo-1544568100-847a948585b9?auto=format&fit=crop&w=500&q=80" alt="Eukanuba Adult Medium Breed" class="product-img">
+            </div>
+            <div class="product-body">
+              <span class="product-meta">Alimento Balanceado · Perros</span>
+              <h3 class="product-name">Eukanuba Adult Raza Mediana (15kg)</h3>
+              <p class="product-desc">Proteína animal de primer nivel para músculos firmes y sistema DentaDefense que reduce la formación de sarro.</p>
+              <div class="product-features">
+                <span>✓ Condroitina y glucosamina</span>
+                <span>✓ Digestión saludable</span>
+              </div>
+              <div class="product-footer">
+                <div class="product-pricing">
+                  <span class="price-label">Bolsa 15kg con envío</span>
+                  <strong class="price-val">$52.000</strong>
+                </div>
+                <a href="https://wa.me/5491148907700?text=Hola%20Prompi!%20Quiero%20pedir%20Eukanuba%2015kg" class="btn btn-sm btn-primary" target="_blank" rel="noopener">Pedir</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Banner de asesoramiento dentro del catálogo -->
+        <div class="catalog-help-banner">
+          <div class="help-banner-content">
+            <h3>¿Buscás una marca específica o dieta medicada?</h3>
+            <p>Contamos con más de 2.500 productos en stock: Hill's Prescription Diet, Royal Canin Veterinary, Sieger, Vitalcan, golosinas y accesorios.</p>
+          </div>
+          <a href="https://wa.me/5491148907700?text=Hola%20Prompi!%20Busco%20un%20producto%20espec%C3%ADfico" class="btn btn-primary" target="_blank" rel="noopener">
+            Consultar a un Asesor
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECCIÓN SERVICIOS: BAÑO, PELUQUERÍA & CLÍNICA VETERINARIA
+         ========================================================================== -->
+    <section class="section section-services" id="servicios">
+      <div class="container">
+        <div class="section-header-center">
+          <span class="section-tag">Cuidado Integral</span>
+          <h2 class="section-title">Servicios Veterinarios &amp; Peluquería Canina</h2>
+          <p class="section-subtitle">
+            Instalaciones modernas equipadas para que tu mascota viva una experiencia sin estrés y con máximo cariño.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <!-- Servicio 1: Baño y Peluquería -->
+          <div class="service-box">
+            <div class="service-box-img">
+              <img src="https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?auto=format&fit=crop&w=700&q=80" alt="Baño y Peluquería Canina en Prompi">
+              <span class="service-pill">Turnos en el Día</span>
+            </div>
+            <div class="service-box-body">
+              <h3 class="service-name">Baño, Spa &amp; Peluquería Canina</h3>
+              <p class="service-desc">
+                Baño con agua templada y shampoo hipoalergénico específico según el tipo de manto, corte de raza o higiénico, deslanado, secado silencioso, corte de uñas y limpieza de oídos.
+              </p>
+              <ul class="service-list">
+                <li>Productos cosméticos de primera línea sin irritación</li>
+                <li>Secadores con control térmico anti-estrés</li>
+                <li>Atención personalizada por peluqueros profesionales</li>
+              </ul>
+              <a href="https://wa.me/5491148907700?text=Hola%20Prompi!%20Quiero%20reservar%20un%20turno%20de%20ba%C3%B1o%20y%20peluquer%C3%ADa" class="btn btn-outline" target="_blank" rel="noopener">Reservar Turno</a>
+            </div>
+          </div>
+
+          <!-- Servicio 2: Clínica Veterinaria & Vacunación -->
+          <div class="service-box">
+            <div class="service-box-img">
+              <img src="https://images.unsplash.com/photo-1628009368231-7bb7cfcb0def?auto=format&fit=crop&w=700&q=80" alt="Consultorio Veterinario en Prompi">
+              <span class="service-pill">Médicos Matriculados</span>
+            </div>
+            <div class="service-box-body">
+              <h3 class="service-name">Consultas Clínicas &amp; Vacunación</h3>
+              <p class="service-desc">
+                Chequeos preventivos, colocación de vacunas obligatorias y optativas (Séxtuple, Antirrábica, Triple Felina), planes de desparasitación interna periódica y certificados de salud.
+              </p>
+              <ul class="service-list">
+                <li>Libreta sanitaria oficial al día</li>
+                <li>Seguimiento de peso y condición corporal</li>
+                <li>Atención cálida y respetuosa de los tiempos de tu mascota</li>
+              </ul>
+              <a href="https://wa.me/5491148907700?text=Hola%20Prompi!%20Quiero%20consultar%20por%20vacunas%20o%20consulta%20veterinaria" class="btn btn-outline" target="_blank" rel="noopener">Consultar Vacunación</a>
+            </div>
+          </div>
+
+          <!-- Servicio 3: Delivery Pesado a Domicilio -->
+          <div class="service-box">
+            <div class="service-box-img">
+              <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=700&q=80" alt="Delivery de Alimentos Prompi">
+              <span class="service-pill">Sin Cargar Peso</span>
+            </div>
+            <div class="service-box-body">
+              <h3 class="service-name">Delivery Express a tu Puerta</h3>
+              <p class="service-desc">
+                ¿Comprás bolsas de 15kg o 20kg de alimento balanceado? Te las entregamos directamente en tu casa o departamento en franjas horarias convenientes para que nunca te quedes sin comida.
+              </p>
+              <ul class="service-list">
+                <li>Entrega en 24 horas en CABA y GBA</li>
+                <li>Podés abonar con transferencia, tarjetas o efectivo</li>
+                <li>Subimos la bolsa hasta tu piso sin recargo</li>
+              </ul>
+              <a href="https://wa.me/5491148907700?text=Hola%20Prompi!%20Quiero%20coordinar%20un%20env%C3%ADo%20de%20alimento%20a%20domicilio" class="btn btn-outline" target="_blank" rel="noopener">Pedir a Domicilio</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECCIÓN HERRAMIENTA INTERACTIVA: CALCULADORA PROMPI (RACIÓN & MATAPULGAS)
+         ========================================================================== -->
     <section class="section section-dark" id="calculadora">
       <div class="container">
-        <div class="section-badge badge-orange">Herramienta Gratuita</div>
-        <h2 class="section-title text-white">Calculadora Rápida de Materiales para tu Obra</h2>
-        <p class="section-description text-gray">
-          Estimá al instante los insumos principales que necesitás según los metros cuadrados de tu proyecto y enviá el cómputo directo a cotización por WhatsApp.
+        <div class="section-badge badge-coral">Herramienta Interactiva Prompi</div>
+        <h2 class="section-title text-white">Calculadora Inteligente de Nutrición &amp; Salud</h2>
+        <p class="text-gray calc-intro">
+          Calculá la porción exacta de alimento diario según el peso de tu perro o gato, o descubrí cuál es el antipulgas correspondiente a su contextura.
         </p>
 
         <div class="calc-wrapper">
-          <!-- Selector de tipo de cálculo -->
+          <!-- Pestañas de cálculo -->
           <div class="calc-tabs">
-            <button class="calc-tab active" data-tab="ladrillos">Paredes / Ladrillos</button>
-            <button class="calc-tab" data-tab="contrapiso">Contrapiso / Mezcla</button>
-            <button class="calc-tab" data-tab="hormigon">Losa de Hormigón</button>
+            <button class="calc-tab active" data-tab="comida">Calculadora de Ración Diaria</button>
+            <button class="calc-tab" data-tab="antipulgas">Buscador de Antipulgas por Peso</button>
           </div>
 
-          <!-- Contenido Tab 1: Ladrillos -->
-          <div class="calc-content active" id="tab-ladrillos">
+          <!-- TAB 1: Ración Diaria -->
+          <div class="calc-content active" id="tab-comida">
             <div class="calc-grid">
               <div class="calc-inputs">
                 <div class="form-group">
-                  <label for="ladrillo-tipo">Tipo de ladrillo:</label>
-                  <select id="ladrillo-tipo" class="form-control">
-                    <option value="hueco12" data-per-m2="16">Ladrillo Hueco 12x18x33 (Tabique estándar)</option>
-                    <option value="hueco18" data-per-m2="16">Ladrillo Hueco 18x18x33 (Pared exterior)</option>
-                    <option value="hueco8" data-per-m2="16">Ladrillo Hueco 8x18x33 (Pared divisoria fina)</option>
-                    <option value="comun" data-per-m2="60">Ladrillo Común Macizo (Muro tradicional)</option>
-                    <option value="bloque" data-per-m2="12.5">Bloque de Hormigón 20x20x40</option>
+                  <label for="pet-species">Especie:</label>
+                  <select id="pet-species" class="form-control">
+                    <option value="perro" selected>🐶 Perro</option>
+                    <option value="gato">🐱 Gato</option>
                   </select>
                 </div>
+
                 <div class="form-group">
-                  <label for="ladrillo-m2">Superficie de pared a levantar (m²):</label>
-                  <input type="number" id="ladrillo-m2" class="form-control" value="30" min="1" max="10000">
-                  <small class="form-hint">Largo de pared × Altura (descontando puertas y ventanas)</small>
+                  <label for="pet-weight">Peso actual de tu mascota (kg):</label>
+                  <input type="number" id="pet-weight" class="form-control" value="12" min="0.5" max="90" step="0.5">
+                  <small class="form-hint">Ingresá el peso aproximado en kilogramos.</small>
                 </div>
-                <button type="button" class="btn btn-primary" id="btn-calc-ladrillo">Calcular Materiales</button>
+
+                <div class="form-group">
+                  <label for="pet-activity">Nivel de Actividad &amp; Etapa:</label>
+                  <select id="pet-activity" class="form-control">
+                    <option value="moderada" selected>Adulto · Actividad normal de paseo</option>
+                    <option value="alta">Adulto · Muy activo / Deporte / Patio grande</option>
+                    <option value="baja">Adulto mayor / Sedentario / Con sobrepeso</option>
+                    <option value="cachorro">Cachorro en crecimiento (hasta 12 meses)</option>
+                  </select>
+                </div>
+
+                <button type="button" class="btn btn-primary" id="btn-calc-food">Calcular Porción Diaria</button>
               </div>
 
-              <div class="calc-results" id="results-ladrillo">
-                <h4 class="results-title">Cómputo estimado de insumos:</h4>
+              <div class="calc-results" id="results-food">
+                <h4 class="results-title">Recomendación Nutricional Prompi:</h4>
                 <div class="result-item">
-                  <span class="result-label">Ladrillos necesarios:</span>
-                  <span class="result-value" id="res-ladrillos-unidades">480 u.</span>
+                  <span class="result-label">Gramos diarios recomendados:</span>
+                  <span class="result-value" id="res-food-daily">190 g / día</span>
                 </div>
                 <div class="result-item">
-                  <span class="result-label">Cemento Portland estimado:</span>
-                  <span class="result-value" id="res-ladrillos-cemento">3 bolsas (50kg)</span>
+                  <span class="result-label">Porción por comida (2 tomas):</span>
+                  <span class="result-value" id="res-food-serving">95 g por toma</span>
                 </div>
                 <div class="result-item">
-                  <span class="result-label">Cal hidratada estimada:</span>
-                  <span class="result-value" id="res-ladrillos-cal">6 bolsas (25kg)</span>
+                  <span class="result-label">Duración bolsa de 15 kg:</span>
+                  <span class="result-value" id="res-food-duration">~78 días</span>
                 </div>
-                <div class="result-item">
-                  <span class="result-label">Arena de río estimada:</span>
-                  <span class="result-value" id="res-ladrillos-arena">1.2 m³</span>
+                <div class="result-note">
+                  * Estimación veterinaria promedio para balanceados premium. Ajustá siempre según indicación de tu profesional.
                 </div>
-                <div class="result-note">* Incluye 10% de desperdicio técnico habitual.</div>
 
-                <a href="#" class="btn btn-whatsapp btn-full" id="btn-send-whatsapp-calc">
-                  <span>Pedir Cotización de este Cómputo por WhatsApp</span>
+                <a href="#" class="btn btn-whatsapp btn-full" id="btn-whatsapp-food-calc" target="_blank" rel="noopener">
+                  <span>Pedir Bolsa de Alimento Recomendada por WhatsApp</span>
                 </a>
               </div>
             </div>
           </div>
 
-          <!-- Contenido Tab 2: Contrapiso -->
-          <div class="calc-content" id="tab-contrapiso">
+          <!-- TAB 2: Buscador de Antipulgas & Matapulgas -->
+          <div class="calc-content" id="tab-antipulgas">
             <div class="calc-grid">
               <div class="calc-inputs">
                 <div class="form-group">
-                  <label for="contrapiso-m2">Superficie del contrapiso (m²):</label>
-                  <input type="number" id="contrapiso-m2" class="form-control" value="25" min="1" max="10000">
-                </div>
-                <div class="form-group">
-                  <label for="contrapiso-espesor">Espesor promedio (cm):</label>
-                  <input type="number" id="contrapiso-espesor" class="form-control" value="10" min="5" max="30">
-                </div>
-                <button type="button" class="btn btn-primary" id="btn-calc-contrapiso">Calcular Insumos</button>
-              </div>
-
-              <div class="calc-results" id="results-contrapiso">
-                <h4 class="results-title">Cómputo de contrapiso:</h4>
-                <div class="result-item">
-                  <span class="result-label">Volumen total de mezcla:</span>
-                  <span class="result-value" id="res-contra-vol">2.5 m³</span>
-                </div>
-                <div class="result-item">
-                  <span class="result-label">Cemento de albañilería / cal:</span>
-                  <span class="result-value" id="res-contra-cal">8 bolsas</span>
-                </div>
-                <div class="result-item">
-                  <span class="result-label">Arena gruesa limpia:</span>
-                  <span class="result-value" id="res-contra-arena">1.5 m³</span>
-                </div>
-                <div class="result-item">
-                  <span class="result-label">Cascote picado / piedra:</span>
-                  <span class="result-value" id="res-contra-cascote">2.2 m³</span>
-                </div>
-                <div class="result-note">* Proporción 1:3:5 estándar para contrapisos interiores y exteriores.</div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Contenido Tab 3: Hormigón -->
-          <div class="calc-content" id="tab-hormigon">
-            <div class="calc-grid">
-              <div class="calc-inputs">
-                <div class="form-group">
-                  <label for="hormigon-m3">Metros cúbicos de hormigón a elaborar (m³):</label>
-                  <input type="number" id="hormigon-m3" class="form-control" value="4" min="0.5" step="0.5">
-                  <small class="form-hint">Largo × Ancho × Espesor de losa, zapatas o columnas</small>
-                </div>
-                <button type="button" class="btn btn-primary" id="btn-calc-hormigon">Calcular Cemento, Arena y Piedra</button>
-              </div>
-
-              <div class="calc-results" id="results-hormigon">
-                <h4 class="results-title">Cómputo para hormigón H21 (1:2:3):</h4>
-                <div class="result-item">
-                  <span class="result-label">Cemento Portland Normal (50kg):</span>
-                  <span class="result-value" id="res-horm-cemento">28 bolsas</span>
-                </div>
-                <div class="result-item">
-                  <span class="result-label">Arena fina/mediana de río:</span>
-                  <span class="result-value" id="res-horm-arena">2.7 m³</span>
-                </div>
-                <div class="result-item">
-                  <span class="result-label">Piedra partida granítica 6/20:</span>
-                  <span class="result-value" id="res-horm-piedra">3.5 m³</span>
-                </div>
-                <div class="result-note">* Estimación basada en dosificación para 350 kg/m³ de cemento.</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SECCIÓN 4: SERVICIOS Y LOGÍSTICA PARA OBRAS Y CONSTRUCTORAS -->
-    <section class="section" id="servicios">
-      <div class="container">
-        <div class="section-badge">Nuestra Logística</div>
-        <h2 class="section-title">El Respaldo que tu Obra Necesita</h2>
-        <p class="section-description">
-          Sabemos que en la construcción un día de retraso cuesta caro. Diseñamos nuestros servicios para que no pierdas horas de trabajo en el obrador.
-        </p>
-
-        <div class="services-grid">
-          <div class="service-card">
-            <div class="service-image-box">
-              <img src="https://images.unsplash.com/photo-1580901368919-7738efb0f87e?auto=format&fit=crop&w=700&h=420&q=80" alt="Camión con grúa descargando materiales en obra" class="service-img" loading="lazy">
-              <span class="service-tag">Descarga en Losa</span>
-            </div>
-            <div class="service-content">
-              <h3 class="service-title">Flota de Camiones Hidrogrúa</h3>
-              <p class="service-text">
-                Descargamos tus pallets directamente en la losa, segundo piso o dentro del predio, evitando sobrecostos de mano de obra y roturas de material.
-              </p>
-            </div>
-          </div>
-
-          <div class="service-card">
-            <div class="service-image-box">
-              <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=700&h=420&q=80" alt="Logística rápida y entregas programadas en 24 horas" class="service-img" loading="lazy">
-              <span class="service-tag">Despacho en 24h</span>
-            </div>
-            <div class="service-content">
-              <h3 class="service-title">Entregas Programadas en 24h</h3>
-              <p class="service-text">
-                Coordinamos franjas horarias exactas con tu jefe de obra o capataz para que el material ingrese justo cuando tu cuadrilla está lista para aplicarlo.
-              </p>
-            </div>
-          </div>
-
-          <div class="service-card">
-            <div class="service-image-box">
-              <img src="https://images.unsplash.com/photo-1586528116493-a029325540fa?auto=format&fit=crop&w=700&h=420&q=80" alt="Depósito central de acopio y custodia de materiales" class="service-img" loading="lazy">
-              <span class="service-tag">Hasta 90 Días</span>
-            </div>
-            <div class="service-content">
-              <h3 class="service-title">Acopio Bonificado sin Recargo</h3>
-              <p class="service-text">
-                Comprás hoy la totalidad de tus materiales, congelás el valor en pesos frente a la inflación y los vas retirando a medida que avanza tu cronograma de obra (hasta 90 días).
-              </p>
-            </div>
-          </div>
-
-          <div class="service-card">
-            <div class="service-image-box">
-              <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=700&h=420&q=80" alt="Cálculo y despiece métrico sobre planos de construcción" class="service-img" loading="lazy">
-              <span class="service-tag">Asesoramiento Técnico</span>
-            </div>
-            <div class="service-content">
-              <h3 class="service-title">Cómputo Métrico de Planos</h3>
-              <p class="service-text">
-                Envianos el plano en PDF o DWG. Nuestro departamento técnico realiza el despiece y cómputo de hierros, ladrillos y mezclas sin costo adicional.
-              </p>
-            </div>
-          </div>
-
-          <div class="service-card">
-            <div class="service-image-box">
-              <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=700&h=420&q=80" alt="Acuerdos comerciales y cuenta corriente para empresas constructoras" class="service-img" loading="lazy">
-              <span class="service-tag">Línea de Crédito</span>
-            </div>
-            <div class="service-content">
-              <h3 class="service-title">Cuenta Corriente a Constructoras</h3>
-              <p class="service-text">
-                Facilidades de pago, facturación electrónica unificada A y B, y condiciones de crédito especiales para desarrolladores y contratistas registrados.
-              </p>
-            </div>
-          </div>
-
-          <div class="service-card">
-            <div class="service-image-box">
-              <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=700&h=420&q=80" alt="Asesores técnicos e ingenieros en visita de obra" class="service-img" loading="lazy">
-              <span class="service-tag">Visitas Técnicas</span>
-            </div>
-            <div class="service-content">
-              <h3 class="service-title">Atención Personalizada en Obra</h3>
-              <p class="service-text">
-                Asignamos un asesor comercial exclusivo para tu proyecto con canal directo por WhatsApp y visitas técnicas al obrador cuando sea necesario.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SECCIÓN 5: PROMOS POR VOLUMEN Y EQUIPOS COMPLETOS -->
-    <section class="section section-highlight" id="promociones">
-      <div class="container">
-        <div class="highlight-inner">
-          <div class="highlight-info">
-            <span class="highlight-badge">Precios Mayoristas</span>
-            <h2 class="highlight-title">Comprá por Pallet Cerrado o Equipo Completo y Ahorrá hasta un 18%</h2>
-            <p class="highlight-text">
-              Si estás comenzando la etapa de cimientos, mampostería o techos, consultá nuestras listas especiales con flete bonificado según el volumen de compra.
-            </p>
-            <div class="highlight-features">
-              <div class="feat-pill">✔ Pallet Cemento x 40 bolsas</div>
-              <div class="feat-pill">✔ Pallet Ladrillos Huecos x 144 / 192 u.</div>
-              <div class="feat-pill">✔ Paquete cerrado de Hierro ADN 420 (2 Tn)</div>
-              <div class="feat-pill">✔ Bolsón de Arena por 5 o más unidades</div>
-            </div>
-          </div>
-          <div class="highlight-cta">
-            <div class="quote-instant-card">
-              <h3>¿Tenés una lista de materiales?</h3>
-              <p>Enviala ahora mismo por WhatsApp o adjuntala en el formulario y te respondemos en menos de 2 horas hábiles.</p>
-              <a href="https://wa.me/5491100000000?text=Hola,%20tengo%20una%20lista%20de%20materiales%20para%20cotizar" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-large btn-full">
-                <span>Enviar Lista por WhatsApp</span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SECCIÓN 6: NÚMEROS Y CONFIANZA -->
-    <section class="section section-stats" id="nosotros">
-      <div class="container">
-        <div class="stats-grid">
-          <div class="stat-item">
-            <span class="stat-number">+18</span>
-            <span class="stat-label">Años abasteciendo obras</span>
-          </div>
-          <div class="stat-item">
-            <span class="stat-number">+15.000</span>
-            <span class="stat-label">Entregas realizadas con éxito</span>
-          </div>
-          <div class="stat-item">
-            <span class="stat-number">8</span>
-            <span class="stat-label">Camiones propios con hidrogrúa</span>
-          </div>
-          <div class="stat-item">
-            <span class="stat-number">6.500 m²</span>
-            <span class="stat-label">De depósito con stock permanente</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SECCIÓN 7: FORMULARIO DE COTIZACIÓN ONLINE -->
-    <section class="section" id="presupuesto">
-      <div class="container">
-        <div class="presupuesto-grid">
-          <!-- LADO IZQUIERDO: Imagen dinámica de materiales de obra -->
-          <div class="presupuesto-media-col">
-            <div class="presupuesto-image-card">
-              <img src="assets/cotizacion-materiales.jpg" alt="Muestrario de materiales para la construcción" class="presupuesto-featured-img" loading="lazy">
-              <div class="presupuesto-image-overlay">
-                <span class="media-badge">Cómputo Inmediato</span>
-                <h3 class="media-title">Todo para tu lista de obra</h3>
-                <p class="media-desc">Cotizamos áridos, mampostería, hierros, cementos, maderas y perfiles en un solo presupuesto unificado.</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- LADO DERECHO: Título y Formulario de cotización -->
-          <div class="presupuesto-form-col">
-            <div class="presupuesto-header">
-              <div class="section-badge">Presupuesto sin Cargo</div>
-              <h2 class="section-title">Solicitá tu Cotización de Materiales</h2>
-              <p class="section-description">
-                Completá los datos de tu obra y detallá los insumos. Te enviaremos el presupuesto formal con valores de materiales, costo de flete y plazos de entrega.
-              </p>
-            </div>
-
-            <form class="presupuesto-form" id="form-cotizacion" onsubmit="event.preventDefault(); window.handleQuoteSubmit(this);">
-              <div class="form-row">
-                <div class="form-group col-half">
-                  <label for="quote-name">Nombre y Apellido / Razón Social *</label>
-                  <input type="text" id="quote-name" name="name" class="form-control" placeholder="Ej: Juan Pérez / Constructora Norte" required>
-                </div>
-                <div class="form-group col-half">
-                  <label for="quote-phone">Teléfono / WhatsApp de Contacto *</label>
-                  <input type="tel" id="quote-phone" name="phone" class="form-control" placeholder="Ej: 11 3456-7890" required>
-                </div>
-              </div>
-
-              <div class="form-row">
-                <div class="form-group col-half">
-                  <label for="quote-email">Correo Electrónico</label>
-                  <input type="email" id="quote-email" name="email" class="form-control" placeholder="tu.correo@ejemplo.com">
-                </div>
-                <div class="form-group col-half">
-                  <label for="quote-location">Localidad / Zona de la Obra *</label>
-                  <input type="text" id="quote-location" name="location" class="form-control" placeholder="Ej: Pilar, San Isidro, Canning, CABA" required>
-                </div>
-              </div>
-
-              <div class="form-row">
-                <div class="form-group col-half">
-                  <label for="quote-type">Tipo de Cliente / Obra</label>
-                  <select id="quote-type" name="type" class="form-control">
-                    <option value="particular">Particular / Autoconstrucción / Reforma</option>
-                    <option value="constructora">Empresa Constructora / Desarrollador</option>
-                    <option value="profesional">Arquitecto / Ingeniero / Maestro Mayor de Obra</option>
-                    <option value="gremio">Contratista / Albañil / Gremio</option>
+                  <label for="flea-species">Mascota:</label>
+                  <select id="flea-species" class="form-control">
+                    <option value="perro" selected>🐶 Perro</option>
+                    <option value="gato">🐱 Gato</option>
                   </select>
                 </div>
+
+                <div class="form-group">
+                  <label for="flea-weight">Rango de Peso:</label>
+                  <select id="flea-weight" class="form-control">
+                    <option value="toy">Muy pequeño (2 a 4.5 kg)</option>
+                    <option value="chico" selected>Chico (4.5 a 10 kg)</option>
+                    <option value="mediano">Mediano (10 a 20 kg)</option>
+                    <option value="grande">Grande (20 a 40 kg)</option>
+                    <option value="gigante">Gigante (+40 kg)</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="flea-format">Preferencia de Administración:</label>
+                  <select id="flea-format" class="form-control">
+                    <option value="oral" selected>Comprimido masticable saborizado (Más efectivo)</option>
+                    <option value="pipeta">Pipeta spot-on sobre el lomo</option>
+                  </select>
+                </div>
+
+                <button type="button" class="btn btn-primary" id="btn-calc-flea">Buscar Matapulgas Ideal</button>
+              </div>
+
+              <div class="calc-results" id="results-flea">
+                <h4 class="results-title">Antiparasitario Sugerido:</h4>
+                <div class="result-item">
+                  <span class="result-label">Producto recomendado:</span>
+                  <span class="result-value" id="res-flea-prod">NexGard Spectra 4.5 - 10 kg</span>
+                </div>
+                <div class="result-item">
+                  <span class="result-label">Duración de la protección:</span>
+                  <span class="result-value" id="res-flea-duration">30 días de protección total</span>
+                </div>
+                <div class="result-item">
+                  <span class="result-label">Efecto contra:</span>
+                  <span class="result-value" id="res-flea-covers">Pulgas, garrapatas, sarna y parásitos internos</span>
+                </div>
+                <div class="result-note">
+                  * Producto original con fecha de vencimiento garantizada y asesoramiento médico directo.
+                </div>
+
+                <a href="#" class="btn btn-whatsapp btn-full" id="btn-whatsapp-flea-calc" target="_blank" rel="noopener">
+                  <span>Pedir este Antipulgas por WhatsApp</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECCIÓN FORMULARIO DE PEDIDO RÁPIDO O CONSULTA
+         ========================================================================== -->
+    <section class="section" id="pedido">
+      <div class="container">
+        <div class="presupuesto-grid">
+          <div class="presupuesto-media-col">
+            <div class="presupuesto-image-card">
+              <img src="https://images.unsplash.com/photo-1548767797-d8c844163c4c?auto=format&fit=crop&w=800&q=80" alt="Veterinaria Prompi Atención Personalizada" class="presupuesto-featured-img">
+              <div class="presupuesto-image-overlay">
+                <span class="media-badge">ATENCIÓN EXPRESS</span>
+                <h3 class="media-title">Cuidamos de tu mascota como en casa</h3>
+                <p class="media-desc">Hacé tu pedido o consultanos cualquier duda de nutrición, antiparasitarios o turnos de baño.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="presupuesto-form-col">
+            <div class="presupuesto-header">
+              <div class="section-badge badge-coral">Pedidos &amp; Consultas</div>
+              <h2 class="section-title">Hacé tu Pedido a Domicilio</h2>
+              <p class="section-description">
+                Completá los datos y te enviamos la confirmación por WhatsApp o correo con los mejores precios y tiempos de entrega.
+              </p>
+            </div>
+
+            <form id="order-form" class="presupuesto-form">
+              <div class="form-row">
                 <div class="form-group col-half">
-                  <label for="quote-delivery">Modalidad de Entrega</label>
-                  <select id="quote-delivery" name="delivery" class="form-control">
-                    <option value="obra-hidrogrua">Envío a obra con descarga hidrogrúa</option>
-                    <option value="obra-estandar">Envío a obra con camión común</option>
-                    <option value="retiro-deposito">Retiro directo por nuestro depósito</option>
-                    <option value="acopio">Compra para acopio (entrega futura)</option>
+                  <label for="order-name">Tu Nombre y Apellido *</label>
+                  <input type="text" id="order-name" name="name" class="form-control" placeholder="Ej: Camila Rossi" required>
+                </div>
+                <div class="form-group col-half">
+                  <label for="order-phone">Teléfono / WhatsApp *</label>
+                  <input type="tel" id="order-phone" name="phone" class="form-control" placeholder="Ej: 11 4890-7700" required>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group col-half">
+                  <label for="order-pet">Nombre y Tipo de Mascota</label>
+                  <input type="text" id="order-pet" name="pet" class="form-control" placeholder="Ej: Milo (Golden Retriever 2 años)">
+                </div>
+                <div class="form-group col-half">
+                  <label for="order-service">¿Qué estás necesitando?</label>
+                  <select id="order-service" name="service" class="form-control">
+                    <option value="alimento">Pedido de Alimento Balanceado</option>
+                    <option value="antipulgas">Matapulgas / Pipetas / Medicamentos</option>
+                    <option value="bano">Turno de Baño &amp; Peluquería Canina</option>
+                    <option value="vacunas">Vacunación o Consulta Veterinaria</option>
+                    <option value="otro">Otro producto o consulta general</option>
                   </select>
                 </div>
               </div>
 
               <div class="form-group">
-                <label for="quote-materials">Detalle de Materiales Necesarios *</label>
-                <textarea id="quote-materials" name="materials" rows="5" class="form-control" placeholder="Ejemplo:
-- 120 bolsas de Cemento Loma Negra
-- 8 bolsones de arena fina
-- 500 ladrillos huecos 12x18x33
-- 40 barras hierro ø10 y 30 barras ø8" required></textarea>
+                <label for="order-address">Localidad / Dirección para Entrega</label>
+                <input type="text" id="order-address" name="address" class="form-control" placeholder="Ej: Belgrano, CABA / San Isidro / Vicente López">
+              </div>
+
+              <div class="form-group">
+                <label for="order-details">Detalle del Pedido o Consulta *</label>
+                <textarea id="order-details" name="details" rows="4" class="form-control" placeholder="Ejemplo:
+- 1 bolsa de Royal Canin Mini Adult de 7.5kg
+- 1 comprimido Nexgard Spectra para 10 a 20 kg" required></textarea>
               </div>
 
               <div class="form-actions">
-                <button type="submit" class="btn btn-primary btn-large" id="btn-submit-quote">
-                  <span>Enviar Solicitud de Presupuesto</span>
+                <button type="submit" class="btn btn-primary btn-large" id="btn-submit-order">
+                  <span>Enviar Pedido a Prompi</span>
                   <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
                 </button>
               </div>
 
-              <div id="quote-feedback" class="form-feedback" aria-live="polite"></div>
+              <div id="order-feedback" class="form-feedback" aria-live="polite"></div>
             </form>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- SECCIÓN 8: DEPÓSITO, UBICACIÓN Y HORARIOS -->
+    <!-- ==========================================================================
+         SECCIÓN 4 ISLAS: CONTACTO, SUCURSAL & ENVÍOS (2 ARRIBA Y 2 ABAJO, SIN ICONOS)
+         ========================================================================== -->
     <section class="section section-dark" id="contacto">
       <div class="container">
         <div class="contact-grid">
           <div class="contact-info">
-            <div class="section-badge badge-orange">Depósito Central</div>
-            <h2 class="section-title text-white">Ventas y Centro de Distribución</h2>
+            <div class="section-badge badge-coral">Sucursal &amp; Envíos</div>
+            <h2 class="section-title text-white">Atención en Local y Delivery Express</h2>
             <p class="text-gray">
-              Podés acercarte personalmente a nuestras oficinas comerciales y patio de materiales, o comunicarte con nuestro equipo de logística.
+              Podés pasar a visitarnos con tu mascota por nuestro local y consultorio, o recibir tus compras cómodamente en tu casa.
             </p>
 
             <div class="info-items">
+              <!-- Isla 1: Dirección -->
               <div class="info-item">
-                <span class="info-item-label">Dirección de Ventas &amp; Depósito</span>
-                <p class="info-item-value">Av. Industrial 4580 <span class="info-item-sub">(Acceso Rápido y Salida a Autopista)</span></p>
+                <span class="info-item-label">Dirección de Tienda &amp; Consultorio</span>
+                <p class="info-item-value">Av. del Libertador 4250 <span class="info-item-sub">(Zona Belgrano / Colegiales · Estacionamiento para clientes)</span></p>
               </div>
 
+              <!-- Isla 2: Horarios -->
               <div class="info-item">
-                <span class="info-item-label">Horarios de Atención y Despacho</span>
-                <p class="info-item-value">Lunes a Viernes: 07:30 a 18:00 hs (corrido)<br>Sábados: 08:00 a 13:00 hs</p>
+                <span class="info-item-label">Horarios de Atención &amp; Baños</span>
+                <p class="info-item-value">Lunes a Sábados: 08:30 a 20:00 hs (corrido)<br>Domingos y Feriados: 10:00 a 14:00 hs (Farmacia de turno)</p>
               </div>
 
+              <!-- Isla 3: Teléfonos -->
               <div class="info-item">
-                <span class="info-item-label">Teléfonos y Ventas Corporativas</span>
+                <span class="info-item-label">Teléfonos &amp; Pedidos por WhatsApp</span>
                 <p class="info-item-value">
-                  Línea directa: <a href="tel:01148905500" class="info-link">(011) 4890-5500</a><br>
-                  WhatsApp: <a href="https://wa.me/5491148905500" class="info-link" target="_blank" rel="noopener">+54 9 11 4890-5500</a>
+                  Línea directa: <a href="tel:01148907700" class="info-link">(011) 4890-7700</a><br>
+                  WhatsApp Oficial: <a href="https://wa.me/5491148907700" class="info-link" target="_blank" rel="noopener">+54 9 11 4890-7700</a>
                 </p>
               </div>
 
+              <!-- Isla 4: Envíos & Cobertura -->
               <div class="info-item">
-                <span class="info-item-label">Correo Electrónico de Presupuestos</span>
+                <span class="info-item-label">Envíos a Domicilio &amp; Delivery</span>
                 <p class="info-item-value">
-                  <a href="mailto:ventas@verticemateriales.com.ar" class="info-link">ventas@verticemateriales.com.ar</a>
+                  Envíos en el día en CABA y Zona Norte sin cargo en bolsas de 7.5kg o más.<br>
+                  Correo oficial para presupuestos: <a href="mailto:hola@prompi.com.ar" class="info-link">hola@prompi.com.ar</a>
                 </p>
               </div>
             </div>
@@ -836,32 +943,47 @@
         </div>
       </div>
     </section>
-
   </main>
 
-  <!-- PIE DE PÁGINA (Sin menú de navegación) -->
+  <!-- ==========================================================================
+       FOOTER (SIN NAVEGACIÓN, PURAMENTE MARCA Y DERECHOS)
+       ========================================================================== -->
   <footer class="footer">
     <div class="container footer-content">
       <div class="footer-brand">
+        <!-- Logo en footer -->
         <div class="footer-logo">
-          <img src="assets/logo.png" alt="VÉRTICE Materiales de Construcción" class="footer-logo-img">
+          <svg class="prompi-footer-logo" viewBox="0 0 200 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g transform="translate(2, 6)">
+              <circle cx="16" cy="18" r="11" fill="#FF6338"/>
+              <ellipse cx="9" cy="8" rx="3.5" ry="5" fill="#4F46E5"/>
+              <ellipse cx="16" cy="4" rx="3.5" ry="5" fill="#FF6338"/>
+              <ellipse cx="23" cy="8" rx="3.5" ry="5" fill="#4F46E5"/>
+            </g>
+            <text x="42" y="27" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="26" fill="#FFFFFF" letter-spacing="-0.03em">prompi</text>
+            <text x="44" y="39" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="7.5" fill="#94A3B8" letter-spacing="0.16em">VETERINARIA &amp; PET SHOP</text>
+          </svg>
         </div>
-        <p>Distribuidora Mayorista y Minorista de Materiales para la Construcción. Despachos a obra, logística pesada y acopio garantizado.</p>
+        <p>
+          Prompi es tu aliado diario en nutrición, salud y bienestar para perros y gatos. Alimentos balanceados originales, farmacia veterinaria y peluquería canina.
+        </p>
       </div>
 
       <div class="footer-legal">
-        <p>© 2026 VÉRTICE Materiales de Construcción. Todos los derechos reservados.</p>
-        <p class="footer-subtext">Precios y promociones sujetos a disponibilidad de stock y cambios sin previo aviso. Factura A y B.</p>
+        <p>&copy; 2026 Prompi Pet Shop &amp; Veterinaria. Todos los derechos reservados.</p>
+        <p class="footer-subtext">Cuidado animal profesional · Asesoramiento médico certificado</p>
       </div>
     </div>
   </footer>
 
-  <!-- BOTÓN FLOTANTE DIRECTO DE WHATSAPP -->
-  <a href="https://wa.me/5491100000000?text=Hola,%20quisiera%20consultar%20por%20materiales%20de%20construcci%C3%B3n" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
+  <!-- ==========================================================================
+       BOTÓN FLOTANTE DE WHATSAPP
+       ========================================================================== -->
+  <a href="https://wa.me/5491148907700?text=Hola%20Prompi!%20Quiero%20consultar%20por%20alimento%20o%20un%20turno" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contactar a Prompi por WhatsApp">
     <svg viewBox="0 0 24 24" fill="currentColor">
-      <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 18.17c-1.49 0-2.95-.4-4.22-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.17 8.17 0 0 1-1.26-4.4c0-4.51 3.67-8.18 8.18-8.18 2.19 0 4.24.85 5.79 2.4 1.55 1.55 2.4 3.61 2.4 5.79-.01 4.51-3.68 8.18-8.18 8.18z"/>
+      <path d="M12.031 2C6.496 2 2 6.48 2 12c0 1.83.497 3.55 1.365 5.035L2 22l5.127-1.34A9.957 9.957 0 0012.031 22C17.566 22 22 17.52 22 12s-4.434-10-9.969-10zm0 18.272a8.23 8.23 0 01-4.218-1.157l-.302-.18-3.13.82.836-3.048-.198-.314A8.225 8.225 0 013.75 12c0-4.566 3.715-8.28 8.281-8.28 4.567 0 8.282 3.714 8.282 8.28 0 4.567-3.715 8.272-8.282 8.272zm4.54-6.19c-.248-.124-1.472-.726-1.7-.81-.228-.083-.394-.124-.56.124-.166.248-.642.81-.786.975-.145.166-.29.186-.538.062a6.837 6.837 0 01-2.002-1.234 7.545 7.545 0 01-1.385-1.724c-.145-.248-.016-.382.108-.506.111-.112.248-.29.373-.435.124-.145.166-.248.248-.414.083-.166.042-.31-.02-.435-.063-.124-.56-1.348-.767-1.846-.202-.486-.407-.42-.56-.428l-.477-.008c-.166 0-.435.062-.663.31-.228.248-.87 0.85-.87 2.073s.891 2.404 1.015 2.57c.125.166 1.752 2.675 4.246 3.75.593.256 1.057.409 1.418.524.596.19 1.138.163 1.567.099.478-.071 1.472-.602 1.68-1.183.207-.58.207-1.077.145-1.183-.062-.104-.228-.166-.477-.29z"/>
     </svg>
-    <span class="whatsapp-tooltip">¡Cotizá tu obra por WhatsApp!</span>
+    <span class="whatsapp-tooltip">¿Consultas o pedidos? Chateá acá</span>
   </a>
 
   <script src="script.js"></script>

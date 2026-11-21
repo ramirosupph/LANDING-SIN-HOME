@@ -1,18 +1,59 @@
 /**
- * VÉRTICE MATERIALES DE CONSTRUCCIÓN
- * Lógica interactiva: Calculadoras de obra, generación de cotizaciones y formularios.
+ * PROMPI - VETERINARIA, ALIMENTOS BALANCEADOS & PET SHOP
+ * Lógica interactiva: Filtros de catálogo, calculadora de nutrición, recomendador de matapulgas y formulario.
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-  initMaterialCalculators();
+  initProductFilters();
+  initPetCalculators();
+  initOrderForm();
   initSmoothScroll();
 });
 
 /* ==========================================================================
-   1. CALCULADORAS INTERACTIVAS DE MATERIALES DE OBRA
+   1. FILTRADO DINÁMICO DE PRODUCTOS (INSPIRADO EN PUPPIS)
    ========================================================================== */
-function initMaterialCalculators() {
-  // Manejo de pestañas (Tabs)
+function initProductFilters() {
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const productCards = document.querySelectorAll('.product-card');
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const filterValue = btn.getAttribute('data-filter');
+
+      productCards.forEach(card => {
+        const categories = card.getAttribute('data-category') || '';
+        if (filterValue === 'all' || categories.includes(filterValue)) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+}
+
+// Función global para filtrar desde las tarjetas de categoría
+window.filterCatalog = function(category) {
+  const catalogEl = document.getElementById('catalogo');
+  if (catalogEl) {
+    catalogEl.scrollIntoView({ behavior: 'smooth' });
+  }
+
+  const targetBtn = document.querySelector(`.filter-btn[data-filter="${category}"]`);
+  if (targetBtn) {
+    targetBtn.click();
+  }
+};
+
+/* ==========================================================================
+   2. CALCULADORA INTERACTIVA PROMPI (RACIÓN DIARIA & MATAPULGAS)
+   ========================================================================== */
+function initPetCalculators() {
+  // Manejo de Tabs
   const tabs = document.querySelectorAll('.calc-tab');
   const contents = document.querySelectorAll('.calc-content');
 
@@ -29,107 +70,185 @@ function initMaterialCalculators() {
     });
   });
 
-  // TAB 1: Cálculo de Ladrillos
-  const btnCalcLadrillo = document.getElementById('btn-calc-ladrillo');
-  const selectLadrillo = document.getElementById('ladrillo-tipo');
-  const inputLadrilloM2 = document.getElementById('ladrillo-m2');
-  const btnSendWhatsApp = document.getElementById('btn-send-whatsapp-calc');
+  // TAB 1: Ración Diaria
+  const selectSpecies = document.getElementById('pet-species');
+  const inputWeight = document.getElementById('pet-weight');
+  const selectActivity = document.getElementById('pet-activity');
+  const btnCalcFood = document.getElementById('btn-calc-food');
+  const btnWhatsAppFood = document.getElementById('btn-whatsapp-food-calc');
 
-  const calcularLadrillos = () => {
-    if (!selectLadrillo || !inputLadrilloM2) return;
-    const m2 = Math.max(1, parseFloat(inputLadrilloM2.value) || 0);
-    const selectedOption = selectLadrillo.options[selectLadrillo.selectedIndex];
-    const perM2 = parseFloat(selectedOption.getAttribute('data-per-m2')) || 16;
-    const tipoTexto = selectedOption.text.split('(')[0].trim();
+  const calcFood = () => {
+    if (!selectSpecies || !inputWeight || !selectActivity) return;
 
-    // 10% de desperdicio estimado
-    const totalLadrillos = Math.round(m2 * perM2 * 1.1);
+    const species = selectSpecies.value; // 'perro' o 'gato'
+    const weight = Math.max(0.5, parseFloat(inputWeight.value) || 5);
+    const activity = selectActivity.value;
 
-    // Cemento estimado: ~0.10 bolsas de 50kg por m2 de pared
-    const bolsasCemento = Math.max(1, Math.round(m2 * 0.10 * 1.1));
+    let dailyGrams = 0;
 
-    // Cal hidratada: ~0.20 bolsas de 25kg por m2
-    const bolsasCal = Math.max(1, Math.round(m2 * 0.20 * 1.1));
+    if (species === 'perro') {
+      // Cálculo aproximado para perros: ~15 a 20g por kg según actividad
+      let factor = 16;
+      if (activity === 'alta') factor = 20;
+      if (activity === 'baja') factor = 13;
+      if (activity === 'cachorro') factor = 25;
 
-    // Arena: ~0.04 m3 por m2
-    const m3Arena = (m2 * 0.04 * 1.1).toFixed(1);
+      dailyGrams = Math.round(weight * factor);
+    } else {
+      // Gatos: ~12 a 15g por kg
+      let factor = 13;
+      if (activity === 'alta') factor = 16;
+      if (activity === 'baja') factor = 10;
+      if (activity === 'cachorro') factor = 20;
 
-    document.getElementById('res-ladrillos-unidades').textContent = `${totalLadrillos} unidades`;
-    document.getElementById('res-ladrillos-cemento').textContent = `${bolsasCemento} bolsas (50kg)`;
-    document.getElementById('res-ladrillos-cal').textContent = `${bolsasCal} bolsas (25kg)`;
-    document.getElementById('res-ladrillos-arena').textContent = `${m3Arena} m³`;
+      dailyGrams = Math.round(weight * factor);
+    }
 
-    // Enlace dinámico a WhatsApp con los datos calculados
-    if (btnSendWhatsApp) {
-      const mensaje = `Hola Vértice Materiales! Hice un cálculo en su web para una pared de ${m2} m² con ${tipoTexto}. Necesito cotizar: ${totalLadrillos} ladrillos, ${bolsasCemento} bolsas de cemento, ${bolsasCal} bolsas de cal y ${m3Arena} m³ de arena.`;
-      btnSendWhatsApp.href = `https://wa.me/5491100000000?text=${encodeURIComponent(mensaje)}`;
+    const serving = Math.round(dailyGrams / 2);
+    const bagDuration = Math.round(15000 / dailyGrams);
+
+    const resDaily = document.getElementById('res-food-daily');
+    const resServing = document.getElementById('res-food-serving');
+    const resDuration = document.getElementById('res-food-duration');
+
+    if (resDaily) resDaily.textContent = `${dailyGrams} g / día`;
+    if (resServing) resServing.textContent = `${serving} g por toma (2 tomas)`;
+    if (resDuration) resDuration.textContent = `~${bagDuration} días`;
+
+    if (btnWhatsAppFood) {
+      const msg = `Hola Prompi! Hice el cálculo en su web para mi ${species} de ${weight}kg (${activity}). Necesita unos ${dailyGrams}g por día. ¿Qué alimento balanceado me recomiendan y qué precio tiene la bolsa?`;
+      btnWhatsAppFood.href = `https://wa.me/5491148907700?text=${encodeURIComponent(msg)}`;
     }
   };
 
-  if (btnCalcLadrillo) btnCalcLadrillo.addEventListener('click', calcularLadrillos);
-  if (inputLadrilloM2) inputLadrilloM2.addEventListener('input', calcularLadrillos);
-  if (selectLadrillo) selectLadrillo.addEventListener('change', calcularLadrillos);
+  if (btnCalcFood) btnCalcFood.addEventListener('click', calcFood);
+  if (inputWeight) inputWeight.addEventListener('input', calcFood);
+  if (selectSpecies) selectSpecies.addEventListener('change', calcFood);
+  if (selectActivity) selectActivity.addEventListener('change', calcFood);
 
-  // Inicializar cálculo por defecto
-  calcularLadrillos();
+  calcFood();
 
-  // TAB 2: Cálculo de Contrapiso
-  const btnCalcContrapiso = document.getElementById('btn-calc-contrapiso');
-  const inputContraM2 = document.getElementById('contrapiso-m2');
-  const inputContraEsp = document.getElementById('contrapiso-espesor');
+  // TAB 2: Buscador de Antipulgas & Matapulgas
+  const fleaSpecies = document.getElementById('flea-species');
+  const fleaWeight = document.getElementById('flea-weight');
+  const fleaFormat = document.getElementById('flea-format');
+  const btnCalcFlea = document.getElementById('btn-calc-flea');
+  const btnWhatsAppFlea = document.getElementById('btn-whatsapp-flea-calc');
 
-  const calcularContrapiso = () => {
-    if (!inputContraM2 || !inputContraEsp) return;
-    const m2 = Math.max(1, parseFloat(inputContraM2.value) || 0);
-    const espCm = Math.max(1, parseFloat(inputContraEsp.value) || 10);
-    const espesorMetros = espCm / 100;
+  const calcFlea = () => {
+    if (!fleaSpecies || !fleaWeight || !fleaFormat) return;
 
-    // Volumen en m³ con 10% de esponjamiento/desperdicio
-    const volumenM3 = (m2 * espesorMetros * 1.1).toFixed(1);
+    const species = fleaSpecies.value;
+    const weightRange = fleaWeight.value;
+    const format = fleaFormat.value;
 
-    // Para 1 m³ de contrapiso estándar: ~3 bolsas cal/plasticor, ~0.6m³ arena, ~0.9m³ cascote
-    const calBolsas = Math.ceil(volumenM3 * 3.2);
-    const arenaM3 = (volumenM3 * 0.6).toFixed(1);
-    const cascoteM3 = (volumenM3 * 0.9).toFixed(1);
+    let prod = '';
+    let duration = '';
+    let covers = '';
 
-    document.getElementById('res-contra-vol').textContent = `${volumenM3} m³`;
-    document.getElementById('res-contra-cal').textContent = `${calBolsas} bolsas`;
-    document.getElementById('res-contra-arena').textContent = `${arenaM3} m³`;
-    document.getElementById('res-contra-cascote').textContent = `${cascoteM3} m³`;
+    if (species === 'gato') {
+      if (format === 'oral') {
+        prod = 'Bravecto Plus Spot-on o Credelio Gatos';
+        duration = '12 semanas (Bravecto) o 30 días';
+        covers = 'Pulgas, garrapatas, ácaros del oído y parásitos internos';
+      } else {
+        prod = 'Pipeta Frontline Plus Felina / Revolution Plus';
+        duration = '30 días de cobertura tópica';
+        covers = 'Pulgas, huevos, larvas y garrapatas';
+      }
+    } else {
+      // Perro
+      if (format === 'oral') {
+        if (weightRange === 'toy') {
+          prod = 'NexGard Spectra 2 a 3.5 kg / Simparica 2.5-5kg';
+        } else if (weightRange === 'chico') {
+          prod = 'NexGard Spectra 3.5 a 7.5 kg / Bravecto 4.5-10kg';
+        } else if (weightRange === 'mediano') {
+          prod = 'NexGard Spectra 7.5 a 15 kg o 15 a 30 kg';
+        } else if (weightRange === 'grande') {
+          prod = 'NexGard Spectra 30 a 60 kg / Bravecto 20-40kg';
+        } else {
+          prod = 'Bravecto 40-56 kg / Nexgard Spectra Gigante';
+        }
+        duration = '30 días a 12 semanas según laboratorio';
+        covers = 'Pulgas, garrapatas, ácaros de sarna y parásitos gastrointestinales';
+      } else {
+        prod = `Pipeta Frontline Plus o Advantix Canina (${weightRange})`;
+        duration = '30 días de protección sobre la piel';
+        covers = 'Pulgas adultas, larvas, garrapatas y repelente de mosquitos';
+      }
+    }
+
+    const resProd = document.getElementById('res-flea-prod');
+    const resDuration = document.getElementById('res-flea-duration');
+    const resCovers = document.getElementById('res-flea-covers');
+
+    if (resProd) resProd.textContent = prod;
+    if (resDuration) resDuration.textContent = duration;
+    if (resCovers) resCovers.textContent = covers;
+
+    if (btnWhatsAppFlea) {
+      const msg = `Hola Prompi! En su buscador vi el antipulgas recomendado: "${prod}" para mi ${species}. ¿Tienen stock y cuánto sale con envío?`;
+      btnWhatsAppFlea.href = `https://wa.me/5491148907700?text=${encodeURIComponent(msg)}`;
+    }
   };
 
-  if (btnCalcContrapiso) btnCalcContrapiso.addEventListener('click', calcularContrapiso);
-  if (inputContraM2) inputContraM2.addEventListener('input', calcularContrapiso);
-  if (inputContraEsp) inputContraEsp.addEventListener('input', calcularContrapiso);
+  if (btnCalcFlea) btnCalcFlea.addEventListener('click', calcFlea);
+  if (fleaSpecies) fleaSpecies.addEventListener('change', calcFlea);
+  if (fleaWeight) fleaWeight.addEventListener('change', calcFlea);
+  if (fleaFormat) fleaFormat.addEventListener('change', calcFlea);
 
-  calcularContrapiso();
-
-  // TAB 3: Cálculo de Hormigón H21
-  const btnCalcHormigon = document.getElementById('btn-calc-hormigon');
-  const inputHormM3 = document.getElementById('hormigon-m3');
-
-  const calcularHormigon = () => {
-    if (!inputHormM3) return;
-    const m3 = Math.max(0.5, parseFloat(inputHormM3.value) || 0);
-
-    // Dosificación típica H21 por m3: 350kg cemento (7 bolsas de 50kg), 0.67m³ arena, 0.87m³ piedra partida
-    const cementoBolsas = Math.ceil(m3 * 7);
-    const arenaM3 = (m3 * 0.67).toFixed(1);
-    const piedraM3 = (m3 * 0.87).toFixed(1);
-
-    document.getElementById('res-horm-cemento').textContent = `${cementoBolsas} bolsas (50kg)`;
-    document.getElementById('res-horm-arena').textContent = `${arenaM3} m³`;
-    document.getElementById('res-horm-piedra').textContent = `${piedraM3} m³`;
-  };
-
-  if (btnCalcHormigon) btnCalcHormigon.addEventListener('click', calcularHormigon);
-  if (inputHormM3) inputHormM3.addEventListener('input', calcularHormigon);
-
-  calcularHormigon();
+  calcFlea();
 }
 
 /* ==========================================================================
-   2. SCROLL SUAVE PARA BOTONES DE ACCIÓN INTERNOS
+   3. FORMULARIO DE PEDIDOS & TURNOS CON ENVÍO DIRECTO A WHATSAPP
+   ========================================================================== */
+function initOrderForm() {
+  const form = document.getElementById('order-form');
+  const feedback = document.getElementById('order-feedback');
+
+  if (!form) return;
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const name = document.getElementById('order-name')?.value.trim();
+    const phone = document.getElementById('order-phone')?.value.trim();
+    const pet = document.getElementById('order-pet')?.value.trim();
+    const service = document.getElementById('order-service')?.value;
+    const address = document.getElementById('order-address')?.value.trim();
+    const details = document.getElementById('order-details')?.value.trim();
+
+    if (!name || !phone || !details) {
+      alert('Por favor completá los campos obligatorios (*)');
+      return;
+    }
+
+    if (feedback) {
+      feedback.textContent = '¡Gracias! Redirigiendo a WhatsApp para confirmar tu pedido con un asesor de Prompi...';
+      feedback.className = 'form-feedback success';
+    }
+
+    const message = `🐾 *NUEVO PEDIDO PROMPI WEB* 🐾
+*Cliente:* ${name}
+*Teléfono:* ${phone}
+*Mascota:* ${pet || 'No especificada'}
+*Motivo:* ${service}
+*Dirección:* ${address || 'A convenir'}
+*Detalle:*
+${details}`;
+
+    setTimeout(() => {
+      const waUrl = `https://wa.me/5491148907700?text=${encodeURIComponent(message)}`;
+      window.open(waUrl, '_blank');
+      form.reset();
+    }, 900);
+  });
+}
+
+/* ==========================================================================
+   4. SCROLL SUAVE PARA ENLACES INTERNOS
    ========================================================================== */
 function initSmoothScroll() {
   const internalLinks = document.querySelectorAll('a[href^="#"]');
@@ -150,34 +269,3 @@ function initSmoothScroll() {
     });
   });
 }
-
-/* ==========================================================================
-   3. GESTIÓN DEL FORMULARIO DE PRESUPUESTO DE OBRA
-   ========================================================================== */
-window.handleQuoteSubmit = function(form) {
-  const submitBtn = document.getElementById('btn-submit-quote');
-  const feedback = document.getElementById('quote-feedback');
-
-  const name = form.querySelector('#quote-name').value;
-  const phone = form.querySelector('#quote-phone').value;
-  const materials = form.querySelector('#quote-materials').value;
-
-  if (!name || !phone || !materials) return;
-
-  submitBtn.disabled = true;
-  submitBtn.style.opacity = '0.7';
-  submitBtn.querySelector('span').textContent = 'Procesando cotización...';
-
-  setTimeout(() => {
-    feedback.className = 'form-feedback success';
-    feedback.innerHTML = `
-      ✓ <strong>¡Solicitud enviada correctamente, ${name}!</strong><br>
-      Recibimos tu lista de materiales. Un asesor de logística comercial te contactará al <strong>${phone}</strong> dentro de las próximas 2 horas hábiles con el presupuesto formal y los plazos de entrega en obra.
-    `;
-
-    form.reset();
-    submitBtn.disabled = false;
-    submitBtn.style.opacity = '1';
-    submitBtn.querySelector('span').textContent = 'Enviar Solicitud de Presupuesto';
-  }, 600);
-};
